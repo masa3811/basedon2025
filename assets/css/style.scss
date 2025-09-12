@@ -1,6 +1,7 @@
 // Scss Document
 
-@use "config";
+@use 'config' ;
+@use 'common';
 
 * {
   margin: 0;
@@ -186,13 +187,6 @@ body {
     }
   }
 
-  .recruit a img {
-    width: 70px;
-    position: absolute;
-    bottom: 0%;
-    right: 67px;
-    z-index: 999;
-  }
 
   #hamburger {
     display: flex;
@@ -449,23 +443,28 @@ body {
 
   }
 }
+
 .banner-cnt {
-display: flex;
-}
-.arrow-cnt {
- a {
-  width: 100%;
   display: flex;
-  align-items: center;
-  text-decoration: none;
-  img {
-    width: 10%;
-  }
-  p {
-    text-decoration: none;
-  }
- }
 }
+
+.arrow-cnt {
+  a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      width: 10%;
+    }
+
+    p {
+      text-decoration: none;
+    }
+  }
+}
+
 #tab {
   max-width: 800px;
   margin: 40px auto;
@@ -508,6 +507,7 @@ display: flex;
     }
   }
 }
+
 table.table {
   width: 100%;
   text-align: left;
@@ -547,6 +547,7 @@ table.table {
     color: #888888;
   }
 }
+
 .news {
   .tab-area {
     display: flex;
@@ -617,4 +618,3 @@ table.table {
     }
   }
 }
-

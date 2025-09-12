@@ -1,0 +1,83 @@
+$main-color: rgb(128, 51, 0);
+$accent-color: #007acc;
+$base-font: 'Helvetica Neue', Arial, sans-serif;
+
+body {
+  font-family: $base-font;
+  margin: 0;
+  color: #333;
+}
+
+.site-header {
+  background: $main-color;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+
+    li a {
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.hero {
+  background: url('hero.jpg') no-repeat center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+
+section {
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+
+  h3 {
+    color: $main-color;
+    margin-bottom: 1rem;
+  }
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: $accent-color;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+
+  &:hover {
+    background: darken($accent-color, 10%);
+  }
+}
+
+.site-footer {
+  background: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
