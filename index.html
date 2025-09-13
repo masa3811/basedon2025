@@ -18,10 +18,11 @@
 
       <nav id="menubar">
         <ul>
-          <li><a href="#">トップ</a></li>
-          <li><a href="#">会社案内</a></li>
+          <li><a href="#">お知らせ</a></li>
+          <li><a href="#">会社概要</a></li>
           <li><a href="#">事業内容</a></li>
-          <li><a href="#">採用情報</a></li>
+          <li><a href="#">船舶情報</a></li>
+          <li><a href="#">船員募集</a></li>
           <li class="contact-btn"><a href="#">お問い合わせ</a></li>
         </ul>
       </nav>
@@ -35,10 +36,11 @@
         </label>
         <nav class="sp-menu">
           <ul>
-            <li><a href="#">トップ</a></li>
-            <li><a href="#">会社案内</a></li>
+            <li><a href="#">お知らせ</a></li>
+            <li><a href="#">会社概要</a></li>
             <li><a href="#">事業内容</a></li>
-            <li><a href="#">採用情報</a></li>
+            <li><a href="#">船舶情報</a></li>
+            <li><a href="#">船員募集</a></li>
             <li><a href="#">お問い合わせ</a></li>
           </ul>
         </nav>
@@ -62,24 +64,34 @@
             <img src="assets/img/common/news_ttl_img.png" alt="ニュースのタイトル">
             <h2>お知らせ</h2>
           </div>
-          <ul>
+          <ul class="news-list">
             <li>
               <span class="date">2025/06/24</span>
-              <a href="#">求人（船員）のご案内</a>
+              <a href="#">
+                求人（船員）のご案内
+                <span class="arrow">▶</span>
+              </a>
             </li>
             <li>
               <span class="date">2020/05/11</span>
-              <a href="#">弊社事務所を移転いたしました</a>
+              <a href="#">
+                弊社事務所を移転いたしました
+                <span class="arrow">▶</span>
+              </a>
             </li>
-            <li>
+                        <li>
               <span class="date">2020/06/11</span>
-              <a href="#">弊社事務所を移転いたしました</a>
+              <a href="#">
+                弊社事務所を移転いたしました
+                <span class="arrow">▶</span>
+              </a>
             </li>
           </ul>
+
         </div>
         <!-- 一覧ボタン -->
-        <div class="news-btn">
-          <a href="#" class="btn-arrow"> <span class="arrow">▶</span>
+        <div class="btn-box">
+          <a href="#" class="btn-arrow btn-arrow--primary"><span class="arrow">▶</span>
             お知らせを一覧で見る
           </a>
         </div>
@@ -168,7 +180,9 @@
           </a>
         </div>
     </section>
+    <img src="assets/img/common/wave_img_up.png" alt="波のデザイン">
     <section class="contact">
+      
       <div class="inner-1200">
         <div class="flex-1">
           <div class="contact-ttl">
@@ -190,8 +204,13 @@
         </div>
       </div>
       </div>
+      
     </section>
+      <img src="assets/img/common/wave_img_down.png" alt="波のデザイン">
   </main>
+
+  <!-- トップに戻るボタン -->
+  <button id="to-top">↑</button>
 
   <!-- フッター -->
   <footer id="footer">
