@@ -1,90 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="utf-8">
-  <title>瀬戸内中央汽船</title>
-  <link rel="stylesheet" href="css/styles.css">
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>コーポレートサイト</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
-<style>
-  
-</style>
+
 <body>
-  <header class="site-header">
-    <h1 class="logo">瀬戸内中央汽船株式会社</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">お知らせ</a></li>
-        <li><a href="#">会社概要</a></li>
-        <li><a href="#">事業内容</a></li>
-        <li><a href="#">船舶情報</a></li>
-        <li><a href="#">船員募集</a></li>
-        <li><a href="#">お問い合わせ</a></li>
-      </ul>
-    </nav>
+  <!-- ヘッダー -->
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#"><img src="assets/img/common/logo.png" alt="Company Logo"></a>
+      </div>
+
+      <nav id="menubar">
+        <ul>
+          <li><a href="#">トップ</a></li>
+          <li><a href="#">会社案内</a></li>
+          <li><a href="#">事業内容</a></li>
+          <li><a href="#">採用情報</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <div class="hamburger">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="sp-menu">
+          <ul>
+            <li><a href="#">トップ</a></li>
+            <li><a href="#">会社案内</a></li>
+            <li><a href="#">事業内容</a></li>
+            <li><a href="#">採用情報</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <h2>日本の海をつなぐ<br>エネルギーを運ぶ</h2>
-    </section>
 
-    <section class="intro">
-      <p class="">私たちは、国内の港と港を結んで産業基礎資材である石油等を運んでいます。常に安全と環境保全を考え、人にやさしく地球にやさしく、大切なエネルギーを大切に運び続けます。</p>
-      <a href="#" class="btn">会社概要を見る</a>
-    </section>
+  <!-- メインビジュアル -->
+  <section class="mv">
+    <div class="mv-wrap">
+    <img src="assets/img/common/mv_img-pc.jpg" alt="トップ画像">
+    <h2>日本の海をつなぐ<br>エネルギーを運ぶ</h2>
+    </div>
+  </section>
 
-    <section class="business">
-      <h3>事業内容</h3>
-      <p>当社のメイン業務は、石油製品、ケミカル製品のタンカー輸送です。時代にマッチした船種・船型の運行により、高度な品質管理と安全で効率の高い輸送を実現しています。</p>
-      <a href="#" class="btn">事業内容を見る</a>
-    </section>
-
-    <section class="recruit">
-      <h3>船員募集</h3>
-      <p>エネルギーの源を海を通じて届ける大切な仕事です。将来を見据えた強い組織をつくる上で必要不可欠な人材を募集します。</p>
-      <a href="#" class="btn">船員募集を見る</a>
-    </section>
-
-    <section class="ship">
-      <h3>船舶情報</h3>
-      <ul>
-        <li>3,778 トン</li>
-        <li>4999D/W 型の限定近海（非国際）</li>
-        <li>白油兼ケミカルタンカー</li>
-      </ul>
-      <a href="#" class="btn">船舶情報を見る</a>
-    </section>
+  <!-- コンテンツ例 -->
+  <main id="main">
 
     <section class="news">
-      <h3>お知らせ</h3>
-      <ul>
-        <li>2025/06/24 求人（船員）のご案内</li>
-        <li>2020/05/11 弊社事務所を移転いたしました</li>
-        <li>2010/06/01 弊社事務所を移転致しました</li>
-      </ul>
-      <a href="#" class="btn">お知らせを一覧で見る</a>
+      <div class="inner-1000">
+        <div class="table-wrapper">
+        <h2>お知らせ</h2>
+        <ul>
+          <li>
+            <span class="date">2025/09/13</span>
+            <a href="#">新しいコーポレートサイトを公開しました。</a>
+          </li>
+          <li>
+            <span class="date">2025/09/01</span>
+            <a href="#">夏季休業のお知らせ</a>
+          </li>
+          <li>
+            <span class="date">2025/08/20</span>
+            <a href="#">採用情報を更新しました。</a>
+          </li>
+        </ul>
+
+        <!-- 一覧ボタン -->
+        <div class="news-btn">
+          <a href="/news.html" class="btn-arrow"> <span class="arrow">▶</span>
+            お知らせを一覧で見る
+           
+          </a>
+        </div>
+      </div>
+      </div>
     </section>
 
+    <section class="company">
+      <div class="inner-1000">
+        <h2>会社概要</h2>
+        <p>ここに会社紹介文が入ります。</p>
+      </div>
+    </section>
+    <section class="business">
+      <div class="inner-1000">
+      <h2>事業内容</h2>
+      <p>ここに事業内容を紹介します。</p>
+      </div>
+    </section>
+    <section class="tanker">
+      <div class="inner-1000">
+      <h2>船舶情報</h2>
+      <p>船舶情報</p>
+      </div>
+    </section>
+    <section class="recruit">
+      <div class="inner-1000">
+      <h2>船員募集</h2>
+      <p>船員募集</p>
+      </div>
+    </section>
     <section class="contact">
-      <h3>お問い合わせ</h3>
-      <p>TEL 083-267-6660　FAX 083-267-6664</p>
-      <address>山口県下関市大和町1丁目16番1号 下関漁港ビル211号</address>
+      <div class="inner-1000">
+      <h2>お問い合わせ</h2>
+      <p>お問い合わせ</p>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <nav>
-      <ul>
-        <li><a href="#">サイトマップ</a></li>
-        <li><a href="#">免責事項</a></li>
-        <li><a href="#">プライバシーポリシー</a></li>
-        <li><a href="#">アクセスマップ</a></li>
-      </ul>
-    </nav>
-    <small>Copyright(c) 2025 SETOUCHI CHUO KISEN CO .,LTD. All Rights Reserved.</small>
+  <!-- フッター -->
+  <footer id="footer">
+    <div class="inner-600">
+    <div class="footer-logo">
+      <img src="assets/img/common/logo.png" alt="Company Logo">
+    </div>
+
+    <div class="footer-nav">
+      <a href="#">会社概要</a>
+      <a href="#">事業内容</a>
+      <a href="#">採用情報</a>
+      <a href="#">お問い合わせ</a>
+    </div>
+
+    <div class="footer-info">
+      <a href="#">サイトマップ</a>
+      <a href="#">免責事項</a>
+      <a href="#">プライバシーポリシー</a>
+      <a href="#">アクセスマップ</a>
+      <a href="#">関連リンク</a>
+    </div>
+</div>
+    <div class="copy-right">&copy; 2025 Company Name. All Rights Reserved.</div>
   </footer>
+
+
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

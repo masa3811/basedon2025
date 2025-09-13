@@ -1,125 +1,71 @@
-// JavaScript Document
+//headerスクロールしたら背景色変化
+const header = document.querySelector('header');
 
- // スクロールでヘッダー固定＆白背景に変更
- const header = document.querySelector('header');
- const scrollposition = 100; 
- 
- window.addEventListener('scroll', () => {
-   if (window.scrollY > scrollposition) {
-     header.classList.add('fixed');
-   } else {
-     header.classList.remove('fixed');
-   }
- });
-
-
-/* === リンクscroll === */
-$(function() {
-    var headerHeight=$("#header").height();
-    var urlHash = location.hash;
-    if(urlHash) { // 別ページからの遷移時にヘッダーの高さ分アンカーを下げる
-        $('body,html').stop().scrollTop(0);
-        setTimeout(function(){
-            var target = $(urlHash);
-            var position = target.offset().top - headerHeight;
-            $('body,html').stop().animate({scrollTop:position}, 400);
-        }, 100);
-    }
-    // #で始まるアンカーをクリックした場合に処理
-    $('a').click(function() {
-        var speed = 400; // ミリ秒
-        var href = $(this).attr('href'); // アンカーの値取得
-        var target = $(href == '#' || href == '' ? 'html' : href); // 移動先を取得
-        var position = target.offset().top - headerHeight; // 移動先を数値で取得+ヘッダーの高さ分下げる
-        $('body,html').animate({ scrollTop: position }, speed, 'swing'); // スムーススクロール
-        return false;
-    });
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) { // 50px以上スクロールしたら
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
 });
 
-    //ハンバーガーメニュー
-    $(document).ready(function () {
-      // 初期状態でアコーディオンの内容はすべて非表示にする
-      $('.accordion-content').hide();
-    
-      // ハンバーガーメニュー開閉
-      $('#hamburger .icon').on('click', function () {
-        let isOpen = $('#hamburger-nav').css('display') === 'block'; // displayプロパティを確認
-        
-        if (!isOpen) {
-          // メニューを表示 (最初に display: none; から display: flex; に変更)
-          $('#hamburger-nav').css('display', 'block').hide().slideDown(500);
-          $('.hamburger-icon.open').fadeOut(150); // 開いたアイコンをフェードアウト
-          setTimeout(() => {
-            $('.hamburger-icon.close').fadeIn(150); // 閉じたアイコンをフェードイン
-          }, 150);
-        } else {
-          // メニューを非表示
-          $('#hamburger-nav').slideUp(500, function () {
-            $(this).css('display', 'none'); // メニューを非表示
-          });
-          $('.hamburger-icon.close').fadeOut(150); // 閉じたアイコンをフェードアウト
-          setTimeout(() => {
-            $('.hamburger-icon.open').fadeIn(150); // 開いたアイコンをフェードイン
-          }, 150);
-        }
-      });
-    
-      // アコーディオン開閉
-      $('.accordion-header').on('click', function () {
-        const parent = $(this).closest('.accordion-item');
-        
-        // クリックしたアコーディオン項目をトグル（開く/閉じる）
-        parent.toggleClass('active');
-        parent.find('.accordion-content').stop(true, true).slideToggle(300);
-      });
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+  if (window.scrollY > 50) { // 50px 以上スクロールしたら
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+
+//ハンバーガーメニュー
+const menuToggle = document.getElementById('menu-toggle');
+const menuIcon = document.querySelector('.menu-icon');
+const spMenu = document.querySelector('.sp-menu');
+const spMenuItems = spMenu.querySelectorAll('li');
+
+menuToggle.addEventListener('change', () => {
+  // ハンバーガーアイコンのアニメーション
+  menuIcon.classList.toggle('open', menuToggle.checked);
+
+  if (menuToggle.checked) {
+    // メニューの高さを動的に取得
+    const ul = spMenu.querySelector('ul');
+    const height = ul.scrollHeight;
+    spMenu.style.maxHeight = height + 'px';
+
+    // フェードインアニメーション
+    spMenuItems.forEach((item, index) => {
+      item.style.transitionDelay = `${index * 0.1}s`;
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
     });
-    
+  } else {
+    spMenu.style.maxHeight = '0';
 
- 
-
-// * === タブ  ===
-document.querySelectorAll(".tab").forEach(tab => {
-    tab.addEventListener("click", () => {
-      const index = tab.getAttribute("data-index");
-  
-      // タブ切り替え
-      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
-  
-      // コンテンツ切り替え
-      document.querySelectorAll(".content").forEach((c, i) => {
-        c.classList.toggle("show", i == index);
-      });
+    // フェードアウトアニメーション
+    spMenuItems.forEach((item) => {
+      item.style.transitionDelay = `0s`;
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(-10px)';
     });
-  });
-  
-  $(function () {
-    var tabs = $(".tab"); 
-    $(".tab").on("click", function () { 
-      $(".active").removeClass("active"); 
-      $(this).addClass("active"); 
-      var index = tabs.index(this);
-      $(".content").removeClass("show").eq(index).addClass("show"); 
-    });
-  });
+  }
+});
 
+function adjustMvTextPosition() {
+    const mvWrap = document.querySelector('.mv-wrap');
+    const h2 = mvWrap.querySelector('h2');
+    const mvHeight = mvWrap.offsetHeight;
+    const h2Height = h2.offsetHeight;
 
+    // 縦中央より少し上に配置
+    const top = (mvHeight - h2Height) * 0.4; 
+    h2.style.top = `${top}px`;
+}
 
-
-  $(function () {
-    var tabs = $(".tab");
-    var contents = $(".content");
-
-    tabs.on("click", function () {
-      // タブの見た目切り替え
-      tabs.removeClass("active");
-      $(this).addClass("active");
-
-      // 該当のコンテンツだけ表示
-      var index = $(this).index();
-      contents.removeClass("show").eq(index).addClass("show");
-    });
-  });
-
-
+// 初回実行
+window.addEventListener('load', adjustMvTextPosition);
+// 画面リサイズ時も再計算
+window.addEventListener('resize', adjustMvTextPosition);
 
