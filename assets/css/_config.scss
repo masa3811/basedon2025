@@ -94,7 +94,32 @@ td {
 *::after {
   box-sizing: border-box;
 }
-
+.flex-1 {
+  display: flex;
+  align-items: center;
+  .img-box {
+    width: 70%;
+  }
+  .text-box {
+    width: 30%;
+  }
+  .btn-box {
+    background-color: $white;
+    a {
+       color: $primary-color;
+    }
+  }
+}
+.flex-2 {
+  display: flex;
+  align-items: center;
+  .img-box {
+    width: 30%;
+  }
+  .text-box {
+    width: 70%;
+  }
+}
 button {
   background: none;
   border: none;
@@ -419,13 +444,3 @@ table.table {
   }
 }
 
-// 横スクロール可能に
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-
-  table.table {
-    min-width: 600px;
-  }
-}

@@ -74,6 +74,34 @@ td {
   box-sizing: border-box;
 }
 
+.flex-1 {
+  display: flex;
+  align-items: center;
+}
+.flex-1 .img-box {
+  width: 70%;
+}
+.flex-1 .text-box {
+  width: 30%;
+}
+.flex-1 .btn-box {
+  background-color: #fff;
+}
+.flex-1 .btn-box a {
+  color: #1f426a;
+}
+
+.flex-2 {
+  display: flex;
+  align-items: center;
+}
+.flex-2 .img-box {
+  width: 30%;
+}
+.flex-2 .text-box {
+  width: 70%;
+}
+
 button {
   background: none;
   border: none;
@@ -362,15 +390,6 @@ table.table td {
   font-size: 16px;
 }
 
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.table-wrapper table.table {
-  min-width: 600px;
-}
-
 header {
   position: fixed;
   top: 0;
@@ -553,6 +572,18 @@ section.contact {
   background-color: #1f426a;
 }
 
+.table-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news-ttl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  max-width: 230px;
+}
+
 .news {
   padding: 30px 20px;
 }
@@ -562,6 +593,7 @@ section.contact {
   color: #1f426a;
 }
 .news ul {
+  width: 75%;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -573,8 +605,8 @@ section.contact {
 }
 .news ul li .date {
   display: inline-block;
-  width: 100px;
-  font-size: 14px;
+  width: 170px;
+  font-size: 16px;
   color: #999;
 }
 .news ul li a {
@@ -582,15 +614,21 @@ section.contact {
   text-decoration: none;
   color: #333;
   transition: color 0.3s;
+  font-size: 16px;
+  display: block;
+  width: 70%;
+  padding-right: 20px;
 }
 .news ul li a::after {
   content: "▶";
-  display: inline-block;
-  margin-left: 6px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   transition: transform 0.3s ease;
 }
 .news ul li a:hover::after {
-  transform: translateX(5px);
+  transform: translateY(-50%) translateX(5px);
 }
 .news ul li a:hover {
   color: #007BFF;
