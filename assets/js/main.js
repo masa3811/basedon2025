@@ -85,3 +85,16 @@ toTopBtn.addEventListener('click', () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const currentUrl = window.location.pathname; 
+  const menuLinks = document.querySelectorAll("#menubar ul li a");
+
+  menuLinks.forEach(link => {
+    if (link.getAttribute("href") === currentUrl) {
+      link.classList.add("is-active");
+    }
+  });
+});
+
+
+
