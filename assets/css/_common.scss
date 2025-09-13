@@ -52,14 +52,27 @@ header .logo img {
 
     ul {
         display: flex;
+        align-items: center;
         gap: 20px; // リンク間の余白
         margin: 0; // デフォルトマージンをリセット
         padding: 0; // デフォルトパディングをリセット
         list-style: none;
+        li {
+            border-radius: 5px;
+        }
 
         li a {
-            color: #fff;
+            display: block;
+            padding: 10px;
+            color: cfg.$primary-color;
             font-weight: bold;
+        }
+    }
+    .contact-btn {
+        background-color: cfg.$primary-color;
+        a {
+              color:cfg.$white;
+
         }
     }
 }
