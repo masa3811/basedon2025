@@ -3,6 +3,7 @@
 // カラー
 $primary-color: #1f426a;
 $secondary-color: #029fd4;
+$accent-color: #f84a2a;
 $text-color: #333;
 $white: #fff;
 $font-family: 'Noto Sans JP', sans-serif;
@@ -94,31 +95,8 @@ td {
 *::after {
   box-sizing: border-box;
 }
-.flex-1 {
+.flex-1{
   display: flex;
-  align-items: center;
-  .img-box {
-    width: 70%;
-  }
-  .text-box {
-    width: 30%;
-  }
-  .btn-box {
-    background-color: $white;
-    a {
-       color: $primary-color;
-    }
-  }
-}
-.flex-2 {
-  display: flex;
-  align-items: center;
-  .img-box {
-    width: 30%;
-  }
-  .text-box {
-    width: 70%;
-  }
 }
 button {
   background: none;
