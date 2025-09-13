@@ -558,7 +558,7 @@ section.recruit h2 {
 section.company,
 section.tanker,
 section.contact {
-  padding: 60px 20px;
+  padding: 60px 0;
   color: #fff;
   background-color: #1f426a;
 }
@@ -734,15 +734,13 @@ section.contact {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 80px;
   margin-top: 50px;
 }
 .business .flex-1 .img-box {
-  width: 55%;
-  max-width: 500px;
+  width: 60%;
 }
 .business .flex-1 .text-box {
-  width: 27%;
+  width: 40%;
 }
 .business .flex-1 .text-box h2 {
   font-size: 40px;
@@ -791,6 +789,14 @@ section.contact {
   font-size: 20px;
   padding: 10px 40px;
   transform: scale(1.2);
+}
+
+.wave-up {
+  margin-bottom: -5px;
+}
+
+.wave-down {
+  margin-top: -5px;
 }
 
 * {

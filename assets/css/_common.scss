@@ -238,7 +238,7 @@ section.recruit {
 section.company,
 section.tanker,
 section.contact {
-    padding: 60px 20px;
+    padding: 60px 0;
     color: cfg.$white;
     background-color: cfg.$primary-color;
 }
@@ -465,16 +465,14 @@ section.contact {
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
-        gap: 80px;
         margin-top: 50px;
 
         .img-box {
-            width: 55%;
-            max-width: 500px;
+            width: 60%;
         }
 
         .text-box {
-            width: 27%;
+            width: 40%;
 
             h2 {
                 font-size: 40px;
@@ -551,4 +549,10 @@ section.contact {
             transform: scale(1.2);
         }
     }
+}
+.wave-up {
+    margin-bottom: -5px;
+}
+.wave-down {
+    margin-top: -5px;
 }
