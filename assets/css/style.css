@@ -570,6 +570,7 @@ section.contact {
   padding: 60px 0;
   color: #fff;
   background-color: #1f426a;
+  margin-top: 100px;
 }
 
 /* トップに戻る矢印 */
@@ -625,7 +626,8 @@ section.contact {
   color: #1f426a;
 }
 .btn-arrow--secondary:hover {
-  background-color: rgb(229.5, 229.5, 229.5);
+  background-color: #fff;
+  opacity: 0.9;
 }
 
 .btn-arrow--accent {
@@ -691,11 +693,10 @@ section.contact {
 .news .news-list li a:hover {
   color: #007BFF;
 }
-
-.btn-box {
-  text-align: left;
+.news .btn-box {
+  text-align: center;
 }
-.btn-box a {
+.news .btn-box a {
   font-size: 20px;
   padding: 20px;
 }
@@ -724,7 +725,6 @@ section.contact {
 .company .flex-1 .img-box,
 .tanker .flex-1 .img-box {
   width: 60%;
-  max-width: 600px;
 }
 .company .flex-1 .text-box,
 .tanker .flex-1 .text-box {
@@ -791,10 +791,10 @@ section.contact {
   font-size: 35px;
   white-space: nowrap;
 }
-.contact .btn-box {
+.contact .flex-1 .btn-box {
   text-align: left;
 }
-.contact .btn-box a {
+.contact .flex-1 .btn-box a {
   font-size: 20px;
   padding: 10px 40px;
   transform: scale(1.2);
