@@ -10,7 +10,7 @@ header {
     z-index: 1000; // メインビジュアルより前面
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px;
     transition: background-color 0.3s ease;
 
     // スマホ・タブレット対応
@@ -460,7 +460,8 @@ section.contact {
         margin-top: 50px;
 
         .img-box {
-            width: 60%;
+            width: calc(60% - 50px);
+            margin-right: 50px;
         }
 
         .text-box {
@@ -492,7 +493,8 @@ section.contact {
         margin-top: 50px;
 
         .img-box {
-            width: 60%;
+            width: calc(60% - 50px);
+            margin-left: 50px;
         }
 
         .text-box {
