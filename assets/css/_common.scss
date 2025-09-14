@@ -237,7 +237,7 @@ main {
 section.company,
 section.business,
 section.recruit {
-    padding: 60px 20px;
+    padding: 60px 0;
     max-width: cfg.$max-width;
     margin: 0 auto;
 
@@ -248,12 +248,16 @@ section.recruit {
 }
 
 section.company,
-section.tanker,
-section.contact {
+section.tanker {
     padding: 60px 0;
     color: cfg.$white;
     background-color: cfg.$primary-color;
     margin-top: 100px;
+}
+section.contact {
+    padding: 60px 0;
+    color: cfg.$white;
+    background-color: cfg.$primary-color;
 }
 
 /* トップに戻る矢印 */
