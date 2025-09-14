@@ -476,8 +476,14 @@ footer .footer-in .footer-info {
 }
 footer .footer-in .footer-nav a,
 footer .footer-in .footer-info a {
-  font-size: 14px;
-  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer .footer-in .footer-nav a:hover,
+footer .footer-in .footer-info a:hover {
+  color: #000;
+  opacity: 0.8;
 }
 footer .footer-in .footer-nav p,
 footer .footer-in .footer-info p {
@@ -623,7 +629,7 @@ section.contact {
   color: #fff;
 }
 .btn-arrow--primary:hover {
-  background-color: rgb(19.4598540146, 41.4306569343, 66.5401459854);
+  opacity: 0.9;
 }
 
 .btn-arrow--secondary {
@@ -645,7 +651,7 @@ section.contact {
 
 .table-wrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 100px;
 }
 
@@ -724,7 +730,7 @@ section.contact {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 80px;
+  flex-wrap: nowrap;
   margin-top: 50px;
 }
 .company .flex-1 .img-box,

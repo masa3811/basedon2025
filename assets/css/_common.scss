@@ -129,8 +129,14 @@ footer {
             flex-wrap: wrap;
 
             a {
-                font-size: 14px;
-                padding: 10px;
+                color: #333;
+                text-decoration: none;
+                transition: 0.3s; 
+
+                &:hover {
+                    color: #000; 
+                    opacity: 0.8; 
+                }
             }
 
             p {
@@ -254,6 +260,7 @@ section.tanker {
     background-color: cfg.$primary-color;
     margin-top: 100px;
 }
+
 section.contact {
     padding: 60px 0;
     color: cfg.$white;
@@ -310,7 +317,7 @@ section.contact {
     color: cfg.$white;
 
     &:hover {
-        background-color: darken(cfg.$primary-color, 10%);
+        opacity: 0.9;
     }
 }
 
@@ -340,7 +347,7 @@ section.contact {
 
 .table-wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 100px;
 }
 
@@ -405,14 +412,14 @@ section.contact {
     }
 
 
-.btn-box {
-    text-align: center;
+    .btn-box {
+        text-align: center;
 
-    a {
-        font-size: 20px;
-        padding: 20px;
+        a {
+            font-size: 20px;
+            padding: 20px;
+        }
     }
-}
 }
 
 
@@ -449,7 +456,7 @@ section.contact {
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
-        gap: 80px;
+        flex-wrap: nowrap;
         margin-top: 50px;
 
         .img-box {
