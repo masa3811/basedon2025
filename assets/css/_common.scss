@@ -31,6 +31,10 @@ header {
       top: 25px;
     }
 
+    @include cfg.sp {
+      width: 60%;
+    }
+
     a {
       display: block;
     }
@@ -99,88 +103,90 @@ header {
   // ==========================
   // ハンバーガーメニュー（SP）
   // ==========================
- .hamburger {
-  .menu-icon {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    top: 22px;
-    right: 16px;
+  @include cfg.sp {
+    .hamburger {
+      .menu-icon {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: absolute;
+        top: 22px;
+        right: 16px;
 
-    span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: cfg.$primary-color;
-      margin: 4px 0;
-      transition: all cfg.$transition-speed;
-      transform-origin: center;
-    }
-  }
-
-  // ハンバーガー → ✖ のアニメーション
-  input[type="checkbox"]:checked + .menu-icon span:nth-child(1) {
-    transform: translateY(12px) rotate(45deg);
-  }
-
-  input[type="checkbox"]:checked + .menu-icon span:nth-child(2) {
-    opacity: 0;
-  }
-
-  input[type="checkbox"]:checked + .menu-icon span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  // メニュー
-  .sp-menu {
-    position: fixed;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    background-color: cfg.$primary-color;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height cfg.$transition-speed ease-in-out;
-    z-index: 999;
-
-    ul {
-      list-style: none;
-
-      li {
-        border-bottom: 1px solid #fff;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: opacity 0.3s ease, transform 0.3s ease;
-
-        a {
+        span {
           display: block;
-          padding: 10px;
-          color: #fff;
-          text-decoration: none;
+          width: 25px;
+          height: 3px;
+          background: cfg.$primary-color;
+          margin: 4px 0;
+          transition: all cfg.$transition-speed;
+          transform-origin: center;
+        }
+      }
 
-          &:hover {
-            opacity: 0.8;
+      // ハンバーガー → ✖ のアニメーション
+      input[type="checkbox"]:checked+.menu-icon span:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+      }
+
+      input[type="checkbox"]:checked+.menu-icon span:nth-child(2) {
+        opacity: 0;
+      }
+
+      input[type="checkbox"]:checked+.menu-icon span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      // メニュー
+      .sp-menu {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        background-color: cfg.$primary-color;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height cfg.$transition-speed ease-in-out;
+        z-index: 999;
+
+        ul {
+          list-style: none;
+
+          li {
+            border-bottom: 1px solid #fff;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+
+            a {
+              display: block;
+              padding: 10px;
+              color: #fff;
+              text-decoration: none;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
           }
         }
       }
+
+      // チェック時にメニュー展開
+      input[type="checkbox"]:checked~.sp-menu {
+        max-height: 500px;
+      }
+
+      input[type="checkbox"]:checked~.sp-menu li {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
     }
   }
-
-  // チェック時にメニュー展開
-  input[type="checkbox"]:checked ~ .sp-menu {
-    max-height: 500px;
-  }
-
-  input[type="checkbox"]:checked ~ .sp-menu li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-    input[type="checkbox"] {
-    display: none;
-  }
-}
-
 
   // ==========================
   // SPレスポンシブ（共通まとめ）
@@ -224,12 +230,17 @@ header {
 footer {
   color: #fff;
   text-align: center;
-  padding: 40px 0 0;
+  margin-top: 80px;
 
   .footer-logo img {
     width: auto;
     max-width: 560px;
     margin: 0 auto 20px;
+
+    @include cfg.ssp {
+      width: 350px;
+
+    }
   }
 
   .footer-in {
@@ -276,7 +287,12 @@ footer {
     margin-top: 10px;
     background-color: cfg.$secondary-color;
     padding: 20px 0;
+
+    @include cfg.ssp {
+      font-size: 13px;
+    }
   }
+
 }
 
 // ==========================
@@ -314,14 +330,14 @@ footer {
       box-sizing: border-box;
 
       text-shadow:
-        4px 4px 4px cfg.$primary-color,
-        -4px 4px 4px cfg.$primary-color,
-        4px -4px 4px cfg.$primary-color,
-        -4px -4px 4px cfg.$primary-color,
-        0 4px 4px cfg.$primary-color,
-        0 -4px 4px cfg.$primary-color,
-        4px 0 4px cfg.$primary-color,
-        -4px 0 4px cfg.$primary-color;
+        6px 6px 0 cfg.$primary-color,
+        -6px 6px 0 cfg.$primary-color,
+        6px -6px 0 cfg.$primary-color,
+        -6px -6px 0 cfg.$primary-color,
+        0 6px 0 cfg.$primary-color,
+        0 -6px 0 cfg.$primary-color,
+        6px 0 0 cfg.$primary-color,
+        -6px 0 0 cfg.$primary-color;
 
       animation: textOutlineAnime 2s forwards;
 
@@ -372,6 +388,7 @@ section.tanker {
     margin: 50px auto 0;
   }
 
+
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -390,7 +407,11 @@ section.contact {
   background-color: cfg.$primary-color;
 }
 
-
+section.business {
+  @include cfg.ssp {
+    padding: 0;
+  }
+}
 
 
 // ==========================
@@ -402,6 +423,16 @@ section.contact {
   display: flex;
   justify-content: flex-start;
   gap: 100px;
+
+  @include cfg.sp {
+    align-items: center;
+    gap: 10px;
+  }
+
+
+  @include cfg.sp {
+    flex-direction: column;
+  }
 }
 
 .news {
@@ -411,8 +442,16 @@ section.contact {
     display: flex;
     flex-direction: column;
 
+    @include cfg.sp {
+      align-items: center;
+    }
+
     img {
       width: 230px;
+
+      @include cfg.ssp {
+        width: 150px;
+      }
     }
 
     h2 {
@@ -424,6 +463,10 @@ section.contact {
 
   .news-list {
     width: 55%;
+
+    @include cfg.sp {
+      width: 100%;
+    }
 
     li {
       display: flex;
@@ -437,6 +480,10 @@ section.contact {
         font-size: 14px;
         color: #999;
         flex-shrink: 0;
+
+        @include cfg.sp {
+          width: 100px;
+        }
       }
 
       a {
@@ -489,8 +536,17 @@ section.contact {
       justify-content: space-between;
     }
 
+    @include cfg.sp {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .img-box {
       width: 60%;
+
+      @include cfg.ssp {
+        width: 100%;
+      }
 
       img {
         display: block;
@@ -500,6 +556,10 @@ section.contact {
 
     .text-box {
       width: 40%;
+
+      @include cfg.sp {
+        width: 90%;
+      }
 
       &--in {
         width: 80%;
@@ -527,6 +587,10 @@ section.contact {
 
       .btn-box {
         margin-top: auto;
+
+        @include cfg.sp {
+          margin: 30px auto;
+        }
       }
     }
   }
@@ -544,9 +608,23 @@ section.contact {
       justify-content: space-between;
     }
 
+    @include cfg.sp {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .img-box {
       width: 60%;
       margin-left: 50px;
+
+      @include cfg.ssp {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      @include cfg.sp {
+        order: 1;
+      }
 
       img {
         display: block;
@@ -563,15 +641,17 @@ section.contact {
         margin-left: 0;
       }
 
+      @include cfg.sp {
+        width: 90%;
+        order: 2;
+      }
+
       &--in {
         width: 100%;
         min-height: 26.04vw;
         display: flex;
         flex-direction: column;
       }
-
-
-
 
       h2 {
         font-size: 40px;
@@ -592,6 +672,10 @@ section.contact {
 
     .btn-box {
       margin-top: auto;
+
+      @include cfg.sp {
+        margin: 30px auto 0;
+      }
     }
   }
 }
@@ -617,7 +701,13 @@ section.contact {
 
   .btn-box {
     text-align: right;
+
+
+    @include cfg.ssp {
+      text-align: center;
+    }
   }
+
 }
 
 // お問い合わせ
@@ -626,12 +716,26 @@ section.contact {
     display: flex;
     justify-content: center;
 
+    @include cfg.sp {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .contact-ttl {
       display: flex;
       flex-wrap: wrap;
       width: 30%;
       padding-right: 50px;
       border-right: 1px solid #ccc;
+
+      @include cfg.sp {
+        width: 50%;
+      }
+
+      @include cfg.ssp {
+        width: 90%;
+        border-bottom: 1px solid #ccc;
+      }
 
       h2 {
         font-size: 35px;
@@ -643,12 +747,21 @@ section.contact {
 
         }
 
+        @include cfg.ssp {
+          font-size: 28px;
+        }
+
       }
     }
 
     .text-box {
       width: 50%;
       padding-left: 50px;
+
+      @include cfg.sp {
+        width: 80%;
+        padding-left: 0;
+      }
 
       .flex-1 {
         display: flex;
@@ -665,10 +778,19 @@ section.contact {
         @include cfg.tab {
           font-size: 22px;
         }
+
+        @include cfg.sp {
+          font-size: 30px;
+          margin-top: 10px;
+        }
       }
 
       h3:nth-of-type(2) {
         margin-left: 20px;
+
+        @include cfg.sp {
+          margin-left: 0;
+        }
       }
 
     }
@@ -678,6 +800,11 @@ section.contact {
   .btn-box {
     text-align: left;
     margin-top: 30px;
+
+    @include cfg.sp {
+      text-align: center;
+      margin-top: 50px;
+    }
 
     a {
       font-size: 20px;
