@@ -47,9 +47,9 @@ header {
 
     @include cfg.ssp() {
       width: 80%;
-      padding-left: 0px;
+      padding-left: 0 !important;
     }
-    
+
 
     a {
       display: block;
@@ -67,157 +67,158 @@ header {
   }
 }
 
-  // グローバルナビ（PC）
-  #menubar {
-    width: 70%;
+// グローバルナビ（PC）
+#menubar {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 100px 0 0;
+
+  @include cfg.pc() {
+    padding: 30px 10px 0 0;
+  }
+
+  @include cfg.sp() {
+    padding: 30px 20px 0 0;
+  }
+
+  ul {
     display: flex;
-    justify-content: flex-end;
-    padding: 30px 100px 0 0;
 
-    @include cfg.pc() {
-      padding: 30px 10px 0 0;
-    }
+    li {
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 20px 20px 10px;
+        color: cfg.$primary-color;
+        font-weight: bold;
+        text-decoration: none;
 
-    ul {
-      display: flex;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 5px;
+          background-color: cfg.$accent-color;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease;
+        }
 
-      li {
-        a {
-          position: relative;
-          display: block;
-          padding: 10px 20px 20px 10px;
-          color: cfg.$primary-color;
-          font-weight: bold;
-          text-decoration: none;
-
-          &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 5px;
-            background-color: cfg.$accent-color;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-          }
-
-          &.is-active::after {
-            transform: scaleX(1);
-          }
+        &.is-active::after {
+          transform: scaleX(1);
         }
       }
     }
-
-    @include cfg.sp() {
-      padding: 30px 20px 0 0;
-    }
   }
 
+}
 
-  .header-contact {
-    margin-left: 20px;
-  }
 
-  .hamburger {
+.header-contact {
+  margin-left: 20px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@include cfg.tab() {
+  #menubar {
     display: none;
   }
-
-  @include cfg.tab() {
-    #menubar {
-      display: none;
-    }
-  }
+}
 
 
-  // ハンバーガーメニュー（SP）
-  @include cfg.tab() {
-    .hamburger {
+// ハンバーガーメニュー（SP）
+@include cfg.tab() {
+  .hamburger {
+    display: flex;
+
+    .menu-icon {
       display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      top: 22px;
+      right: 16px;
 
-      .menu-icon {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: absolute;
-        top: 22px;
-        right: 16px;
-
-        span {
-          display: block;
-          width: 25px;
-          height: 3px;
-          background: cfg.$primary-color;
-          margin: 4px 0;
-          transition: all cfg.$transition-speed;
-          transform-origin: center;
-        }
+      span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: cfg.$primary-color;
+        margin: 4px 0;
+        transition: all cfg.$transition-speed;
+        transform-origin: center;
       }
+    }
 
-      // ハンバーガー → ✖ のアニメーション
-      input[type="checkbox"]:checked+.menu-icon span:nth-child(1) {
-        transform: translateY(12px) rotate(45deg);
-      }
+    // ハンバーガー → ✖ のアニメーション
+    input[type="checkbox"]:checked+.menu-icon span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
 
-      input[type="checkbox"]:checked+.menu-icon span:nth-child(2) {
-        opacity: 0;
-      }
+    input[type="checkbox"]:checked+.menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
 
-      input[type="checkbox"]:checked+.menu-icon span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
+    input[type="checkbox"]:checked+.menu-icon span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
 
-      // メニュー
-      .sp-menu {
-        position: fixed;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        background-color: cfg.$primary-color;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height cfg.$transition-speed ease-in-out;
-        z-index: 999;
+    // メニュー
+    .sp-menu {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      background-color: cfg.$primary-color;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height cfg.$transition-speed ease-in-out;
+      z-index: 999;
 
-        ul {
-          list-style: none;
+      ul {
+        list-style: none;
 
-          li {
-            border-bottom: 1px solid #fff;
-            opacity: 0;
-            transform: translateY(-10px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
+        li {
+          border-bottom: 1px solid #fff;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
 
-            a {
-              display: block;
-              padding: 10px;
-              color: #fff;
-              text-decoration: none;
+          a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
 
-              &:hover {
-                opacity: 0.8;
-              }
+            &:hover {
+              opacity: 0.8;
             }
           }
         }
       }
+    }
 
-      // チェック時にメニュー展開
-      input[type="checkbox"]:checked~.sp-menu {
-        max-height: 500px;
-      }
+    // チェック時にメニュー展開
+    input[type="checkbox"]:checked~.sp-menu {
+      max-height: 500px;
+    }
 
-      input[type="checkbox"]:checked~.sp-menu li {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    input[type="checkbox"]:checked~.sp-menu li {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-      input[type="checkbox"] {
-        display: none;
-      }
+    input[type="checkbox"] {
+      display: none;
     }
   }
+}
 
 
 // company, tanker, business, recruit, contact も同様に統一
@@ -278,7 +279,7 @@ footer {
     font-size: 16px;
     margin-top: 10px;
     background-color: cfg.$secondary-color;
-    padding: 20px 0;
+    padding: 20px 10px;
   }
 }
 
@@ -374,6 +375,13 @@ section.contact {
   display: flex;
   justify-content: flex-start;
   gap: 100px;
+
+  @include cfg.ssp() {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
 }
 
 .news {
@@ -386,6 +394,10 @@ section.contact {
     width: 20%;
     max-width: 180px;
 
+    @include cfg.ssp() {
+      width: 60%;
+    }
+
     h2 {
       font-size: 30px;
       margin-top: 20px;
@@ -396,6 +408,10 @@ section.contact {
   .news-list {
     width: 65%;
 
+    @include cfg.ssp() {
+      width: 100%;
+    }
+
     li {
       display: flex;
       align-items: center;
@@ -403,11 +419,19 @@ section.contact {
       padding: 10px;
       border-bottom: 1px solid #ccc;
 
+      @include cfg.ssp() {
+        padding: 5px 0;
+      }
+
       .date {
         width: 140px;
         font-size: 14px;
         color: #999;
         flex-shrink: 0; // 固定幅を維持
+
+        @include cfg.ssp() {
+          width: 100px;
+        }
       }
 
       a {
@@ -561,7 +585,7 @@ section.contact {
       }
 
       &--in {
-        width: 70%;
+        width: 100%;
         min-height: 28vw;
         display: flex;
         flex-direction: column;
@@ -608,6 +632,9 @@ section.contact {
 .recruit {
   .img-box {
     text-align: center;
+        @include cfg.ssp() {
+     padding: 0 1em;
+    }
   }
 
   p {
@@ -618,6 +645,10 @@ section.contact {
   .btn-box {
     text-align: right;
     margin-top: 40px;
+
+    @include cfg.ssp() {
+      text-align: center;
+    }
   }
 
 }
@@ -637,12 +668,20 @@ section.contact {
       padding: 0 2em;
     }
 
+    @include cfg.tab() {
+      flex-direction: column;
+    }
+
     .contact-ttl {
       display: flex;
       flex-wrap: wrap;
       width: 30%;
       padding-right: 50px;
       border-right: 1px solid #ccc;
+
+      @include cfg.ssp() {
+        width: 100%;
+      }
 
       h2 {
         font-size: 30px;
@@ -653,8 +692,16 @@ section.contact {
     .text-box {
       width: 70%;
 
+      @include cfg.ssp() {
+        width: 100%;
+      }
+
       .flex-2 {
         display: flex;
+
+        @include cfg.ssp() {
+          flex-direction: column;
+        }
 
         h3 {
           font-size: 35px;
@@ -665,6 +712,10 @@ section.contact {
 
           &:last-of-type {
             margin-left: 20px;
+
+            @include cfg.ssp() {
+              margin-left: 0;
+            }
 
           }
         }
@@ -677,6 +728,10 @@ section.contact {
           font-size: 20px;
           padding: 10px 80px;
           margin-top: 30px;
+
+          @include cfg.ssp() {
+            padding: 10px;
+          }
         }
       }
     }
