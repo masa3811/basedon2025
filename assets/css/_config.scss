@@ -46,7 +46,7 @@ a {
   transition: all 0.3s ease;
 
   &:hover {
-    background-color: darken($primary-color, 10%);
+    opacity: 0.8;
   }
 }
 
@@ -95,9 +95,11 @@ td {
 *::after {
   box-sizing: border-box;
 }
-.flex-1{
+
+.flex-1 {
   display: flex;
 }
+
 button {
   background: none;
   border: none;
@@ -195,17 +197,36 @@ button {
   padding: 0 1em;
 }
 
+.inner-1600 {
+  width: min(100%, 1600px);
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+
 .w-100 {
   width: 100% !important;
   max-width: 100% !important;
+  margin: 0 auto;
+}
+
+.w-90 {
+  width: 90% !important;
+  max-width: 90% !important;
+  margin: 0 auto;
+
 }
 
 .w-80 {
   width: 80% !important;
+  max-width: 80% !important;
+  margin: 0 auto;
 }
 
 .w-50 {
   width: 50% !important;
+  max-width: 50% !important;
+  margin: 0 auto;
 }
 
 .relative {
@@ -220,49 +241,251 @@ button {
   display: inline-block;
 }
 
-/* === メディアクエリ === */
+/* === ブレークポイント === */
+
+/* === デバイス別ミックスイン === */
+@mixin sp {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width: 601px) and (max-width: 1025px) {
+    @content;
+  }
+}
+
+
+@mixin pc {
+  @media (min-width: 1026px) {
+    @content;
+  }
+}
+
+/* === デバイス別表示用クラス === */
 .sp-only,
 .tab-only,
 .pc-only {
   display: none;
 }
 
-/* スマホ用 */
-@media (max-width: 600px) {
-  .sp-only {
-    display: block;
-  }
-
+@media (max-width: 620px) {
+  .sp-only { display: block; }
   .tab-only,
-  .pc-only {
-    display: none;
-  }
+  .pc-only { display: none; }
 }
 
-/* タブレット用 */
-@media (min-width: 601px) and (max-width: 820px) {
-  .tab-only {
-    display: block;
-  }
-
+@media (min-width: 621px) and (max-width: 1023px) {
+  .tab-only { display: block; }
   .sp-only,
-  .pc-only {
-    display: none;
-  }
+  .pc-only { display: none; }
 }
 
-/* PC用 */
-@media (min-width: 1120px) {
-  .pc-only {
-    display: block;
-  }
-
+@media (min-width: 1024px) {
+  .pc-only { display: block; }
   .sp-only,
-  .tab-only {
-    display: none;
+  .tab-only { display: none; }
+}
+
+// ==========================
+// トップに戻るボタン
+// ==========================
+#to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  display: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+// ==========================
+// ボタン共通
+// ==========================
+.btn-box {
+  margin-top: 50px;
+}
+
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .arrow {
+    transform: translateX(5px);
+  }
+
+  &:active {
+    transform: translateY(1px);
   }
 }
 
+
+.btn-arrow--primary {
+  background-color: $primary-color;
+  color: $white !important;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-arrow--secondary {
+  background-color: $white;
+  color: $primary-color;
+
+  &:hover {
+    background-color: $white;
+    opacity: 0.8;
+  }
+}
+
+.btn-arrow--accent {
+  background-color: $accent-color;
+  color: $white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// サイズバリエーション
+.btn-arrow--large {
+  padding: 20px 60px;
+  font-size: 1.2rem;
+}
+
+.btn-arrow--small {
+  padding: 10px 25px;
+  font-size: 0.9rem;
+}
+
+// テーブル用カラー
+$table-bg: #fff;
+$table-border: #727171;
+$table-text: #333;
+
+// テーブル用フォント・サイズ
+$table-font-size: 16px;
+$table-line-height: 1.8;
+
+// テーブル用パディング
+$table-th-padding: 1em 0 1em 4em;
+$table-td-padding: 1em 0;
+
+/* ベース */
+table.table {
+  width: 100%;
+  text-align: left;
+  border-spacing: 10px;
+  background-color: $table-bg;
+
+  th {
+    padding: $table-th-padding;
+    border: 1px $table-border dotted;
+    border-width: 1px 0;
+    line-height: $table-line-height;
+    text-align: center;
+    vertical-align: top;
+    font-size: $table-font-size;
+    font-weight: normal;
+    width: 35%;
+
+    a {
+      text-decoration: none;
+      color: $table-text;
+    }
+  }
+
+  td {
+    padding: $table-td-padding;
+    border: 1px $table-border dotted;
+    border-width: 1px 0;
+    line-height: $table-line-height;
+    text-align: left;
+    vertical-align: middle;
+    background-color: $table-bg;
+    word-break: break-all;
+    font-size: $table-font-size;
+  }
+}
+
+/* ----------------------
+   データ用
+---------------------- */
+.table--data {
+  th {
+    background-color: $primary-color;
+    color: $white;
+  }
+
+  // 小画面は横スクロール
+  @media (max-width: 768px) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ----------------------
+   フォーム用
+---------------------- */
+.table--form {
+  th {
+    text-align: right;
+    vertical-align: middle;
+    background-color: #f9f9f9;
+  }
+
+  td {
+    background-color: $table-bg;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid $table-border;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  // スマホでは縦並び
+  @media (max-width: 768px) {
+
+    th,
+    td {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+
+    th {
+      margin-top: 10px;
+      background: none;
+    }
+  }
+}
 
 
 /* === フォントサイズ（レスポンシブ対応） === */
@@ -372,53 +595,3 @@ button {
     font-size: 2.5rem;
   }
 }
-
-// テーブル用カラー
-$table-bg: #fff;
-$table-border: #727171;
-$table-text: #333;
-
-// テーブル用フォント・サイズ
-$table-font-size: 16px;
-$table-line-height: 1.8;
-
-// テーブル用パディング
-$table-th-padding: 1em 0 1em 4em;
-$table-td-padding: 1em 0;
-
-table.table {
-  width: 100%;
-  text-align: left;
-  border-spacing: 10px;
-  background-color: $table-bg;
-
-  th {
-    padding: $table-th-padding;
-    border: 1px $table-border dotted;
-    border-width: 1px 0 1px 0;
-    line-height: $table-line-height;
-    text-align: center;
-    vertical-align: top;
-    font-size: $table-font-size;
-    font-weight: normal;
-    width: 35%;
-
-    a {
-      text-decoration: none;
-      color: $table-text;
-    }
-  }
-
-  td {
-    padding: $table-td-padding;
-    border: 1px $table-border dotted;
-    border-width: 1px 0 1px 0;
-    line-height: $table-line-height;
-    text-align: left;
-    vertical-align: middle;
-    background-color: $table-bg;
-    word-break: break-all;
-    font-size: $table-font-size;
-  }
-}
-
