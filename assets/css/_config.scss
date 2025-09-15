@@ -17,6 +17,9 @@ $header-height: 60px;
 $footer-height: 200px;
 $max-width: 1920px;
 
+//トランジション
+$transition-speed: 0.3s;
+
 // リセット・共通
 * {
   margin: 0;
@@ -33,21 +36,6 @@ body {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-// 共通ボタン
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: $primary-color;
-  color: #fff;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-
-  &:hover {
-    opacity: 0.8;
-  }
 }
 
 p {
@@ -209,7 +197,12 @@ button {
   max-width: 100% !important;
   margin: 0 auto;
 }
+.w-95 {
+  width: 95% !important;
+  max-width: 95% !important;
+  margin: 0 auto;
 
+}
 .w-90 {
   width: 90% !important;
   max-width: 90% !important;
@@ -251,14 +244,14 @@ button {
 }
 
 @mixin tab {
-  @media (min-width: 601px) and (max-width: 1025px) {
+  @media (min-width: 601px) and (max-width: 1190px) {
     @content;
   }
 }
 
 
 @mixin pc {
-  @media (min-width: 1026px) {
+  @media (min-width: 1200px) {
     @content;
   }
 }

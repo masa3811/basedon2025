@@ -16,19 +16,6 @@ a {
   color: inherit;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background-color: #1f426a;
-  color: #fff;
-  border-radius: 4px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  opacity: 0.8;
-}
-
 p {
   font-size: 16px;
   line-height: 1.8;
@@ -181,6 +168,12 @@ button {
 .w-100 {
   width: 100% !important;
   max-width: 100% !important;
+  margin: 0 auto;
+}
+
+.w-95 {
+  width: 95% !important;
+  max-width: 95% !important;
   margin: 0 auto;
 }
 
@@ -509,6 +502,7 @@ table.table td {
   }
 }
 header {
+  position: relative;
   box-sizing: border-box;
   height: 70px;
 }
@@ -523,9 +517,15 @@ header .logo {
   width: 30%;
   padding-left: 100px;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (max-width: 1200px) {
   header .logo {
     padding-left: 30px;
+  }
+}
+@media (max-width: 820px) {
+  header .logo {
+    position: absolute;
+    top: 25px;
   }
 }
 header .logo a {
@@ -542,7 +542,7 @@ header #menubar {
   justify-content: flex-end;
   padding: 30px 100px 0 0;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (max-width: 1200px) {
   header #menubar {
     padding: 30px 30px 0 0;
   }
@@ -576,14 +576,13 @@ header #menubar ul li a.is-active::after {
 header .header-contact {
   margin-left: 20px;
 }
-header .hamburger {
-  display: none;
-  position: relative;
-}
 header .hamburger .menu-icon {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 16px;
 }
 header .hamburger .menu-icon span {
   display: block;
@@ -592,9 +591,19 @@ header .hamburger .menu-icon span {
   background: #1f426a;
   margin: 4px 0;
   transition: all 0.3s;
+  transform-origin: center;
+}
+header .hamburger input[type=checkbox]:checked + .menu-icon span:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+header .hamburger input[type=checkbox]:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+header .hamburger input[type=checkbox]:checked + .menu-icon span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 header .hamburger .sp-menu {
-  position: absolute;
+  position: fixed;
   top: 60px;
   right: 0;
   width: 200px;
@@ -602,6 +611,7 @@ header .hamburger .sp-menu {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  z-index: 999;
 }
 header .hamburger .sp-menu ul {
   list-style: none;
@@ -621,14 +631,12 @@ header .hamburger .sp-menu ul li a {
 header .hamburger .sp-menu ul li a:hover {
   opacity: 0.8;
 }
-header .hamburger .open span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+header .hamburger input[type=checkbox]:checked ~ .sp-menu {
+  max-height: 500px;
 }
-header .hamburger .open span:nth-child(2) {
-  opacity: 0;
-}
-header .hamburger .open span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+header .hamburger input[type=checkbox]:checked ~ .sp-menu li {
+  opacity: 1;
+  transform: translateY(0);
 }
 header .hamburger input[type=checkbox] {
   display: none;
@@ -770,7 +778,7 @@ section.tanker {
   max-width: 1920px;
   margin: 100px auto 0;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (min-width: 601px) and (max-width: 1190px) {
   section.company,
   section.business,
   section.recruit,
@@ -866,27 +874,42 @@ section.contact {
 .company .flex-1,
 .tanker .flex-1 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  flex-wrap: nowrap;
+  gap: 40px;
   margin-top: 50px;
+}
+@media (min-width: 601px) and (max-width: 1190px) {
+  .company .flex-1,
+  .tanker .flex-1 {
+    justify-content: space-between;
+  }
 }
 .company .flex-1 .img-box,
 .tanker .flex-1 .img-box {
-  width: calc(60% - 50px);
-  margin-right: 50px;
+  width: 60%;
 }
 .company .flex-1 .img-box img,
 .tanker .flex-1 .img-box img {
   display: block;
   width: 100%;
-  max-width: 680px;
 }
 .company .flex-1 .text-box,
 .tanker .flex-1 .text-box {
   width: 40%;
+}
+.company .flex-1 .text-box--in,
+.tanker .flex-1 .text-box--in {
+  width: 80%;
+  min-height: 26.04vw;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 1200px) {
+  .company .flex-1 .text-box--in,
+  .tanker .flex-1 .text-box--in {
+    width: 100%;
+  }
 }
 .company .flex-1 .text-box h2,
 .tanker .flex-1 .text-box h2 {
@@ -894,9 +917,9 @@ section.contact {
 }
 .company .flex-1 .text-box p,
 .tanker .flex-1 .text-box p {
-  line-height: 2;
+  line-height: 2.5;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (min-width: 601px) and (max-width: 1190px) {
   .company .flex-1 .text-box p,
   .tanker .flex-1 .text-box p {
     line-height: 1.5;
@@ -913,40 +936,60 @@ section.contact {
   align-items: flex-start;
   margin-top: 50px;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (max-width: 1200px) {
   .business .flex-1 {
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 .business .flex-1 .img-box {
-  width: calc(60% - 50px);
+  width: 60%;
   margin-left: 50px;
 }
 .business .flex-1 .img-box img {
   display: block;
   width: 100%;
-  max-width: 680px;
 }
 .business .flex-1 .text-box {
   width: calc(40% - 100px);
   margin-left: 100px;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (max-width: 1200px) {
   .business .flex-1 .text-box {
+    width: 40%;
     margin-left: 0;
   }
+}
+.business .flex-1 .text-box--in {
+  width: 100%;
+  min-height: 26.04vw;
+  display: flex;
+  flex-direction: column;
 }
 .business .flex-1 .text-box h2 {
   font-size: 40px;
 }
+@media (max-width: 1200px) {
+  .business .flex-1 .text-box h2 {
+    font-size: 30px;
+  }
+}
 .business .flex-1 .text-box p {
   line-height: 2;
 }
+@media (max-width: 1200px) {
+  .business .flex-1 .text-box p {
+    line-height: 1.7;
+  }
+}
+.business .flex-1 .btn-box {
+  margin-top: auto;
+}
 
 .recruit .img-box {
+  height: 100%;
   text-align: center;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (min-width: 601px) and (max-width: 1190px) {
   .recruit .img-box img {
     width: 80%;
     margin: 0 auto;
@@ -976,7 +1019,7 @@ section.contact {
   margin-bottom: 20px;
   color: #fff;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (min-width: 601px) and (max-width: 1190px) {
   .contact .flex-1 .contact-ttl h2 {
     font-size: 25px;
   }
@@ -992,7 +1035,12 @@ section.contact {
 .contact .flex-1 .text-box h3 {
   font-size: 30px;
 }
-@media (min-width: 601px) and (max-width: 1025px) {
+@media (max-width: 1300px) {
+  .contact .flex-1 .text-box h3 {
+    font-size: 23px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1190px) {
   .contact .flex-1 .text-box h3 {
     font-size: 22px;
   }
