@@ -574,17 +574,15 @@ header .logo img {
   color: #fff;
 }
 
-@media (max-width: 820px) {
-  #menubar {
+.hamburger {
+  display: block;
+}
+@media (min-width: 1024px) {
+  .hamburger {
     display: none;
   }
-  .hamburger {
-    display: block;
-  }
-  header .logo img {
-    height: 35px;
-  }
 }
+
 footer {
   color: #fff;
   text-align: center;

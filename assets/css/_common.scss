@@ -84,20 +84,15 @@ header .logo img {
   }
 }
 
-// SPハンバーガー
-@media (max-width: 820px) {
-  #menubar {
+.hamburger {
+  display: block;
+
+  @include cfg.pc() {
     display: none;
   }
-
-  .hamburger {
-    display: block;
-  }
-
-  header .logo img {
-    height: 35px;
-  }
 }
+
+
 
 // ==========================
 // フッター
@@ -329,7 +324,7 @@ section.contact {
 
 
 // ==========================
-// ここから下は個別セクションスタイル（ニュース・会社概要・事業内容・募集・お問い合わせ）
+// （ニュース・会社概要・事業内容・募集・お問い合わせ）
 // ==========================
 
 // ニュース
