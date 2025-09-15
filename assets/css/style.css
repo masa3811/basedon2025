@@ -812,6 +812,14 @@ section.contact {
   .table-wrapper {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  section.business,
+  section.recruit {
+    margin: 50px auto 0;
   }
 }
 
@@ -1088,19 +1096,26 @@ section.contact {
   padding-right: 50px;
   border-right: 1px solid #ccc;
 }
-@media (max-width: 400px) {
+@media (max-width: 768.98px) {
   .contact .flex-1 .contact-ttl {
     width: 100%;
+    border-right: 0px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 }
 .contact .flex-1 .contact-ttl h2 {
   font-size: 30px;
   margin-top: 10px;
 }
+@media (max-width: 768.98px) {
+  .contact .flex-1 .contact-ttl h2 {
+    padding-bottom: 20px;
+  }
+}
 .contact .flex-1 .text-box {
   width: 70%;
 }
-@media (max-width: 400px) {
+@media (max-width: 768.98px) {
   .contact .flex-1 .text-box {
     width: 100%;
   }

@@ -379,10 +379,21 @@ section.contact {
   @include cfg.ssp() {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
 
 
 }
+
+section.business,
+section.recruit {
+  @include cfg.ssp() {
+    margin: 50px auto 0;
+  }
+
+}
+
+
 
 .news {
   padding: 30px 20px;
@@ -632,8 +643,9 @@ section.contact {
 .recruit {
   .img-box {
     text-align: center;
-        @include cfg.ssp() {
-     padding: 0 1em;
+
+    @include cfg.ssp() {
+      padding: 0 1em;
     }
   }
 
@@ -679,20 +691,27 @@ section.contact {
       padding-right: 50px;
       border-right: 1px solid #ccc;
 
-      @include cfg.ssp() {
+      @include cfg.sp() {
         width: 100%;
+        border-right: 0px solid #ccc;
+        border-bottom: 1px solid #ccc;
       }
+
 
       h2 {
         font-size: 30px;
         margin-top: 10px;
+
+        @include cfg.sp() {
+          padding-bottom: 20px;
+        }
       }
     }
 
     .text-box {
       width: 70%;
 
-      @include cfg.ssp() {
+      @include cfg.sp() {
         width: 100%;
       }
 
