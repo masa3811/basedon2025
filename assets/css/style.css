@@ -735,6 +735,7 @@ footer .footer-in .footer-info {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 @media (max-width: 400px) {
   footer .footer-in .footer-nav,
@@ -745,7 +746,7 @@ footer .footer-in .footer-info {
 }
 footer .footer-in .footer-nav--link,
 footer .footer-in .footer-info--link {
-  margin-top: 3px;
+  margin-top: 10px;
 }
 @media (max-width: 400px) {
   footer .footer-in .footer-nav--link,
