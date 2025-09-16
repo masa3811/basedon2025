@@ -203,22 +203,36 @@ button {
   margin: 0 auto;
 }
 .w-95 {
-  width: 95% !important;
-  max-width: 95% !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 auto;
-
+  padding: 0 2%;
 }
+
+@media (max-width: 600px) {
+  .w-95 {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  padding: 0;
+  }
+}
+
 .w-90 {
   width: 90% !important;
   max-width: 90% !important;
   margin: 0 auto;
-
 }
 
 .w-80 {
   width: 80% !important;
   max-width: 80% !important;
   margin: 0 auto;
+  @media (max-width: 600px) {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+}  
 }
 
 .w-50 {
