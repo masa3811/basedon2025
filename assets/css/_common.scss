@@ -25,6 +25,10 @@ header {
   transition: background-color 0.1s ease;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 
+  @include cfg.ssp() {
+    padding: 0 10px;
+  }
+
   &.scrolled {
     background-color: rgba(255, 255, 255, 1);
   }
@@ -172,7 +176,7 @@ header {
     // メニュー
     .sp-menu {
       position: fixed;
-      top: 60px;
+      top: 80px;
       right: 0;
       width: 200px;
       background-color: cfg.$primary-color;
@@ -240,6 +244,10 @@ footer {
   .footer-in {
     padding: 50px 0;
 
+    @include cfg.ssp() {
+      padding: 1em;
+    }
+
     .footer-nav,
     .footer-info {
       display: flex;
@@ -247,8 +255,19 @@ footer {
       gap: 20px;
       flex-wrap: wrap;
 
+      @include cfg.ssp() {
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+
       &--link {
         margin-top: 3px;
+
+        @include cfg.ssp() {
+          margin-top: 20px;
+        }
+
       }
 
       a {
@@ -353,6 +372,7 @@ section.tanker {
   max-width: cfg.$max-width;
   margin: 100px auto 0;
 
+
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -363,6 +383,14 @@ section.company,
 section.tanker {
   color: cfg.$white;
   background-color: cfg.$primary-color;
+}
+
+section.business,
+section.recruit,
+section.tanker {
+  @include cfg.ssp() {
+    margin: 40px auto 0;
+  }
 }
 
 section.contact {
@@ -388,7 +416,7 @@ section.contact {
 section.business,
 section.recruit {
   @include cfg.ssp() {
-    margin: 50px auto 0;
+    margin: 50px auto;
   }
 
 }
@@ -410,13 +438,18 @@ section.recruit {
     max-width: 180px;
 
     @include cfg.ssp() {
-      width: 60%;
+      width: 40%;
     }
 
     h2 {
       font-size: 30px;
       margin-top: 20px;
       color: cfg.$primary-color;
+
+      @include cfg.ssp() {
+        font-size: 25px;
+        margin-top: 10px;
+      }
     }
   }
 
@@ -499,6 +532,11 @@ section.recruit {
     gap: 50px;
     margin-top: 50px;
 
+    @include cfg.ssp() {
+      gap: 20px;
+    }
+
+
     @include cfg.tab() {
       flex-direction: column;
       align-items: center;
@@ -519,6 +557,10 @@ section.recruit {
         width: 100%;
       }
 
+      @include cfg.ssp() {
+        padding: 0 1em;
+      }
+
       &--in {
         width: 70%;
         min-height: 28vw;
@@ -528,6 +570,7 @@ section.recruit {
         @media (max-width:1025px) {
           width: 100%;
         }
+
       }
 
       h2 {
@@ -535,6 +578,10 @@ section.recruit {
 
         @include cfg.pc() {
           font-size: 30px;
+        }
+
+        @include cfg.ssp() {
+          font-size: 25px;
         }
 
       }
@@ -578,6 +625,10 @@ section.recruit {
       flex-direction: column;
     }
 
+    @include cfg.ssp() {
+      gap: 20px;
+    }
+
     .img-box {
       width: 55%;
 
@@ -585,6 +636,7 @@ section.recruit {
         order: 1;
         width: 100%;
       }
+
     }
 
     .text-box {
@@ -597,6 +649,10 @@ section.recruit {
       @include cfg.tab() {
         order: 2;
         width: 100%;
+      }
+
+      @include cfg.ssp() {
+        padding: 0 1em;
       }
 
       &--in {
@@ -614,6 +670,10 @@ section.recruit {
 
           @include cfg.pc() {
             font-size: 30px;
+          }
+
+          @include cfg.ssp() {
+            font-size: 25px;
           }
         }
 
@@ -709,6 +769,10 @@ section.recruit {
         @include cfg.sp() {
           padding-bottom: 20px;
         }
+
+        @include cfg.ssp() {
+          font-size: 25px;
+        }
       }
     }
 
@@ -732,6 +796,11 @@ section.recruit {
           @include cfg.pc {
             font-size: 30px;
           }
+          @include cfg.ssp {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 15px;
+          }
 
           &:last-of-type {
             margin-left: 20px;
@@ -753,7 +822,9 @@ section.recruit {
           margin-top: 30px;
 
           @include cfg.ssp() {
-            padding: 10px;
+            padding: 15px;
+            width: 100%;
+            justify-content: center;
           }
         }
       }

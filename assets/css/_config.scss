@@ -88,6 +88,12 @@ td {
   display: flex;
 }
 
+@media (max-width: 600px) {
+.pd-1 {
+  padding: 0 1em;
+}
+}
+
 button {
   background: none;
   border: none;
