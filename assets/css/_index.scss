@@ -460,7 +460,7 @@ section.tanker {
   @include c.ssp() {
     padding: 0 1em;
   }
-}
+
 
 .news-list {
   width: 65%;
@@ -531,6 +531,7 @@ section.tanker {
       }
     }
   }
+}
 }
 
 .btn-box {

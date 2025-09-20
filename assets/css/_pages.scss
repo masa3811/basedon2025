@@ -1,0 +1,118 @@
+
+@use './config' as c;
+
+.kv-wrap {
+    position: relative;
+
+    img {
+        width: 100%;
+        display: block;
+        margin-top: 5rem;
+    }
+
+    .section-ttl {
+        position: absolute;
+        top: 45%; // 縦中央
+        left: 18%; // 横中央
+        transform: translate(-50%, 30px); // 初期は下にずらす
+        text-align: center;
+        color: #fff;
+        z-index: 2;
+        opacity: 0; // 初期は透明
+        transition: transform 0.8s ease, opacity 0.8s ease;
+
+        &.is-animated {
+            transform: translate(-50%, -50%); // 中央に移動
+            opacity: 1;
+        }
+
+        h3 {
+            font-size: clamp(36px, 5vw, 70px);
+            font-weight: bold;
+            margin: 0;
+        }
+
+        p {
+            font-size: clamp(18px, 3vw, 36px);
+            margin: 10px 0 0;
+        }
+    }
+}
+
+.pages-news {
+    padding: 30px 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    @include c.ssp() {
+        padding: 0 1em;
+    }
+
+
+.news-list {
+    width: 100%;
+
+    li {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+
+        @include c.ssp() {
+            flex-direction: column; // 縦並びに変更
+            align-items: flex-start; // 左寄せ
+            padding: 5px 0;
+        }
+
+        .date {
+            width: 140px;
+            font-size: 16px;
+            color: #999;
+            flex-shrink: 0; // 固定幅を維持
+
+            @include c.ssp() {
+                width: 100%;
+                margin-bottom: 5px; // 日付とリンクの間に隙間
+                font-size: 15px;
+            }
+        }
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            flex: 1;
+            min-width: 0;
+
+            @include c.ssp() {
+                width: 100%;
+                font-size: 15px;
+            }
+
+            .arrow {
+                margin-left: 10px;
+                flex-shrink: 0;
+                transition: transform 0.3s;
+
+                @include c.ssp() {
+                    margin-left: 0;
+                    margin-top: 5px; // 縦並びのときは下に
+                }
+            }
+
+            &:hover .arrow {
+                transform: translateX(5px);
+            }
+
+            &:hover {
+                color: #007BFF;
+            }
+        }
+    }
+}
+}
