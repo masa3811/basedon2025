@@ -17,9 +17,6 @@ $font-ttl: 'Roboto', sans-serif;
 // ==========================
 // 共通タイトル
 // ==========================
-.page-ttl {
-    font-family: $font-ttl;
-}
 
 
 .section-ttl {
@@ -40,7 +37,7 @@ $font-ttl: 'Roboto', sans-serif;
         }
 
         &::first-letter {
-            color: #8fa0b4;
+            color: #8fa0b5;
             font-size: 100px;
             font-weight: 600;
             line-height: 0.9;

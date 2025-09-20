@@ -6,6 +6,7 @@ $secondary-color: #029fd4;
 $accent-color: #f84a2a;
 $text-color: #333;
 $white: #fff;
+$bg-color:#e7f1f5;
 
 // 本文用
 $font-family: 'Noto Sans JP', sans-serif;
@@ -45,13 +46,13 @@ a {
 
 p {
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 2;
 }
 
 @media (max-width: 600px) {
   p {
     font-size: 15px;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 }
 

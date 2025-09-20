@@ -824,7 +824,7 @@ section.tanker {
     width: 70%;
     margin-left: 50px;
 
-    @include c.sp() {
+    @include c.tab() {
       width: 100%;
     }
 
@@ -844,11 +844,11 @@ section.tanker {
         font-size: 30px;
 
         @include c.pc {
-          font-size: 30px;
+          font-size: 25px;
         }
 
-        @include c.ssp {
-          font-size: 25px;
+        @include c.tab {
+          font-size: 35px;
           text-align: center;
           margin-top: 15px;
         }

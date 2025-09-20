@@ -99,7 +99,7 @@ window.addEventListener('resize', animateMvText);
 
 //kvのタイトル位置-----
 function animateSectionTitle() {
-  const sectionTitle = document.querySelector('.kv .section-ttl');
+  const sectionTitle = document.querySelector('.kv .page-ttl');
 
   requestAnimationFrame(() => {
     sectionTitle.classList.add('is-animated');
