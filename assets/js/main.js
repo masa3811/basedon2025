@@ -1,4 +1,4 @@
-//headerスクロールしたら背景色変化
+//headerスクロールしたら背景色変化------
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
@@ -19,7 +19,7 @@ window.addEventListener('scroll', function() {
 });
 
 
-//ハンバーガーメニュー
+//ハンバーガーメニュー-----
 const menuToggle = document.getElementById('menu-toggle');
 const menuIcon = document.querySelector('.menu-icon');
 const spMenu = document.querySelector('.sp-menu');
@@ -53,48 +53,47 @@ menuToggle.addEventListener('change', () => {
   }
 });
 
-function adjustMvTextPosition() {
-    const mvWrap = document.querySelector('.mv-wrap');
-    const h2 = mvWrap.querySelector('h2');
-    const mvHeight = mvWrap.offsetHeight;
-    const h2Height = h2.offsetHeight;
 
-    // 縦中央より少し上に配置
-    const top = (mvHeight - h2Height) * 0.4; 
-    h2.style.top = `${top}px`;
-}
+//topに戻る------
+document.addEventListener('DOMContentLoaded', () => {
+  const toTopBtn = document.getElementById('to-top');
 
-// 初回実行
-window.addEventListener('load', adjustMvTextPosition);
-// 画面リサイズ時も再計算
-window.addEventListener('resize', adjustMvTextPosition);
-
-//topに戻る
-const toTopBtn = document.getElementById('to-top');
-
-window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-        toTopBtn.style.display = 'block';
+      toTopBtn.classList.add('show');
     } else {
-        toTopBtn.style.display = 'none';
-    }
-});
-
-toTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const currentUrl = window.location.pathname; 
-  const menuLinks = document.querySelectorAll("#menubar ul li a");
-
-  menuLinks.forEach(link => {
-    if (link.getAttribute("href") === currentUrl) {
-      link.classList.add("is-active");
+      toTopBtn.classList.remove('show');
     }
   });
+
+  toTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 });
+
+
+//mvのH2位置-----
+function animateMvText() {
+  const mvWrap = document.querySelector('.mv-wrap');
+  const h2 = mvWrap.querySelector('h2');
+
+  const mvHeight = mvWrap.offsetHeight;
+  const h2Height = h2.offsetHeight;
+
+  // 縦中央より少し上に配置（必要なら微調整）
+  const top = (mvHeight - h2Height) * 0.2;
+  h2.style.top = `${top}px`;
+
+  // スムーズに下から上へ表示
+  requestAnimationFrame(() => {
+    h2.classList.add('is-animated');
+  });
+}
+
+// ページ読み込み時
+window.addEventListener('load', animateMvText);
+// リサイズ時にも対応
+window.addEventListener('resize', animateMvText);
 
 
 

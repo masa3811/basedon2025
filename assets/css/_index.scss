@@ -1,0 +1,892 @@
+@use './config' as c;
+
+// ==========================
+// キーフレーム
+// ==========================
+@keyframes textOutlineAnime {
+  0% {}
+
+  100% {}
+}
+
+// ==========================
+// ヘッダー
+// ==========================
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  transition: background-color 0.1s ease;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+
+  @include c.ssp() {
+    padding: 0 10px;
+  }
+
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    width: 30%;
+    padding-left: 100px;
+
+    @include c.pc() {
+      padding-left: 10px;
+    }
+
+    @include c.ssp() {
+      width: 80%;
+      padding-left: 0 !important;
+    }
+
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+
+      @include c.ssp() {
+        max-width: 230px;
+
+      }
+    }
+
+    @include c.sp() {
+      padding-left: 20px;
+
+    }
+  }
+}
+
+// グローバルナビ（PC）
+#menubar {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px 100px 0 0;
+
+  @include c.pc() {
+    padding: 30px 10px 0 0;
+  }
+
+  @include c.sp() {
+    padding: 30px 20px 0 0;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      a {
+        position: relative;
+        display: block;
+        padding: 10px 20px 20px 10px;
+        color: c.$primary-color;
+        font-weight: bold;
+        text-decoration: none;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 5px;
+          background-color: c.$accent-color;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease;
+        }
+
+        &.is-active::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+
+}
+
+
+.header-contact {
+  margin-left: 20px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@include c.tab() {
+  #menubar {
+    display: none;
+  }
+}
+
+
+// ハンバーガーメニュー（SP）
+@include c.tab() {
+  .hamburger {
+    display: flex;
+
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      top: 22px;
+      right: 16px;
+
+      span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: c.$primary-color;
+        margin: 4px 0;
+        transition: all c.$transition-speed;
+        transform-origin: center;
+      }
+    }
+
+    // ハンバーガー → ✖ のアニメーション
+    input[type="checkbox"]:checked+.menu-icon span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked+.menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+
+    input[type="checkbox"]:checked+.menu-icon span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+    // メニュー
+    .sp-menu {
+      position: fixed;
+      top: 80px;
+      right: 0;
+      width: 200px;
+      background-color: c.$primary-color;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height c.$transition-speed ease-in-out;
+      z-index: 999;
+
+      ul {
+        list-style: none;
+
+        li {
+          border-bottom: 1px solid #fff;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: opacity 0.3s ease, transform 0.3s ease;
+
+          a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+
+    // チェック時にメニュー展開
+    input[type="checkbox"]:checked~.sp-menu {
+      max-height: 500px;
+    }
+
+    input[type="checkbox"]:checked~.sp-menu li {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+}
+
+
+// company, tanker, business, recruit, contact も同様に統一
+
+// ==========================
+// フッター
+// ==========================
+footer {
+  color: #fff;
+  text-align: center;
+  margin-top: 80px;
+
+  .footer-logo img {
+    width: 90%;
+    max-width: 560px;
+    margin: 0 auto 20px;
+  }
+
+  .footer-in {
+    padding: 50px 0;
+
+    @include c.ssp() {
+      padding: 1em;
+    }
+
+    .footer-nav,
+    .footer-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+
+      @include c.ssp() {
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+
+      &--link {
+        margin-top: 10px;
+
+        @include c.ssp() {
+          margin-top: 20px;
+        }
+
+      }
+
+      a {
+        color: #333;
+        text-decoration: none;
+        transition: 0.3s;
+        margin-top: 3px;
+
+        &:hover {
+          color: c.$secondary-color;
+          opacity: 0.8;
+        }
+      }
+
+      p {
+        color: c.$text-color;
+      }
+    }
+
+
+  }
+
+  small {
+    display: block;
+    color: c.$text-color;
+
+    @include c.ssp() {
+      margin-top: 30px;
+    }
+  }
+
+  .copy-right {
+    font-size: 16px;
+    margin-top: 50px;
+    background-color: c.$secondary-color;
+    padding: 20px 10px;
+
+    @include c.ssp() {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+// ==========================
+// メインビジュアル
+// ==========================
+.mv {
+  position: relative;
+  width: 100%;
+  margin-top: 83px;
+
+  .mv-wrap {
+    position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    h2 {
+      position: absolute;
+      right: 5%;
+      max-width: 600px;
+      font-size: clamp(26px, 3.5vw, 60px);
+      line-height: 1.3;
+      font-weight: bold;
+      color: #fff;
+      text-align: right;
+      word-break: break-word;
+      z-index: 2;
+      padding: 0 20px;
+      display: inline-block;
+      box-sizing: border-box;
+
+      text-shadow:
+        6px 6px 0 c.$primary-color,
+        -6px 6px 0 c.$primary-color,
+        6px -6px 0 c.$primary-color,
+        -6px -6px 0 c.$primary-color,
+        0 6px 0 c.$primary-color,
+        0 -6px 0 c.$primary-color,
+        6px 0 0 c.$primary-color,
+        -6px 0 0 c.$primary-color;
+
+      animation: textOutlineAnime 2s forwards;
+
+      /* 下からスムーズに上に動くための設定 */
+      transform: translateY(30px);
+      /* 初期は下にずらす */
+      opacity: 0;
+      /* 初期非表示 */
+      transition: transform 0.8s ease, opacity 0.8s ease;
+
+      &.is-animated {
+        transform: translateY(0);
+        /* 最終位置 */
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+
+// ==========================
+// トップセクション
+// ==========================
+section.company,
+section.business,
+section.recruit,
+section.tanker {
+  padding: 60px 0;
+  max-width: c.$max-width;
+  margin: 100px auto 0;
+
+  @include c.ssp() {
+    padding: 30px 0;
+
+  }
+}
+
+section.company,
+section.tanker {
+  color: c.$white;
+  background-color: c.$primary-color;
+}
+
+section.business,
+section.recruit,
+section.tanker {
+  @include c.ssp() {
+    margin: 40px auto 0;
+  }
+}
+
+section.contact {
+  padding: 50px 0;
+  color: c.$white;
+  background-color: c.$primary-color;
+}
+
+.table-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+
+  @include c.sp() {
+    gap: 30px;
+  }
+
+  @include c.ssp() {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
+
+section.business {
+  @include c.ssp() {
+    margin: 60px auto;
+  }
+}
+
+section.recruit {
+  @include c.ssp() {
+    margin: 70px auto;
+  }
+}
+
+section.tanker {
+  @include c.ssp() {
+    margin: 80px auto;
+  }
+}
+
+.news {
+  padding: 30px 20px;
+  margin-top: 50px;
+
+  @include c.ssp() {
+    padding: 0 1em;
+  }
+}
+
+.news-list {
+  width: 65%;
+
+  @include c.ssp() {
+    width: 100%;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+
+    @include c.ssp() {
+      flex-direction: column; // 縦並びに変更
+      align-items: flex-start; // 左寄せ
+      padding: 5px 0;
+    }
+
+    .date {
+      width: 140px;
+      font-size: 16px;
+      color: #999;
+      flex-shrink: 0; // 固定幅を維持
+
+      @include c.ssp() {
+        width: 100%;
+        margin-bottom: 5px; // 日付とリンクの間に隙間
+        font-size: 15px;
+      }
+    }
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      flex: 1;
+      min-width: 0;
+
+      @include c.ssp() {
+        width: 100%;
+        font-size: 15px;
+      }
+
+      .arrow {
+        margin-left: 10px;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+
+        @include c.ssp() {
+          margin-left: 0;
+          margin-top: 5px; // 縦並びのときは下に
+        }
+      }
+
+      &:hover .arrow {
+        transform: translateX(5px);
+      }
+
+      &:hover {
+        color: #007BFF;
+      }
+    }
+  }
+}
+
+.btn-box {
+  text-align: center;
+  margin-top: 50px;
+}
+
+
+
+
+// ==========================
+// 会社概要 船舶情報
+// ==========================
+
+.company,
+.tanker {
+
+  .flex-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 50px;
+
+    @include c.ssp() {
+      gap: 20px;
+    }
+
+    @include c.tab() {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .img-box {
+      width: 60%;
+
+      @include c.tab() {
+        width: 100%;
+      }
+    }
+
+    .text-box {
+      width: 40%;
+
+      @include c.tab() {
+        width: 100%;
+      }
+
+      @include c.ssp() {
+        padding: 0 1em;
+      }
+
+      &--in {
+        width: 70%;
+        min-height: 27vw;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:1025px) {
+          width: 100%;
+        }
+
+        @media (max-width:798.98px) {
+          padding: 0 1em;
+        }
+
+        @include c.ssp() {
+          padding: 0;
+        }
+
+      }
+
+      h3 {
+        font-size: 40px;
+
+        @include c.pc() {
+          font-size: 30px;
+        }
+
+        @include c.ssp() {
+          font-size: 25px;
+        }
+
+      }
+
+      p {
+        line-height: 2.2;
+        letter-spacing: 0.05em;
+        margin-top: 30px;
+
+        @include c.pc() {
+          line-height: 1.7;
+        }
+      }
+
+      .btn-box {
+        margin-top: auto;
+        text-align: left;
+
+        @include c.tab() {
+          margin: 50px auto 0;
+
+        }
+      }
+
+
+    }
+
+  }
+}
+
+// ==========================
+// 事業内容
+// ==========================
+.business {
+  .flex-1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 50px;
+
+    @include c.tab() {
+      flex-direction: column;
+    }
+
+    @include c.ssp() {
+      gap: 20px;
+    }
+
+    .img-box {
+      width: 55%;
+
+      @include c.tab() {
+        order: 1;
+        width: 100%;
+      }
+
+    }
+
+    .text-box {
+      width: 27%;
+
+      @include c.pc() {
+        width: 40%;
+      }
+
+      @include c.tab() {
+        order: 2;
+        width: 100%;
+      }
+
+      @include c.ssp() {
+        padding: 0 1em;
+      }
+
+      &--in {
+        width: 100%;
+        min-height: 26.5vw;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width:1025px) {
+          width: 100%;
+        }
+
+        @media (max-width:798.98px) {
+          padding: 0 1em;
+        }
+
+        @include c.ssp() {
+          padding: 0;
+        }
+
+        h3 {
+          font-size: 40px;
+
+          @include c.pc() {
+            font-size: 30px;
+          }
+
+          @include c.ssp() {
+            font-size: 25px;
+          }
+        }
+
+        p {
+          line-height: 2.2;
+          letter-spacing: 0.05em;
+          margin-top: 30px;
+
+          @include c.pc() {
+            line-height: 1.7;
+          }
+        }
+
+        .btn-box {
+          margin-top: auto;
+          text-align: left;
+
+          @include c.tab() {
+            margin: 50px auto 0;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+
+// ==========================
+// 船員募集
+// ==========================
+.recruit {
+  .img-box {
+    position: relative;
+    text-align: center;
+
+    @include c.ssp() {
+      padding: 0 1em;
+    }
+
+    .img-ttl {
+      position: absolute;
+      top: 10%;
+      left: 15%;
+      color: c.$secondary-color;
+      font-family: c.$font-serif;
+      font-size: 60px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+
+      @include c.ssp() {
+        top: 25%;
+        font-size: 30px;
+      }
+    }
+  }
+
+  .line {
+    border-bottom: 1px solid #1f426a;
+    padding-bottom: 20px;
+  }
+
+  .btn-box {
+    text-align: right;
+    margin-top: 40px;
+
+    @include c.ssp() {
+      text-align: center;
+    }
+  }
+
+}
+
+// ==========================
+// お問い合わせ
+// ==========================
+.contact {
+
+  .flex-1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+
+    @include c.pc() {
+      gap: 30px;
+      padding: 0 2em;
+    }
+
+    @include c.tab() {
+      flex-direction: column;
+    }
+
+    .section-ttl {
+      border-right: 1px solid #ccc;
+      padding-right: 50px;
+
+      p {
+        color: c.$white;
+      }
+    }
+
+  }
+
+  .text-box {
+    width: 70%;
+    margin-left: 50px;
+
+    @include c.sp() {
+      width: 100%;
+    }
+
+    @include c.ssp() {
+      margin-left: 0;
+
+    }
+
+    .flex-2 {
+      display: flex;
+
+      @include c.ssp() {
+        flex-direction: column;
+      }
+
+      h3 {
+        font-size: 30px;
+
+        @include c.pc {
+          font-size: 30px;
+        }
+
+        @include c.ssp {
+          font-size: 25px;
+          text-align: center;
+          margin-top: 15px;
+        }
+
+        &:last-of-type {
+          margin-left: 20px;
+
+          @include c.ssp() {
+            margin-left: 0;
+          }
+
+        }
+      }
+    }
+
+    .btn-box {
+      text-align: left;
+      margin-top: 0;
+
+      a {
+        font-size: 20px;
+        padding: 10px 80px;
+        margin-top: 30px;
+
+        @include c.ssp() {
+          padding: 15px;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+
+.wave-up {
+  margin-bottom: -5px;
+}
+
+.wave-down {
+  margin-top: -5px;
+}

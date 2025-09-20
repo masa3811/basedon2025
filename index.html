@@ -6,15 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>瀬戸内中央汽船</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@300;400;500;700&family=Sawarabi+Gothic&family=Sawarabi+Mincho&display=swap"
+    rel="stylesheet">
+
+
 </head>
 
 <body>
   <!-- ヘッダー -->
   <header id="header">
     <div class="container">
-      <div class="logo">
-        <a href="#"><img src="assets/img/common/logo.png" alt="Company Logo"></a>
-      </div>
+      <h1 class="logo">
+        <a href="#"><img src="assets/img/index/logo.png" alt="Company Logo"></a>
+      </h1>
 
       <nav id="menubar">
         <ul>
@@ -54,7 +63,7 @@
   <!-- メインビジュアル -->
   <section class="mv">
     <div class="mv-wrap">
-      <img src="assets/img/common/mv_img-pc.jpg" alt="トップ画像">
+      <img src="assets/img/index/mv_img-pc.jpg" alt="トップ画像">
       <h2>日本の海をつなぐ<br>エネルギーを運ぶ</h2>
     </div>
   </section>
@@ -63,9 +72,9 @@
     <section class="news">
       <div class="inner-1000">
         <div class="table-wrapper">
-          <div class="news-ttl">
-            <img src="assets/img/common/news_ttl_img.png" alt="ニュースのタイトル">
-            <h2>お知らせ</h2>
+          <div class="section-ttl">
+            <h3>News</h3>
+            <p>お知らせ</p>
           </div>
           <ul class="news-list">
             <li>
@@ -102,17 +111,19 @@
     </section>
 
     <section class="company">
-      <div class="inner-800">
-        <img src="assets/img/common/company_ttl_img.png" alt="会社概要のタイトル">
+      <div class="inner-1000">
+        <div class="section-ttl">
+          <h3>Company overview</h3>
+        </div>
       </div>
       <div class="w-95">
         <div class="flex-1">
           <div class="img-box">
-            <img src="assets/img/common/company_img_1.jpg" alt="会社概要のイメージ">
+            <img src="assets/img/index/company_img_1.jpg" alt="会社概要のイメージ">
           </div>
           <div class="text-box">
             <div class="text-box--in">
-              <h2>会社概要</h2>
+              <h4 class="box-ttl">会社概要</h4>
               <p>私たちは、国内の港と港を結んで
                 産業基礎資材である石油等を運んでいます。<br>
                 常に安全と環境保全を考え人にやさしく地球にやさし
@@ -129,14 +140,17 @@
     </section>
 
     <section class="business">
-      <div class="inner-800">
-        <img src="assets/img/common/business_ttl_img.png" alt="事業内容のタイトル">
+      <div class="inner-1000">
+        <div class="section-ttl">
+          <h3>Business description</h3>
+        </div>
+      </div>
       </div>
       <div class="w-95">
         <div class="flex-1">
           <div class="text-box">
             <div class="text-box--in">
-              <h2>事業内容</h2>
+              <h4 class="box-ttl primary">事業内容</h4>
               <p>当社のメイン業務は、石油製品、ケミカル製品のタンカー輸送です。<br>
                 当社では、常に時代にマッチした船種・船型の運行により、高度な品質管理と安全で効率
                 の高い輸送を実現しています。</p>
@@ -148,7 +162,7 @@
             </div>
           </div>
           <div class="img-box">
-            <img src="assets/img/common/business_img_1.jpg" alt="事業内容のイメージ">
+            <img src="assets/img/index/business_img_1.jpg" alt="事業内容のイメージ">
           </div>
         </div>
       </div>
@@ -156,16 +170,18 @@
     </section>
     <section class="tanker">
       <div class="inner-1000">
-        <img class="pd-1" src="assets/img/common/tanker_ttl_img.png" alt="船舶情報のタイトル">
+        <div class="section-ttl">
+          <h3>Tanker ship specification</h3>
+        </div>
       </div>
       <div class="w-95">
         <div class="flex-1">
           <div class="img-box">
-            <img src="assets/img/common/tanker_img_1.jpg" alt="船舶情報のイメージ">
+            <img src="assets/img/index/tanker_img_1.jpg" alt="船舶情報のイメージ">
           </div>
           <div class="text-box">
             <div class="text-box--in">
-              <h2>船舶情報</h2>
+              <h4 class="box-ttl">船舶情報</h4>
               <p>3,778 トン<br>
                 4999D/W 型の限定近海（非国際）<br>
                 白油兼ケミカルタンカー</p>
@@ -183,8 +199,12 @@
     <section class="recruit">
       <div class="inner-1000">
         <div class="img-box">
-          <img src="assets/img/common/recruit_img_3.png" alt="船員募集のイメージ">
-          <p>将来を見据えた強い組織をつくる上で<br class="sp-only">必要不可欠な人材を募集します。</p>
+          <div class="section-ttl">
+          <h3>Recruit crew member</h3>
+          </div>
+          <p class="img-ttl">船員募集</p>
+          <img src="assets/img/index/recruit_img_4.png" alt="船員募集のイメージ">
+          <p class="line">将来を見据えた強い組織をつくる上で<br class="sp-only">必要不可欠な人材を募集します。</p>
         </div>
         <div class="btn-box">
           <a href="#" class="btn-arrow btn-arrow--accent"><span class="arrow">▶</span>
@@ -193,15 +213,15 @@
         </div>
     </section>
     <div class="wave-up">
-      <img src="assets/img/common/wave_img_up.png" alt="波のデザイン">
+      <img src="assets/img/index/wave_img_up.png" alt="波のデザイン">
     </div>
 
     <section class="contact">
-      <div class="inner-1200">
+      <div class="inner-1000">
         <div class="flex-1">
-          <div class="contact-ttl">
-            <img src="assets/img/common/contact_ttl_img.png" alt="お問い合わせのタイトル">
-            <h2>お問い合わせ</h2>
+          <div class="section-ttl">
+            <h3>Contact</h3>
+            <p>お問い合わせ</p>
           </div>
           <div class="text-box">
             <div class="flex-2">
@@ -216,9 +236,9 @@
           </div>
         </div>
       </div>
-      </section>
+    </section>
     <div class="wave-down">
-      <img src="assets/img/common/wave_img_down.png" alt="波のデザイン">
+      <img src="assets/img/index/wave_img_down.png" alt="波のデザイン">
     </div>
   </main>
 
@@ -228,7 +248,7 @@
   <footer id="footer">
 
     <div class="footer-logo">
-      <img src="assets/img/common/logo.png" alt="Company Logo">
+      <img src="assets/img/index/logo.png" alt="Company Logo">
     </div>
 
     <div class="footer-in">
