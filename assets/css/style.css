@@ -1438,23 +1438,28 @@ main section {
   color: #007BFF;
 }
 
-.pages-business .img-wrap img {
+.pages-business .img-wrap img,
+.pages-tanker .img-wrap img {
   margin-top: 100px;
 }
-.pages-business .flex-1 {
+.pages-business .flex-1,
+.pages-tanker .flex-1 {
   display: flex;
   align-items: flex-end;
   margin-top: 50px;
 }
-.pages-business .flex-1 p {
+.pages-business .flex-1 p,
+.pages-tanker .flex-1 p {
   width: 80%;
   color: #1f426a;
   font-size: 22px;
 }
-.pages-business .flex-1 .img-box {
+.pages-business .flex-1 .img-box,
+.pages-tanker .flex-1 .img-box {
   width: 20%;
 }
-.pages-business .flex-1 .img-box img {
+.pages-business .flex-1 .img-box img,
+.pages-tanker .flex-1 .img-box img {
   width: 100%;
   max-width: 120px;
 }
@@ -1465,9 +1470,47 @@ main section {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-.description p {
+.description .description-small {
+  padding: 0;
+}
+.description .frame {
   background-color: #fff;
   padding: 50px 80px;
   margin-top: 30px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.description .frame-small {
+  padding: 20px 40px;
+}
+.description table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+}
+.description table th,
+.description table td {
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+.description table th {
+  font-weight: bold;
+}
+.description tr:first-child th,
+.description tr:first-child td {
+  border-top: 1px solid #ccc;
+}
+
+.desc {
+  line-height: 3;
+}
+
+.table-small th {
+  width: 30%;
+}
+
+iframe {
+  margin-top: 50px;
 }/*# sourceMappingURL=style.css.map */
