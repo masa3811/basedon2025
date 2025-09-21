@@ -1676,33 +1676,40 @@ iframe {
   font-size: 22px;
 }
 
+.system,
 .environment,
 .voice {
   margin-top: 100px;
 }
+.system .flex-1,
 .environment .flex-1,
 .voice .flex-1 {
   align-items: center;
   gap: 40px;
 }
+.system .flex-1 .img-box,
 .environment .flex-1 .img-box,
 .voice .flex-1 .img-box {
   width: 60%;
 }
+.system .section-ttl,
 .environment .section-ttl,
 .voice .section-ttl {
   width: 40%;
   text-align: left;
 }
+.system .section-ttl p,
 .environment .section-ttl p,
 .voice .section-ttl p {
   margin: 0;
   line-height: 1;
 }
+.system .section-ttl img,
 .environment .section-ttl img,
 .voice .section-ttl img {
   margin-top: 150px;
 }
+.system .details,
 .environment .details,
 .voice .details {
   width: 100%;
@@ -1712,28 +1719,33 @@ iframe {
   padding: 160px 25px 50px;
   margin-top: -100px;
 }
+.system .details .item,
 .environment .details .item,
 .voice .details .item {
   padding: 10px;
 }
+.system .details .item h4,
 .environment .details .item h4,
 .voice .details .item h4 {
   display: flex;
   align-items: flex-end;
   line-height: 1;
 }
+.system .details .item h4 .num,
 .environment .details .item h4 .num,
 .voice .details .item h4 .num {
   font-size: 80px;
   color: #8fa0b4;
   margin-right: 6px;
 }
+.system .details .item h4 .title,
 .environment .details .item h4 .title,
 .voice .details .item h4 .title {
   font-size: 30px;
   color: #c7d0da;
   line-height: 1.4;
 }
+.system .point,
 .environment .point,
 .voice .point {
   display: flex;
@@ -1745,17 +1757,20 @@ iframe {
   margin-top: 15px;
   min-height: 200px;
 }
+.system .point .flex-1,
 .environment .point .flex-1,
 .voice .point .flex-1 {
   align-items: flex-start;
   gap: 10px;
 }
+.system .point .flex-1 img,
 .environment .point .flex-1 img,
 .voice .point .flex-1 img {
   width: 10%;
   max-width: 26px;
   margin-top: 10px;
 }
+.system .point .flex-1 p,
 .environment .point .flex-1 p,
 .voice .point .flex-1 p {
   width: 90%;
