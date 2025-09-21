@@ -175,7 +175,7 @@
         }
     }
 }
-
+.pages-company,
 .pages-business,
 .pages-tanker {
     .img-wrap {
@@ -202,6 +202,13 @@
                 width: 100%;
                 max-width: 120px;
             }
+        }
+    }
+}
+.pages-company {
+    .img-wrap {
+        img {
+            margin-top: 100px;
         }
     }
 }

@@ -1488,30 +1488,39 @@ main section {
   color: #007BFF;
 }
 
+.pages-company .img-wrap img,
 .pages-business .img-wrap img,
 .pages-tanker .img-wrap img {
   margin-top: 100px;
 }
+.pages-company .flex-1,
 .pages-business .flex-1,
 .pages-tanker .flex-1 {
   display: flex;
   align-items: flex-end;
   margin-top: 50px;
 }
+.pages-company .flex-1 p,
 .pages-business .flex-1 p,
 .pages-tanker .flex-1 p {
   width: 80%;
   color: #1f426a;
   font-size: 22px;
 }
+.pages-company .flex-1 .img-box,
 .pages-business .flex-1 .img-box,
 .pages-tanker .flex-1 .img-box {
   width: 20%;
 }
+.pages-company .flex-1 .img-box img,
 .pages-business .flex-1 .img-box img,
 .pages-tanker .flex-1 .img-box img {
   width: 100%;
   max-width: 120px;
+}
+
+.pages-company .img-wrap img {
+  margin-top: 100px;
 }
 
 .description {
