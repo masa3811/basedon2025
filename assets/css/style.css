@@ -1319,7 +1319,8 @@ main section {
   border-radius: 10px;
 }
 .btn-arrow--accent--alt:hover {
-  opacity: 0.8;
+  opacity: 1;
+  color: #fff;
 }
 
 .btn-arrow--large {
@@ -1682,7 +1683,7 @@ iframe {
 .environment .flex-1,
 .voice .flex-1 {
   align-items: center;
-  gap: 60px;
+  gap: 40px;
 }
 .environment .flex-1 .img-box,
 .voice .flex-1 .img-box {

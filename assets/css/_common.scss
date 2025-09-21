@@ -169,7 +169,8 @@ $font-ttl: 'Roboto', sans-serif;
     border-radius: 10px;
 
     &:hover {
-        opacity: 0.8; 
+        opacity: 1; 
+        color: c.$white;
     }
 }
 // サイズバリエーション
