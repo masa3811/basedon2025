@@ -6,7 +6,9 @@ $secondary-color: #029fd4;
 $accent-color: #f84a2a;
 $text-color: #333;
 $white: #fff;
+$light-gray:#f5f5f5;
 $bg-color:#e7f1f5;
+
 
 // 本文用
 $font-family: 'Noto Sans JP', sans-serif;
@@ -184,6 +186,11 @@ button {
   .inner-1200 {
     padding: 0;
   }
+}
+.inner-1300 {
+  width: min(100%, 1300px);
+  margin: 0 auto;
+  padding: 0 1em;
 }
 .inner-1350 {
   width: min(100%, 1350px);

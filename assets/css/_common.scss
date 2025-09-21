@@ -63,6 +63,25 @@ $font-ttl: 'Roboto', sans-serif;
 
         }
     }
+
+        &.pages {
+            font-size: 45px;
+    
+            @include c.ssp() {
+                font-size: 32px;
+            }
+        }
+
+}
+.pages-recruit .system .section-ttl {
+    text-align: left;
+    p{
+        margin: 0;
+        line-height: 1;
+    }
+    img {
+        margin-top: 100px;
+    }
 }
 
 .box-ttl {

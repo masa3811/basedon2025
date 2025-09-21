@@ -279,6 +279,8 @@ iframe {
     margin-top: -70px;
 }
 
+
+/* 船員募集 */
 #recruit .kv-wrap .page-ttl {
     top: 50%;
 }
@@ -316,4 +318,184 @@ iframe {
         font-size: 22px;
         font-weight: 600;
     }
+}
+
+.system {
+    margin-top: 100px;
+
+    .flex-1 {
+        align-items: center;
+        gap: 60px;
+
+        .img-box {
+            width: 60%;
+        }
+    }
+
+    .section-ttl {
+        width: 40%;
+        text-align: left;
+
+        p {
+            margin: 0;
+            line-height: 1;
+        }
+    }
+
+
+    .details {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        background-color: c.$primary-color;
+        padding: 160px 25px 50px;
+        margin-top: -100px;
+
+        .item {
+            width: calc(100% / 3);
+            padding: 10px;
+
+            h4 {
+                display: flex;
+                align-items: flex-end;
+                line-height: 1;
+
+                .num {
+                    font-size: 80px;
+                    color: #8fa0b4;
+                    margin-right: 6px;
+                }
+
+                .title {
+                    font-size: 30px;
+                    color: #c7d0da;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+
+    .point {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: c.$white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+        min-height: 160px;
+
+        .flex-1 {
+            gap: 10px;
+
+
+            img {
+                width: 10%;
+                max-width: 26px;
+            }
+
+            p {
+                width: 90%;
+                font-size: 22px;
+            }
+        }
+
+    }
+}
+
+.environment {
+    margin-top: 100px;
+
+    .flex-1 {
+        align-items: center;
+        gap: 60px;
+
+        .img-box {
+            width: 60%;
+        }
+    }
+
+    .section-ttl {
+        width: 40%;
+        text-align: left;
+
+        p {
+            margin: 0;
+            line-height: 1;
+
+        }
+
+        img {
+            margin-top: 150px;
+        }
+    }
+
+
+    .details {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        background-color: c.$primary-color;
+        padding: 160px 25px 50px;
+        margin-top: -100px;
+
+        .item {
+            padding: 10px;
+
+            h4 {
+                display: flex;
+                align-items: flex-end;
+                line-height: 1;
+
+                .num {
+                    font-size: 80px;
+                    color: #8fa0b4;
+                    margin-right: 6px;
+                }
+
+                .title {
+                    font-size: 30px;
+                    color: #c7d0da;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
+
+    .point {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: c.$white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+        min-height: 200px;
+
+        .flex-1 {
+            align-items: flex-start;
+            gap: 10px;
+
+
+            img {
+                width: 10%;
+                max-width: 26px;
+                margin-top: 10px;
+            }
+
+            p {
+                width: 90%;
+                font-size: 22px;
+            }
+        }
+
+    }
+}
+
+.item.wide {
+    width: 57%;
+}
+
+.item.narrow {
+    width: 43%;
 }

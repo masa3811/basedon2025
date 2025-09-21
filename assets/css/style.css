@@ -163,6 +163,12 @@ button {
     padding: 0;
   }
 }
+.inner-1300 {
+  width: min(100%, 1300px);
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .inner-1350 {
   width: min(100%, 1350px);
   margin: 0 auto;
@@ -1224,6 +1230,25 @@ main section {
     font-size: 25px;
   }
 }
+.section-ttl.pages {
+  font-size: 45px;
+}
+@media (max-width: 400px) {
+  .section-ttl.pages {
+    font-size: 32px;
+  }
+}
+
+.pages-recruit .system .section-ttl {
+  text-align: left;
+}
+.pages-recruit .system .section-ttl p {
+  margin: 0;
+  line-height: 1;
+}
+.pages-recruit .system .section-ttl img {
+  margin-top: 100px;
+}
 
 .box-ttl {
   font-size: 36px;
@@ -1551,6 +1576,7 @@ iframe {
   margin-top: -70px;
 }
 
+/* 船員募集 */
 #recruit .kv-wrap .page-ttl {
   top: 50%;
 }
@@ -1580,4 +1606,150 @@ iframe {
   color: #1f426a;
   font-size: 22px;
   font-weight: 600;
+}
+
+.system {
+  margin-top: 100px;
+}
+.system .flex-1 {
+  align-items: center;
+  gap: 60px;
+}
+.system .flex-1 .img-box {
+  width: 60%;
+}
+.system .section-ttl {
+  width: 40%;
+  text-align: left;
+}
+.system .section-ttl p {
+  margin: 0;
+  line-height: 1;
+}
+.system .details {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  background-color: #1f426a;
+  padding: 160px 25px 50px;
+  margin-top: -100px;
+}
+.system .details .item {
+  width: 33.3333333333%;
+  padding: 10px;
+}
+.system .details .item h4 {
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+}
+.system .details .item h4 .num {
+  font-size: 80px;
+  color: #8fa0b4;
+  margin-right: 6px;
+}
+.system .details .item h4 .title {
+  font-size: 30px;
+  color: #c7d0da;
+  line-height: 1.4;
+}
+.system .point {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  min-height: 160px;
+}
+.system .point .flex-1 {
+  gap: 10px;
+}
+.system .point .flex-1 img {
+  width: 10%;
+  max-width: 26px;
+}
+.system .point .flex-1 p {
+  width: 90%;
+  font-size: 22px;
+}
+
+.environment {
+  margin-top: 100px;
+}
+.environment .flex-1 {
+  align-items: center;
+  gap: 60px;
+}
+.environment .flex-1 .img-box {
+  width: 60%;
+}
+.environment .section-ttl {
+  width: 40%;
+  text-align: left;
+}
+.environment .section-ttl p {
+  margin: 0;
+  line-height: 1;
+}
+.environment .section-ttl img {
+  margin-top: 150px;
+}
+.environment .details {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  background-color: #1f426a;
+  padding: 160px 25px 50px;
+  margin-top: -100px;
+}
+.environment .details .item {
+  padding: 10px;
+}
+.environment .details .item h4 {
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+}
+.environment .details .item h4 .num {
+  font-size: 80px;
+  color: #8fa0b4;
+  margin-right: 6px;
+}
+.environment .details .item h4 .title {
+  font-size: 30px;
+  color: #c7d0da;
+  line-height: 1.4;
+}
+.environment .point {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 15px;
+  min-height: 200px;
+}
+.environment .point .flex-1 {
+  align-items: flex-start;
+  gap: 10px;
+}
+.environment .point .flex-1 img {
+  width: 10%;
+  max-width: 26px;
+  margin-top: 10px;
+}
+.environment .point .flex-1 p {
+  width: 90%;
+  font-size: 22px;
+}
+
+.item.wide {
+  width: 57%;
+}
+
+.item.narrow {
+  width: 43%;
 }/*# sourceMappingURL=style.css.map */
