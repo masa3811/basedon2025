@@ -1591,8 +1591,18 @@ iframe {
   right: 8%;
   width: 40%;
   max-width: 500px;
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.8s;
 }
 
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .pages-recruit .img-wrap img {
   margin-top: 50px;
 }

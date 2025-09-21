@@ -294,6 +294,22 @@ iframe {
         right: 8%;
         width: 40%;
         max-width: 500px;
+
+    
+        transform: translateY(100px);
+        opacity: 0;
+
+        // アニメーション
+        animation: slideUp 1s ease-out forwards;
+        animation-delay: 0.8s; 
+    }
+}
+
+// 下から上に上がるアニメーション
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
