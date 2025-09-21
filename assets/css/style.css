@@ -1350,14 +1350,17 @@ main section {
   max-width: 1000px;
 }
 
+#company .page-ttl h3,
 #business .page-ttl h3,
 #tanker .page-ttl h3 {
   color: #c7d0da;
 }
+#company .page-ttl h3::first-letter,
 #business .page-ttl h3::first-letter,
 #tanker .page-ttl h3::first-letter {
   color: #8fa0b4;
 }
+#company .page-ttl p,
 #business .page-ttl p,
 #tanker .page-ttl p {
   color: #fff;
@@ -1476,7 +1479,7 @@ main section {
 .description .frame {
   background-color: #fff;
   padding: 50px 80px;
-  margin-top: 30px;
+  margin-top: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 .description .frame-small {
@@ -1492,7 +1495,7 @@ main section {
 .description table td {
   font-size: 16px;
   border-bottom: 1px solid #ccc;
-  padding: 10px;
+  padding: 20px;
   text-align: left;
 }
 .description table th {
@@ -1503,6 +1506,10 @@ main section {
   border-top: 1px solid #ccc;
 }
 
+.description .box-ttl {
+  margin-top: 70px;
+}
+
 .desc {
   line-height: 3;
 }
@@ -1511,6 +1518,14 @@ main section {
   width: 30%;
 }
 
+.iframe-wrap {
+  margin-bottom: -70px;
+}
+
 iframe {
-  margin-top: 50px;
+  margin-top: 20px;
+}
+
+#company.waveup {
+  margin-top: -70px;
 }/*# sourceMappingURL=style.css.map */
