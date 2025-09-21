@@ -403,7 +403,8 @@ iframe {
     }
 }
 
-.environment {
+.environment,
+.voice {
     margin-top: 100px;
 
     .flex-1 {
@@ -498,4 +499,87 @@ iframe {
 
 .item.narrow {
     width: 43%;
+}
+
+
+.voice {
+    margin-top: 100px;
+}
+
+.talk {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+    margin-top: 60px;
+
+    .talk-left {
+        width: 20%;
+
+        .avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+        }
+    }
+
+    .talk-right {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        .balloon {
+            position: relative;
+            display: inline-block;
+            margin: 1.5em 0 1.5em 15px;
+            padding: 20px 30px;
+            min-width: 120px;
+            max-width: 100%;
+            color: c.$white;
+            font-size: 16px;
+            background: #029fd4;
+            border-radius: 20px;
+        }
+
+        .balloon:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -28px;
+            margin-top: -15px;
+            border: 15px solid transparent;
+            border-right: 15px solid #029fd4;
+        }
+
+
+        p {
+            margin: 0;
+            font-size: 22px;
+            line-height: 1.5;
+            color: c.$white;
+        }
+    }
+
+    .writer {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+}
+
+.voice .flex-1 .section-ttl {
+    width: 100%;
+    border-bottom: 1px solid #666;
+    padding-bottom: 50px;
+}
+
+.talk:last-of-type {
+    padding-bottom: 50px;
+    border-bottom: 1px solid #666;
 }

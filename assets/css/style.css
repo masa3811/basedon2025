@@ -1675,28 +1675,35 @@ iframe {
   font-size: 22px;
 }
 
-.environment {
+.environment,
+.voice {
   margin-top: 100px;
 }
-.environment .flex-1 {
+.environment .flex-1,
+.voice .flex-1 {
   align-items: center;
   gap: 60px;
 }
-.environment .flex-1 .img-box {
+.environment .flex-1 .img-box,
+.voice .flex-1 .img-box {
   width: 60%;
 }
-.environment .section-ttl {
+.environment .section-ttl,
+.voice .section-ttl {
   width: 40%;
   text-align: left;
 }
-.environment .section-ttl p {
+.environment .section-ttl p,
+.voice .section-ttl p {
   margin: 0;
   line-height: 1;
 }
-.environment .section-ttl img {
+.environment .section-ttl img,
+.voice .section-ttl img {
   margin-top: 150px;
 }
-.environment .details {
+.environment .details,
+.voice .details {
   width: 100%;
   display: flex;
   gap: 20px;
@@ -1704,25 +1711,30 @@ iframe {
   padding: 160px 25px 50px;
   margin-top: -100px;
 }
-.environment .details .item {
+.environment .details .item,
+.voice .details .item {
   padding: 10px;
 }
-.environment .details .item h4 {
+.environment .details .item h4,
+.voice .details .item h4 {
   display: flex;
   align-items: flex-end;
   line-height: 1;
 }
-.environment .details .item h4 .num {
+.environment .details .item h4 .num,
+.voice .details .item h4 .num {
   font-size: 80px;
   color: #8fa0b4;
   margin-right: 6px;
 }
-.environment .details .item h4 .title {
+.environment .details .item h4 .title,
+.voice .details .item h4 .title {
   font-size: 30px;
   color: #c7d0da;
   line-height: 1.4;
 }
-.environment .point {
+.environment .point,
+.voice .point {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1732,16 +1744,19 @@ iframe {
   margin-top: 15px;
   min-height: 200px;
 }
-.environment .point .flex-1 {
+.environment .point .flex-1,
+.voice .point .flex-1 {
   align-items: flex-start;
   gap: 10px;
 }
-.environment .point .flex-1 img {
+.environment .point .flex-1 img,
+.voice .point .flex-1 img {
   width: 10%;
   max-width: 26px;
   margin-top: 10px;
 }
-.environment .point .flex-1 p {
+.environment .point .flex-1 p,
+.voice .point .flex-1 p {
   width: 90%;
   font-size: 22px;
 }
@@ -1752,4 +1767,78 @@ iframe {
 
 .item.narrow {
   width: 43%;
+}
+
+.voice {
+  margin-top: 100px;
+}
+
+.talk {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  margin-top: 60px;
+}
+.talk .talk-left {
+  width: 20%;
+}
+.talk .talk-left .avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+.talk .talk-right {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.talk .talk-right .balloon {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 20px 30px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #fff;
+  font-size: 16px;
+  background: #029fd4;
+  border-radius: 20px;
+}
+.talk .talk-right .balloon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #029fd4;
+}
+.talk .talk-right p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #fff;
+}
+.talk .writer {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.voice .flex-1 .section-ttl {
+  width: 100%;
+  border-bottom: 1px solid #666;
+  padding-bottom: 50px;
+}
+
+.talk:last-of-type {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #666;
 }/*# sourceMappingURL=style.css.map */
