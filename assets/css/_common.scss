@@ -84,6 +84,14 @@ $font-ttl: 'Roboto', sans-serif;
     &.accent {
         color: c.$accent-color;
     }
+
+    &.lg {
+        font-size: 45px;
+
+        @include c.ssp() {
+            font-size: 32px; 
+        }
+    }
 }
 
 

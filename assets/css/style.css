@@ -1242,6 +1242,14 @@ main section {
 .box-ttl.accent {
   color: #f84a2a;
 }
+.box-ttl.lg {
+  font-size: 45px;
+}
+@media (max-width: 400px) {
+  .box-ttl.lg {
+    font-size: 32px;
+  }
+}
 
 .btn-arrow {
   display: inline-flex;
@@ -1364,6 +1372,19 @@ main section {
 #business .page-ttl p,
 #tanker .page-ttl p {
   color: #fff;
+}
+
+#recruit .page-ttl p.lead {
+  color: #1f426a;
+  font-family: "Noto Serif JP", "Sawarabi Mincho", serif;
+  font-size: 100px;
+  letter-spacing: 0.05em;
+}
+#recruit .page-ttl p.sub {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
 }
 
 .pages-news {
@@ -1528,4 +1549,35 @@ iframe {
 
 #company.waveup {
   margin-top: -70px;
+}
+
+#recruit .kv-wrap .page-ttl {
+  top: 50%;
+}
+
+.recruit-catch {
+  position: relative;
+}
+.recruit-catch img {
+  position: absolute;
+  top: -400px;
+  right: 8%;
+  width: 40%;
+  max-width: 500px;
+}
+
+.pages-recruit .img-wrap img {
+  margin-top: 50px;
+}
+.pages-recruit .img-wrap .box-ttl {
+  margin-top: 70px;
+}
+
+.info {
+  margin-top: 50px;
+}
+.info p {
+  color: #1f426a;
+  font-size: 22px;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

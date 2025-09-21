@@ -78,6 +78,26 @@
     }
 }
 
+#recruit {
+    .page-ttl {
+
+        p.lead {
+            color: c.$primary-color;
+            font-family: c.$font-serif;
+            font-size: 100px;
+            letter-spacing: 0.05em;
+        }
+
+        p.sub {
+            color: c.$white;
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+    }
+}
+
+
 .pages-news {
     padding: 30px 20px;
     margin-top: 50px;
@@ -191,9 +211,11 @@
     padding: 40px 0 100px; // 上下の余白
     margin-top: 100px;
     margin-bottom: 100px;
-.description-small {
-    padding: 0;
-}
+
+    .description-small {
+        padding: 0;
+    }
+
     .frame {
         background-color: #fff; // 白い背景
         padding: 50px 80px; // 内側に余白
@@ -230,9 +252,11 @@
         border-top: 1px solid #ccc;
     }
 }
+
 .description .box-ttl {
     margin-top: 70px;
 }
+
 .desc {
     line-height: 3;
 }
@@ -242,6 +266,7 @@
         width: 30%;
     }
 }
+
 .iframe-wrap {
     margin-bottom: -70px;
 }
@@ -249,6 +274,46 @@
 iframe {
     margin-top: 20px;
 }
+
 #company.waveup {
     margin-top: -70px;
+}
+
+#recruit .kv-wrap .page-ttl {
+    top: 50%;
+}
+
+.recruit-catch {
+    position: relative;
+
+    img {
+        position: absolute;
+        top: -400px;
+        right: 8%;
+        width: 40%;
+        max-width: 500px;
+    }
+}
+
+.pages-recruit {
+    .img-wrap {
+        img {
+            margin-top: 50px;
+        }
+
+        .box-ttl {
+            margin-top: 70px;
+        }
+
+    }
+}
+
+.info {
+    margin-top: 50px;
+
+    p {
+        color: c.$primary-color;
+        font-size: 22px;
+        font-weight: 600;
+    }
 }
