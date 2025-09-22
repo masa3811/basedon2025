@@ -34,6 +34,8 @@
             margin: 0;
             max-width: 1000px; // ここで横幅制限して左端揃え
 
+
+
             &::first-letter {
                 color: #8fa0b5;
                 font-size: 100px;
@@ -86,11 +88,14 @@
             font-family: c.$font-serif;
             font-size: 100px;
             letter-spacing: 0.05em;
+
+            @media (max-width: 1100px) {
+                line-height: 1.5;
+            }
         }
 
-        @media (max-width: 1200px) {
-            font-size: 80px;
-        }
+
+
 
         p.sub {
             color: c.$white;
@@ -279,6 +284,22 @@
 
 .iframe-wrap {
     margin-bottom: -70px;
+
+    @media (max-width: 1500px) {
+        margin-bottom: -60px;
+    }
+
+    @media (max-width: 1200px) {
+        margin-bottom: -38px;
+    }
+
+    @media (max-width: 768.98px) {
+        margin-bottom: -30px;
+    }
+
+    @media (max-width: 600px) {
+        margin-bottom: -26px;
+    }
 }
 
 iframe {
@@ -474,14 +495,28 @@ iframe {
         width: 40%;
         text-align: left;
 
+        h3 {
+            @media (max-width: 1100px) {
+                font-size: 50px;
+            }
+        }
+
         p {
             margin: 0;
             line-height: 1;
+
+            @media (max-width: 1100px) {
+                font-size: 30px;
+            }
 
         }
 
         img {
             margin-top: 150px;
+
+            @media (max-width: 1100px) {
+                width: 90%;
+            }
         }
     }
 
@@ -541,6 +576,10 @@ iframe {
             p {
                 width: 90%;
                 font-size: 22px;
+
+                @media (max-width: 1100px) {
+                    font-size: 17px;
+                }
             }
         }
 

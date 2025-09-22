@@ -1406,9 +1406,9 @@ main section {
   font-size: 100px;
   letter-spacing: 0.05em;
 }
-@media (max-width: 1200px) {
-  #recruit .page-ttl {
-    font-size: 80px;
+@media (max-width: 1100px) {
+  #recruit .page-ttl p.lead {
+    line-height: 1.5;
   }
 }
 #recruit .page-ttl p.sub {
@@ -1583,6 +1583,26 @@ main section {
 .iframe-wrap {
   margin-bottom: -70px;
 }
+@media (max-width: 1500px) {
+  .iframe-wrap {
+    margin-bottom: -60px;
+  }
+}
+@media (max-width: 1200px) {
+  .iframe-wrap {
+    margin-bottom: -38px;
+  }
+}
+@media (max-width: 768.98px) {
+  .iframe-wrap {
+    margin-bottom: -30px;
+  }
+}
+@media (max-width: 600px) {
+  .iframe-wrap {
+    margin-bottom: -26px;
+  }
+}
 
 iframe {
   margin-top: 20px;
@@ -1754,16 +1774,37 @@ iframe {
   width: 40%;
   text-align: left;
 }
+@media (max-width: 1100px) {
+  .system .section-ttl h3,
+  .environment .section-ttl h3,
+  .voice .section-ttl h3 {
+    font-size: 50px;
+  }
+}
 .system .section-ttl p,
 .environment .section-ttl p,
 .voice .section-ttl p {
   margin: 0;
   line-height: 1;
 }
+@media (max-width: 1100px) {
+  .system .section-ttl p,
+  .environment .section-ttl p,
+  .voice .section-ttl p {
+    font-size: 30px;
+  }
+}
 .system .section-ttl img,
 .environment .section-ttl img,
 .voice .section-ttl img {
   margin-top: 150px;
+}
+@media (max-width: 1100px) {
+  .system .section-ttl img,
+  .environment .section-ttl img,
+  .voice .section-ttl img {
+    width: 90%;
+  }
 }
 .system .details,
 .environment .details,
@@ -1831,6 +1872,13 @@ iframe {
 .voice .point .flex-1 p {
   width: 90%;
   font-size: 22px;
+}
+@media (max-width: 1100px) {
+  .system .point .flex-1 p,
+  .environment .point .flex-1 p,
+  .voice .point .flex-1 p {
+    font-size: 17px;
+  }
 }
 
 .item.wide {
