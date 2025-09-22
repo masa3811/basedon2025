@@ -1593,13 +1593,20 @@ iframe {
 .recruit-catch img {
   position: absolute;
   top: -400px;
-  right: 8%;
+  right: 17%;
   width: 40%;
   max-width: 500px;
   transform: translateY(100px);
   opacity: 0;
   animation: slideUp 1s ease-out forwards;
   animation-delay: 0.8s;
+}
+@media (max-width: 1200px) {
+  .recruit-catch img {
+    top: -280px;
+    right: 8%;
+    width: 30%;
+  }
 }
 
 @keyframes slideUp {

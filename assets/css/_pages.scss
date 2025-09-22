@@ -175,6 +175,7 @@
         }
     }
 }
+
 .pages-company,
 .pages-business,
 .pages-tanker {
@@ -292,17 +293,23 @@ iframe {
     img {
         position: absolute;
         top: -400px;
-        right: 8%;
+        right: 17%;
         width: 40%;
         max-width: 500px;
 
-    
+        @include c.pc() {
+            top: -280px;
+            right: 8%;
+            width: 30%;
+        }
+
+
         transform: translateY(100px);
         opacity: 0;
 
         // アニメーション
         animation: slideUp 1s ease-out forwards;
-        animation-delay: 0.8s; 
+        animation-delay: 0.8s;
     }
 }
 
