@@ -1406,11 +1406,21 @@ main section {
   font-size: 100px;
   letter-spacing: 0.05em;
 }
+@media (max-width: 1200px) {
+  #recruit .page-ttl {
+    font-size: 80px;
+  }
+}
 #recruit .page-ttl p.sub {
   color: #fff;
   font-size: 26px;
   font-weight: 600;
   letter-spacing: 0.05em;
+}
+@media (max-width: 1200px) {
+  #recruit .page-ttl p.sub {
+    font-size: 22px;
+  }
 }
 
 .pages-news {
@@ -1601,9 +1611,33 @@ iframe {
   animation: slideUp 1s ease-out forwards;
   animation-delay: 0.8s;
 }
+@media (max-width: 1600px) {
+  .recruit-catch img {
+    top: -300px;
+    max-width: 450px;
+  }
+}
+@media (max-width: 1400px) {
+  .recruit-catch img {
+    top: -220px;
+    max-width: 380px;
+  }
+}
+@media (max-width: 1300px) {
+  .recruit-catch img {
+    right: 13%;
+  }
+}
 @media (max-width: 1200px) {
   .recruit-catch img {
     top: -280px;
+    right: 8%;
+    width: 30%;
+  }
+}
+@media (max-width: 1023.98px) {
+  .recruit-catch img {
+    top: -200px;
     right: 8%;
     width: 30%;
   }
