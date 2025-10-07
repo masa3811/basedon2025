@@ -1560,7 +1560,11 @@ main section {
   padding: 20px;
   text-align: left;
 }
+.description table td {
+  width: 70%;
+}
 .description table th {
+  width: 30%;
   font-weight: bold;
 }
 .description tr:first-child th,
