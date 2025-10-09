@@ -255,6 +255,7 @@
             padding: 20px;
             text-align: left;
         }
+
         td {
             width: 70%;
         }
@@ -636,7 +637,7 @@ iframe {
             position: relative;
             display: inline-block;
             margin: 1.5em 0 1.5em 15px;
-            padding: 20px 40px;
+            padding: 20px;
             min-width: 120px;
             max-width: 100%;
             color: c.$white;
@@ -717,6 +718,10 @@ iframe {
     }
 }
 
+.indent-1 {
+    padding-left: 1em;
+    text-indent: -1em;
+}
 
 .blue-box {
     width: 100%;
