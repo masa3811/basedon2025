@@ -1351,6 +1351,11 @@ main section {
   opacity: 0;
   transition: transform 0.8s ease, opacity 0.8s ease;
 }
+@media (max-width: 800px) {
+  .kv-wrap .page-ttl {
+    top: 50%;
+  }
+}
 .kv-wrap .page-ttl.is-animated {
   transform: translateY(-50%);
   opacity: 1;
@@ -1364,7 +1369,17 @@ main section {
   margin: 0;
   max-width: 1000px;
 }
-.kv-wrap .page-ttl h3::first-letter {
+@media (max-width: 800px) {
+  .kv-wrap .page-ttl h3 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .kv-wrap .page-ttl h3 {
+    font-size: 25px;
+  }
+}
+.kv-wrap .page-ttl::first-letter {
   color: #8fa0b5;
   font-size: 100px;
   font-weight: 600;
@@ -1372,16 +1387,26 @@ main section {
   vertical-align: bottom;
 }
 @media (max-width: 400px) {
-  .kv-wrap .page-ttl h3::first-letter {
+  .kv-wrap .page-ttl::first-letter {
     font-size: 55px;
   }
 }
-.kv-wrap .page-ttl p {
+.kv-wrap p {
   font-size: 36px;
   color: #1f426a;
   font-weight: bold;
   margin: 10px 0 0;
   max-width: 1000px;
+}
+@media (max-width: 800px) {
+  .kv-wrap p {
+    font-size: 27px;
+  }
+}
+@media (max-width: 600px) {
+  .kv-wrap p {
+    font-size: 18px;
+  }
 }
 
 #company .page-ttl h3,
@@ -1503,6 +1528,13 @@ main section {
 .pages-tanker .img-wrap img {
   margin-top: 100px;
 }
+@media (max-width: 800px) {
+  .pages-company .img-wrap img,
+  .pages-business .img-wrap img,
+  .pages-tanker .img-wrap img {
+    padding: 0 1em;
+  }
+}
 .pages-company .flex-1,
 .pages-business .flex-1,
 .pages-tanker .flex-1 {
@@ -1535,6 +1567,11 @@ main section {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+@media (max-width: 800px) {
+  .description {
+    padding: 40px 16px 100px;
+  }
+}
 .description .description-small {
   padding: 0;
 }
@@ -1543,6 +1580,11 @@ main section {
   padding: 50px 80px;
   margin-top: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 800px) {
+  .description .frame {
+    padding: 0;
+  }
 }
 .description .frame-small {
   padding: 20px 40px;
@@ -1582,6 +1624,11 @@ main section {
 
 .table-small th {
   width: 30%;
+}
+@media (max-width: 800px) {
+  .table-small th {
+    width: 45% !important;
+  }
 }
 
 .iframe-wrap {

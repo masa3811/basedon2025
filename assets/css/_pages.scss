@@ -14,14 +14,18 @@
         position: absolute;
         top: 35%; // 縦中央
         left: 18%; // 左端位置
-        transform: translateY(30px); // 初期は下にずらす
-        text-align: left; // 左揃え
+        transform: translateY(30px);
+        text-align: left;
         z-index: 2;
-        opacity: 0; // 初期は透明
+        opacity: 0;
         transition: transform 0.8s ease, opacity 0.8s ease;
 
+        @media (max-width: 800px) {
+            top: 50%;
+        }
+
         &.is-animated {
-            transform: translateY(-50%); // 縦中央に移動
+            transform: translateY(-50%);
             opacity: 1;
         }
 
@@ -32,32 +36,47 @@
             letter-spacing: 0.03em;
             line-height: 1.1;
             margin: 0;
-            max-width: 1000px; // ここで横幅制限して左端揃え
+            max-width: 1000px;
 
+            @media (max-width: 800px) {
+                font-size: 50px;
+            }
 
-
-            &::first-letter {
-                color: #8fa0b5;
-                font-size: 100px;
-                font-weight: 600;
-                line-height: 0.9;
-                vertical-align: bottom;
-
-                @include c.ssp() {
-                    font-size: 55px;
-                }
+            @media (max-width: 600px) {
+                font-size: 25px;
             }
         }
 
-        p {
-            font-size: 36px;
-            color: c.$primary-color;
-            font-weight: bold;
-            margin: 10px 0 0;
-            max-width: 1000px; // 横幅を揃える
+        &::first-letter {
+            color: #8fa0b5;
+            font-size: 100px;
+            font-weight: 600;
+            line-height: 0.9;
+            vertical-align: bottom;
+
+            @include c.ssp() {
+                font-size: 55px;
+            }
+        }
+    }
+
+    p {
+        font-size: 36px;
+        color: c.$primary-color;
+        font-weight: bold;
+        margin: 10px 0 0;
+        max-width: 1000px; // 横幅を揃える
+
+        @media (max-width: 800px) {
+            font-size: 27px;
+        }
+
+        @media (max-width: 600px) {
+            font-size: 18px;
         }
     }
 }
+
 
 #company,
 #business,
@@ -195,6 +214,10 @@
     .img-wrap {
         img {
             margin-top: 100px;
+
+            @media (max-width: 800px) {
+                padding: 0 1em;
+            }
         }
     }
 
@@ -227,6 +250,10 @@
     margin-top: 100px;
     margin-bottom: 100px;
 
+    @media (max-width: 800px) {
+        padding: 40px 16px 100px; // 上下の余白
+    }
+
     .description-small {
         padding: 0;
     }
@@ -235,11 +262,17 @@
         background-color: #fff; // 白い背景
         padding: 50px 80px; // 内側に余白
         margin-top: 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); // （お好みで影）
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: 800px) {
+            padding: 0;
+        }
+
+
     }
 
     .frame-small {
-        padding: 20px 40px; // 変更したい余白
+        padding: 20px 40px;
     }
 
     table {
@@ -284,8 +317,16 @@
 .table-small {
     th {
         width: 30%;
+
+        @media (max-width: 800px) {
+            width: 45% !important;
+        }
     }
+
+
 }
+
+
 
 .iframe-wrap {
     margin-bottom: -70px;
