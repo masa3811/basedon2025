@@ -1244,7 +1244,7 @@ main section {
 }
 @media (max-width: 400px) {
   .box-ttl {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 .box-ttl.primary {
@@ -1354,6 +1354,7 @@ main section {
 @media (max-width: 800px) {
   .kv-wrap .page-ttl {
     top: 50%;
+    left: 10%;
   }
 }
 .kv-wrap .page-ttl.is-animated {
@@ -1532,7 +1533,7 @@ main section {
   .pages-company .img-wrap img,
   .pages-business .img-wrap img,
   .pages-tanker .img-wrap img {
-    padding: 0 1em;
+    padding: 0;
   }
 }
 .pages-company .flex-1,
@@ -1548,6 +1549,13 @@ main section {
   width: 80%;
   color: #1f426a;
   font-size: 22px;
+}
+@media (max-width: 400px) {
+  .pages-company .flex-1 p,
+  .pages-business .flex-1 p,
+  .pages-tanker .flex-1 p {
+    font-size: 17px;
+  }
 }
 .pages-company .flex-1 .img-box,
 .pages-business .flex-1 .img-box,
@@ -1572,50 +1580,94 @@ main section {
     padding: 40px 16px 100px;
   }
 }
-.description .description-small {
-  padding: 0;
-}
-.description .frame {
-  background-color: #fff;
-  padding: 50px 80px;
-  margin-top: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 800px) {
-  .description .frame {
-    padding: 0;
+@media (max-width: 800px) and (max-width: 600px) {
+  .description {
+    margin-top: 50px;
   }
 }
-.description .frame-small {
-  padding: 20px 40px;
+@media (max-width: 800px) {
+  .description .description-small {
+    padding: 0;
+  }
+  .description .frame {
+    background-color: #fff;
+    padding: 50px 80px;
+    margin-top: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
 }
-.description table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 16px;
+@media (max-width: 800px) and (max-width: 1100px) {
+  .description .frame {
+    padding: 50px;
+  }
 }
-.description table th,
-.description table td {
-  font-size: 16px;
-  border-bottom: 1px solid #ccc;
-  padding: 20px;
-  text-align: left;
+@media (max-width: 800px) and (max-width: 800px) {
+  .description .frame {
+    padding: 30px;
+  }
 }
-.description table td {
-  width: 70%;
+@media (max-width: 800px) and (max-width: 400px) {
+  .description .frame {
+    padding: 20px;
+  }
 }
-.description table th {
-  width: 30%;
-  font-weight: bold;
+@media (max-width: 800px) {
+  .description .frame-small {
+    padding: 20px 40px;
+  }
+  .description table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  .description table th,
+  .description table td {
+    font-size: 16px;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+  }
+  .description table td {
+    width: 70%;
+  }
 }
-.description tr:first-child th,
-.description tr:first-child td {
-  border-top: 1px solid #ccc;
+@media (max-width: 800px) and (max-width: 400px) {
+  .description table td {
+    width: 100%;
+    display: block;
+    padding: 10px 0 30px;
+    border-bottom: 0px solid #ccc;
+  }
+}
+@media (max-width: 800px) {
+  .description table th {
+    width: 30%;
+    font-weight: bold;
+  }
+}
+@media (max-width: 800px) and (max-width: 400px) {
+  .description table th {
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 800px) {
+  .description tr:first-child th,
+  .description tr:first-child td {
+    border-top: 1px solid #ccc;
+  }
 }
 
 .description .box-ttl {
   margin-top: 70px;
+}
+@media (max-width: 400px) {
+  .description .box-ttl {
+    font-size: 22px;
+    text-align: center;
+  }
 }
 
 .desc {
@@ -2086,4 +2138,10 @@ iframe {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .p-01 {
+    padding: 0 1em;
+  }
 }/*# sourceMappingURL=style.css.map */
