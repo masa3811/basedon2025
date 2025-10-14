@@ -34,7 +34,7 @@ $font-ttl: 'Roboto', sans-serif;
 
 
         @include c.ssp() {
-            font-size: 40px;
+            font-size: 30px;
 
         }
 
@@ -61,7 +61,7 @@ $font-ttl: 'Roboto', sans-serif;
         line-height: 1.4;
 
         @include c.ssp() {
-            font-size: 25px;
+            font-size: 20px;
 
         }
     }

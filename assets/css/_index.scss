@@ -462,76 +462,76 @@ section.tanker {
   }
 
 
-.news-list {
-  width: 65%;
-
-  @include c.ssp() {
-    width: 100%;
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+  .news-list {
+    width: 65%;
 
     @include c.ssp() {
-      flex-direction: column; // 縦並びに変更
-      align-items: flex-start; // 左寄せ
-      padding: 5px 0;
+      width: 100%;
     }
 
-    .date {
-      width: 140px;
-      font-size: 16px;
-      color: #999;
-      flex-shrink: 0; // 固定幅を維持
-
-      @include c.ssp() {
-        width: 100%;
-        margin-bottom: 5px; // 日付とリンクの間に隙間
-        font-size: 15px;
-      }
-    }
-
-    a {
+    li {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      text-decoration: none;
-      color: #333;
       font-size: 16px;
-      flex: 1;
-      min-width: 0;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
 
       @include c.ssp() {
-        width: 100%;
-        font-size: 15px;
+        flex-direction: column; // 縦並びに変更
+        align-items: flex-start; // 左寄せ
+        padding: 5px 0;
       }
 
-      .arrow {
-        margin-left: 10px;
-        flex-shrink: 0;
-        transition: transform 0.3s;
+      .date {
+        width: 140px;
+        font-size: 16px;
+        color: #999;
+        flex-shrink: 0; // 固定幅を維持
 
         @include c.ssp() {
-          margin-left: 0;
-          margin-top: 5px; // 縦並びのときは下に
+          width: 100%;
+          margin-bottom: 5px; // 日付とリンクの間に隙間
+          font-size: 15px;
         }
       }
 
-      &:hover .arrow {
-        transform: translateX(5px);
-      }
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+        flex: 1;
+        min-width: 0;
 
-      &:hover {
-        color: #007BFF;
+        @include c.ssp() {
+          width: 100%;
+          font-size: 15px;
+        }
+
+        .arrow {
+          margin-left: 10px;
+          flex-shrink: 0;
+          transition: transform 0.3s;
+
+          @include c.ssp() {
+            margin-left: 0;
+            margin-top: 5px; // 縦並びのときは下に
+          }
+        }
+
+        &:hover .arrow {
+          transform: translateX(5px);
+        }
+
+        &:hover {
+          color: #007BFF;
+        }
       }
     }
   }
-}
 }
 
 .btn-box {
@@ -851,6 +851,10 @@ section.tanker {
           font-size: 35px;
           text-align: center;
           margin-top: 15px;
+        }
+
+        @include c.ssp {
+          font-size: 25px;
         }
 
         &:last-of-type {
