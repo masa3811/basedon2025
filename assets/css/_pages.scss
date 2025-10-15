@@ -579,6 +579,7 @@ iframe {
 
             @media (max-width: 400px) {
                 font-size: 25px;
+                text-align: center;
             }
 
         }
@@ -934,6 +935,10 @@ iframe {
     width: 100%;
     border-bottom: 1px solid #666;
     padding-bottom: 50px;
+
+    @media (max-width: 400px) {
+        text-align: center;
+    }
 }
 
 .talk:last-of-type {

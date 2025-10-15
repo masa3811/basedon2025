@@ -1905,6 +1905,7 @@ iframe {
   .environment .section-ttl p,
   .voice .section-ttl p {
     font-size: 25px;
+    text-align: center;
   }
 }
 .system .section-ttl img,
@@ -2303,6 +2304,11 @@ iframe {
   width: 100%;
   border-bottom: 1px solid #666;
   padding-bottom: 50px;
+}
+@media (max-width: 400px) {
+  .voice .flex-1 .section-ttl {
+    text-align: center;
+  }
 }
 
 .talk:last-of-type {
