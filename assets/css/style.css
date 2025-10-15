@@ -1805,6 +1805,7 @@ iframe {
 @media (max-width: 400px) {
   .recruit-catch img {
     top: 8px;
+    width: 40%;
   }
 }
 
@@ -1824,6 +1825,9 @@ iframe {
   .pages-recruit .img-wrap .box-ttl {
     padding: 0 16px;
   }
+}
+.pages-recruit .img-wrap .box-ttl.lg {
+  font-size: 28px;
 }
 
 .info {
@@ -1896,6 +1900,13 @@ iframe {
     font-size: 30px;
   }
 }
+@media (max-width: 400px) {
+  .system .section-ttl p,
+  .environment .section-ttl p,
+  .voice .section-ttl p {
+    font-size: 25px;
+  }
+}
 .system .section-ttl img,
 .environment .section-ttl img,
 .voice .section-ttl img {
@@ -1906,6 +1917,13 @@ iframe {
   .environment .section-ttl img,
   .voice .section-ttl img {
     width: 90%;
+  }
+}
+@media (max-width: 400px) {
+  .system .section-ttl img,
+  .environment .section-ttl img,
+  .voice .section-ttl img {
+    margin-top: 120px;
   }
 }
 .system .details,
@@ -2008,6 +2026,12 @@ iframe {
 .environment {
   margin-top: 100px;
 }
+@media (max-width: 400px) {
+  .system,
+  .environment {
+    margin-top: 50px;
+  }
+}
 .system .flex-1,
 .environment .flex-1 {
   align-items: center;
@@ -2017,6 +2041,7 @@ iframe {
   .system .flex-1,
   .environment .flex-1 {
     flex-direction: column;
+    gap: 10px;
   }
 }
 .system .flex-1 .img-box,
@@ -2026,13 +2051,20 @@ iframe {
 @media (max-width: 400px) {
   .system .flex-1 .img-box,
   .environment .flex-1 .img-box {
-    width: 80%;
+    width: 100%;
+    margin-top: 50px;
   }
 }
 .system .section-ttl,
 .environment .section-ttl {
   width: 40%;
   text-align: left;
+}
+@media (max-width: 400px) {
+  .system .section-ttl,
+  .environment .section-ttl {
+    width: 80%;
+  }
 }
 .system .section-ttl p,
 .environment .section-ttl p {
@@ -2048,6 +2080,12 @@ iframe {
   padding: 160px 25px 50px;
   margin-top: -100px;
 }
+@media (max-width: 400px) {
+  .system .details,
+  .environment .details {
+    padding: 100px 16px 50px;
+  }
+}
 .system .details .item,
 .environment .details .item {
   width: 33.3333333333%;
@@ -2058,6 +2096,13 @@ iframe {
   .environment .details .item {
     width: 100%;
     padding: 0 20px;
+  }
+}
+@media (max-width: 400px) {
+  .system .details .item,
+  .environment .details .item {
+    padding: 0;
+    margin-top: 30px;
   }
 }
 .system .details .item h4,
@@ -2072,11 +2117,23 @@ iframe {
   color: #8fa0b4;
   margin-right: 6px;
 }
+@media (max-width: 400px) {
+  .system .details .item h4 .num,
+  .environment .details .item h4 .num {
+    font-size: 40px;
+  }
+}
 .system .details .item h4 .title,
 .environment .details .item h4 .title {
   font-size: 30px;
   color: #c7d0da;
   line-height: 1.4;
+}
+@media (max-width: 400px) {
+  .system .details .item h4 .title,
+  .environment .details .item h4 .title {
+    font-size: 22px;
+  }
 }
 .system .point,
 .environment .point {
@@ -2089,19 +2146,43 @@ iframe {
   margin-top: 15px;
   min-height: 160px;
 }
+@media (max-width: 400px) {
+  .system .point,
+  .environment .point {
+    padding: 15px;
+  }
+}
 .system .point .flex-1,
 .environment .point .flex-1 {
   gap: 10px;
+}
+@media (max-width: 400px) {
+  .system .point .flex-1,
+  .environment .point .flex-1 {
+    flex-direction: row;
+  }
 }
 .system .point .flex-1 img,
 .environment .point .flex-1 img {
   width: 10%;
   max-width: 26px;
 }
+@media (max-width: 400px) {
+  .system .point .flex-1 img,
+  .environment .point .flex-1 img {
+    max-width: 17px;
+  }
+}
 .system .point .flex-1 p,
 .environment .point .flex-1 p {
   width: 90%;
   font-size: 22px;
+}
+@media (max-width: 400px) {
+  .system .point .flex-1 p,
+  .environment .point .flex-1 p {
+    font-size: 15px;
+  }
 }
 
 .item.wide {
@@ -2125,6 +2206,11 @@ iframe {
 .voice {
   margin-top: 100px;
 }
+@media (max-width: 400px) {
+  .voice {
+    padding: 0 1em;
+  }
+}
 
 .talk {
   width: 100%;
@@ -2136,10 +2222,16 @@ iframe {
 @media (max-width: 400px) {
   .talk {
     flex-direction: column;
+    gap: 20px;
   }
 }
 .talk .talk-left {
   width: 20%;
+}
+@media (max-width: 400px) {
+  .talk .talk-left {
+    width: 100%;
+  }
 }
 .talk .talk-left .avatar {
   width: 200px;
@@ -2157,6 +2249,11 @@ iframe {
   width: 80%;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 400px) {
+  .talk .talk-right {
+    width: 100%;
+  }
 }
 .talk .talk-right .balloon {
   position: relative;
@@ -2185,9 +2282,21 @@ iframe {
   line-height: 1.5;
   color: #fff;
 }
+@media (max-width: 400px) {
+  .talk .talk-right p {
+    font-size: 15px;
+  }
+}
 .talk .writer {
   margin-left: 20px;
   font-size: 20px;
+}
+@media (max-width: 400px) {
+  .talk .writer {
+    margin-left: 0;
+    font-size: 15px;
+    text-align: center;
+  }
 }
 
 .voice .flex-1 .section-ttl {
@@ -2205,6 +2314,11 @@ iframe {
   background-color: #1f426a;
   margin-top: 100px;
   padding: 100px 0;
+}
+@media (max-width: 400px) {
+  .job {
+    padding: 100px 16px;
+  }
 }
 .job .section-ttl {
   text-align: left;
@@ -2226,14 +2340,42 @@ iframe {
   padding: 20px;
   text-align: left;
 }
+@media (max-width: 400px) {
+  .job table th,
+  .job table td {
+    font-size: 15px;
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .job table td {
+    padding: 20px 10px;
+    border-width: 0;
+  }
+}
 .job table th {
   width: 30%;
   font-weight: bold;
+}
+@media (max-width: 400px) {
+  .job table th {
+    white-space: nowrap;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 30px 10px 10px;
+  }
 }
 
 .indent-1 {
   padding-left: 1em;
   text-indent: -1em;
+}
+
+.indent-2 {
+  padding-left: 2em;
+  text-indent: -2em;
 }
 
 .blue-box {
@@ -2265,8 +2407,19 @@ iframe {
     padding: 50px;
   }
 }
+@media (max-width: 400px) {
+  .recruit-btn .btn-in {
+    padding: 50px 10px;
+  }
+}
 .recruit-btn .btn-box {
   margin-top: 30px;
+}
+@media (max-width: 400px) {
+  .recruit-btn .btn-box .btn-arrow--accent--alt {
+    padding: 30px 20px;
+    font-size: 25px;
+  }
 }
 .recruit-btn p {
   color: #fff;
@@ -2278,6 +2431,11 @@ iframe {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
+}
+@media (max-width: 400px) {
+  .recruit-btn .tel-number {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 600px) {

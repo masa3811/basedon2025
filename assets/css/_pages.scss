@@ -480,6 +480,7 @@ iframe {
 
         @media (max-width: 400px) {
             top: 8px;
+            width: 40%;
         }
 
         transform: translateY(100px);
@@ -511,6 +512,10 @@ iframe {
             @media (max-width: 400px) {
                 padding: 0 16px;
             }
+        }
+
+        .box-ttl.lg {
+            font-size: 28px;
         }
 
     }
@@ -572,6 +577,10 @@ iframe {
                 font-size: 30px;
             }
 
+            @media (max-width: 400px) {
+                font-size: 25px;
+            }
+
         }
 
         img {
@@ -579,6 +588,10 @@ iframe {
 
             @media (max-width: 1100px) {
                 width: 90%;
+            }
+
+            @media (max-width: 400px) {
+                margin-top: 120px;
             }
         }
     }
@@ -666,19 +679,26 @@ iframe {
 .environment {
     margin-top: 100px;
 
+    @media (max-width: 400px) {
+        margin-top: 50px;
+    }
+
+
     .flex-1 {
         align-items: center;
         gap: 60px;
 
         @media (max-width: 400px) {
             flex-direction: column;
+            gap: 10px;
         }
 
         .img-box {
             width: 60%;
 
             @media (max-width: 400px) {
-                width: 80%;
+                width: 100%;
+                margin-top: 50px;
             }
         }
     }
@@ -686,6 +706,11 @@ iframe {
     .section-ttl {
         width: 40%;
         text-align: left;
+
+        @media (max-width: 400px) {
+            width: 80%;
+        }
+
 
         p {
             margin: 0;
@@ -702,6 +727,10 @@ iframe {
         padding: 160px 25px 50px;
         margin-top: -100px;
 
+        @media (max-width: 400px) {
+            padding: 100px 16px 50px;
+        }
+
         .item {
             width: calc(100% / 3);
             padding: 10px;
@@ -709,6 +738,11 @@ iframe {
             @media (max-width: 800px) {
                 width: 100%;
                 padding: 0 20px;
+            }
+
+            @media (max-width: 400px) {
+                padding: 0;
+                margin-top: 30px;
             }
 
             h4 {
@@ -720,12 +754,20 @@ iframe {
                     font-size: 80px;
                     color: #8fa0b4;
                     margin-right: 6px;
+
+                    @media (max-width: 400px) {
+                        font-size: 40px;
+                    }
                 }
 
                 .title {
                     font-size: 30px;
                     color: #c7d0da;
                     line-height: 1.4;
+
+                    @media (max-width: 400px) {
+                        font-size: 22px;
+                    }
                 }
             }
         }
@@ -741,18 +783,33 @@ iframe {
         margin-top: 15px;
         min-height: 160px;
 
+        @media (max-width: 400px) {
+            padding: 15px;
+        }
+
         .flex-1 {
             gap: 10px;
 
+            @media (max-width: 400px) {
+                flex-direction: row;
+            }
 
             img {
                 width: 10%;
                 max-width: 26px;
+
+                @media (max-width: 400px) {
+                    max-width: 17px;
+                }
             }
 
             p {
                 width: 90%;
                 font-size: 22px;
+
+                @media (max-width: 400px) {
+                    font-size: 15px;
+                }
             }
         }
 
@@ -777,6 +834,10 @@ iframe {
 
 .voice {
     margin-top: 100px;
+
+    @media (max-width: 400px) {
+        padding: 0 1em;
+    }
 }
 
 .talk {
@@ -788,10 +849,15 @@ iframe {
 
     @media (max-width: 400px) {
         flex-direction: column;
+        gap: 20px;
     }
 
     .talk-left {
         width: 20%;
+
+        @media (max-width: 400px) {
+            width: 100%;
+        }
 
         .avatar {
             width: 200px;
@@ -811,6 +877,10 @@ iframe {
         width: 80%;
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 400px) {
+            width: 100%;
+        }
 
         .balloon {
             position: relative;
@@ -841,12 +911,22 @@ iframe {
             font-size: 22px;
             line-height: 1.5;
             color: c.$white;
+
+            @media (max-width: 400px) {
+                font-size: 15px;
+            }
         }
     }
 
     .writer {
         margin-left: 20px;
         font-size: 20px;
+
+        @media (max-width: 400px) {
+            margin-left: 0;
+            font-size: 15px;
+            text-align: center;
+        }
     }
 }
 
@@ -865,6 +945,10 @@ iframe {
     background-color: c.$primary-color;
     margin-top: 100px;
     padding: 100px 0;
+
+    @media (max-width: 400px) {
+        padding: 100px 16px;
+    }
 
     .section-ttl {
         text-align: left;
@@ -887,11 +971,36 @@ iframe {
             border-bottom: 1px solid #ccc;
             padding: 20px;
             text-align: left;
+
+            @media (max-width: 400px) {
+                font-size: 15px;
+                display: block;
+                width: 100%;
+
+            }
+        }
+
+        td {
+            @media (max-width: 400px) {
+                padding: 20px 10px;
+                border-width: 0;
+
+
+            }
         }
 
         th {
             width: 30%;
             font-weight: bold;
+
+            @media (max-width: 400px) {
+                white-space: nowrap;
+                font-size: 15px;
+                display: block;
+                width: 100%;
+                padding: 30px 10px 10px;
+
+            }
         }
 
     }
@@ -901,6 +1010,12 @@ iframe {
     padding-left: 1em;
     text-indent: -1em;
 }
+
+.indent-2 {
+    padding-left: 2em;
+    text-indent: -2em;
+}
+
 
 .blue-box {
     width: 100%;
@@ -929,10 +1044,23 @@ iframe {
         @media (max-width: 800px) {
             padding: 50px;
         }
+
+        @media (max-width: 400px) {
+            padding: 50px 10px;
+        }
+
     }
 
     .btn-box {
         margin-top: 30px;
+
+        .btn-arrow--accent--alt {
+            @media (max-width: 400px) {
+                padding: 30px 20px;
+                font-size: 25px;
+            }
+
+        }
     }
 
     p {
@@ -948,6 +1076,10 @@ iframe {
         text-align: center;
         font-size: 50px;
         font-weight: bold;
+
+        @media (max-width: 400px) {
+            font-size: 30px;
+        }
     }
 
 }
