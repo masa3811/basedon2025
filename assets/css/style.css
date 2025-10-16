@@ -1618,79 +1618,80 @@ main section {
     padding: 40px 16px 100px;
   }
 }
-@media (max-width: 800px) and (max-width: 600px) {
+@media (max-width: 600px) {
   .description {
     margin-top: 50px;
   }
 }
-@media (max-width: 800px) {
-  .description .description-small {
-    padding: 0;
-  }
-  .description .frame {
-    background-color: #fff;
-    padding: 50px 80px;
-    margin-top: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
+
+.description-small {
+  padding: 0;
 }
-@media (max-width: 800px) and (max-width: 1100px) {
-  .description .frame {
+
+.frame {
+  background-color: #fff;
+  padding: 50px 80px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 1100px) {
+  .frame {
     padding: 50px;
   }
 }
-@media (max-width: 800px) and (max-width: 800px) {
-  .description .frame {
+@media (max-width: 800px) {
+  .frame {
     padding: 30px;
   }
 }
-@media (max-width: 800px) and (max-width: 400px) {
-  .description .frame {
+@media (max-width: 400px) {
+  .frame {
     padding: 20px;
   }
 }
-@media (max-width: 800px) {
-  .description .frame-small {
-    padding: 20px 40px;
-  }
+
+.frame-small {
+  padding: 20px 40px;
 }
-.description table {
+
+table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
   font-size: 16px;
 }
-.description table th,
-.description table td {
+table th,
+table td {
   font-size: 16px;
   border-bottom: 1px solid #ccc;
   padding: 20px;
   text-align: left;
 }
-.description table td {
+table td {
   width: 70%;
 }
 @media (max-width: 400px) {
-  .description table td {
+  table td {
     width: 100%;
     display: block;
     padding: 10px 0 30px;
     border-bottom: 0px solid #ccc;
   }
 }
-.description table th {
+table th {
   width: 30%;
   font-weight: bold;
 }
 @media (max-width: 400px) {
-  .description table th {
+  table th {
     width: 100%;
     display: block;
     padding: 10px 0;
   }
 }
-.description tr:first-child th,
-.description tr:first-child td {
+
+tr:first-child th,
+tr:first-child td {
   border-top: 1px solid #ccc;
 }
 

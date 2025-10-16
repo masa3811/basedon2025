@@ -294,87 +294,88 @@
     @media (max-width: 800px) {
         padding: 40px 16px 100px; // 上下の余白
 
-        @media (max-width: 800px) {}
-
-        @media (max-width: 600px) {
-            margin-top: 50px;
-        }
-
-        .description-small {
-            padding: 0;
-        }
-
-        .frame {
-            background-color: #fff; // 白い背景
-            padding: 50px 80px; // 内側に余白
-            margin-top: 10px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-
-            @media (max-width: 1100px) {
-                padding: 50px;
-            }
-
-            @media (max-width: 800px) {
-                padding: 30px;
-            }
-
-            @media (max-width: 400px) {
-                padding: 20px;
-            }
-
-
-        }
-
-        .frame-small {
-            padding: 20px 40px;
-        }
     }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        font-size: 16px;
-
-        th,
-        td {
-            font-size: 16px;
-            border-bottom: 1px solid #ccc;
-            padding: 20px;
-            text-align: left;
-        }
-
-        td {
-            width: 70%;
-
-            @media (max-width: 400px) {
-                width: 100%;
-                display: block;
-                padding: 10px 0 30px;
-                border-bottom: 0px solid #ccc;
-            }
-        }
-
-        th {
-            width: 30%;
-            font-weight: bold;
-
-            @media (max-width: 400px) {
-                width: 100%;
-                display: block;
-
-                padding: 10px 0;
-
-            }
-        }
-
-    }
-
-    tr:first-child th,
-    tr:first-child td {
-        border-top: 1px solid #ccc;
+    @media (max-width: 600px) {
+        margin-top: 50px;
     }
 }
+    .description-small {
+        padding: 0;
+    }
+
+
+    .frame {
+        background-color: #fff; // 白い背景
+        padding: 50px 80px; // 内側に余白
+        margin-top: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+        @media (max-width: 1100px) {
+            padding: 50px;
+        }
+
+        @media (max-width: 800px) {
+            padding: 30px;
+        }
+
+        @media (max-width: 400px) {
+            padding: 20px;
+        }
+
+
+    }
+
+    .frame-small {
+        padding: 20px 40px;
+    }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+
+    th,
+    td {
+        font-size: 16px;
+        border-bottom: 1px solid #ccc;
+        padding: 20px;
+        text-align: left;
+    }
+
+    td {
+        width: 70%;
+
+        @media (max-width: 400px) {
+            width: 100%;
+            display: block;
+            padding: 10px 0 30px;
+            border-bottom: 0px solid #ccc;
+        }
+    }
+
+    th {
+        width: 30%;
+        font-weight: bold;
+
+        @media (max-width: 400px) {
+            width: 100%;
+            display: block;
+
+            padding: 10px 0;
+
+        }
+    }
+
+}
+
+tr:first-child th,
+tr:first-child td {
+    border-top: 1px solid #ccc;
+}
+
 
 
 .description .box-ttl {
@@ -819,7 +820,7 @@ iframe {
 }
 
 .item.wide {
-    width: 57%!important;
+    width: 57% !important;
 
     @media (max-width: 800px) {
         width: 100%;
