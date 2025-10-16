@@ -1108,6 +1108,16 @@ section.contact {
   border-right: 1px solid #ccc;
   padding-right: 50px;
 }
+@media (max-width: 400px) {
+  .contact .flex-1 .section-ttl {
+    width: 100%;
+    text-align: left;
+    border-right: 0px solid #ccc;
+    padding-right: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+  }
+}
 .contact .flex-1 .section-ttl p {
   color: #fff;
 }
@@ -1429,6 +1439,21 @@ main section {
 #business .page-ttl p,
 #tanker .page-ttl p {
   color: #fff;
+}
+#company .border-1,
+#business .border-1,
+#tanker .border-1 {
+  text-align: center;
+  font-size: 20px;
+  border-width: 0 0 1px;
+}
+@media (max-width: 400px) {
+  #company .border-1,
+  #business .border-1,
+  #tanker .border-1 {
+    font-size: 18px;
+    border-width: 0 0 0 0;
+  }
 }
 
 @media (max-width: 800px) {
@@ -1828,7 +1853,13 @@ iframe {
   }
 }
 .pages-recruit .img-wrap .box-ttl.lg {
-  font-size: 28px;
+  font-size: 45px;
+}
+@media (max-width: 400px) {
+  .pages-recruit .img-wrap .box-ttl.lg {
+    font-size: 28px;
+    border-width: 0 0 0 0;
+  }
 }
 
 .info {
@@ -2188,11 +2219,11 @@ iframe {
   }
 }
 
-.item.wide {
-  width: 57% !important;
+.environment .item.wide {
+  width: 57%;
 }
 @media (max-width: 800px) {
-  .item.wide {
+  .environment .item.wide {
     width: 100%;
   }
 }
