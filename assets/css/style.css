@@ -2303,7 +2303,7 @@ iframe {
   display: flex;
   align-items: flex-start;
   gap: 100px;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 @media (max-width: 400px) {
   .talk {
@@ -2344,7 +2344,7 @@ iframe {
 .talk .talk-right .balloon {
   position: relative;
   display: inline-block;
-  margin: 1.5em 0 1.5em 15px;
+  margin: 0 0 10px 10px;
   padding: 20px;
   min-width: 120px;
   max-width: 100%;
