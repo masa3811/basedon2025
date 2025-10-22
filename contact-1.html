@@ -79,19 +79,18 @@
           </div>
 
         </div>
-        <div class="inner-1200">
+        <div class="inner-1000">
 
-          <div class="inner-800">
+          <div class="contact-table-wrap">
             <form action="#" method="post">
               <table class="table-contact-1">
                 <tr>
-                  <th class="narrow-th"><span class="required">必須</span></th>
-                  <th class="middle-th">お問い合わせの分類</th>
+                  <th class="narrow-th"><span class="required">必須</span>お問い合わせの分類</th>
                   <td class="wide-td">
                     <label>
                       <input type="radio" name="inquiry_type" value="other">
                       採用について
-                    </label><br>
+                    </label>
                     <label>
                       <input type="radio" name="inquiry_type" value="product" required>
                       相談したい
@@ -104,8 +103,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th class="narrow-th"><span class=" required">必須</span></th>
-                  <th class="middle-th">お名前</th>
+                  <th class="narrow-th"><span class=" required">必須</span>お名前</th>
                   <td class="wide-td">
                     <div class="table-flex-1">
                       <div class="table-flex-2">
@@ -120,8 +118,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th class="narrow-th"><span class=" required">必須</span></th>
-                  <th class="middle-th">フリガナ</th>
+                  <th class="narrow-th"><span class=" required">必須</span>フリガナ</th>
                   <td class="wide-td">
                     <div class="table-flex-1">
                       <div class="table-flex-2">
@@ -137,8 +134,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <th class="narrow-th"><span class=" required">必須</span></th>
-                  <th class="middle-th">電話番号</th>
+                  <th class="narrow-th"><span class=" required">必須</span>電話番号</th>
                   <td class="wide-td">
                     <label for="phone">
                       ※つながりやすい番号をご記入ください
@@ -147,11 +143,13 @@
                   </td>
                 </tr>
                 <tr>
-                  <th class="narrow-th"><span class=" required">必須</span></th>
-                  <th class="required">メールアドレス</th>
-                  <td><input type="email" name="email" required></td>
+                  <th class="narrow-th"><span class=" required">必須</span>メールアドレス</th>
+                  <td class="wide-td">
+                    <input type="email" id="mail" name="phone" placeholder="example@mail.com" required>
+                  </td>
                 </tr>
               </table>
+
               <p class="table-dot table-txt"><span>※ 採用に応募する方は以下もご記入ください</span></p>
               <table class="table-contact-2">
                 <tr>
@@ -182,42 +180,52 @@
                   <th class="middle-th">番地・ビル名</th>
                   <td class="wider-td"><input type="text" name="address-detail"></td>
                 </tr>
-              </table>
-              <table class="table-contact-1 ma-0">
+  <p class="table-dot table-txt"><span></span></p>
                 <tr>
-                  <th class="narrow-th"><span class=" required">必須</span></th>
-                  <th class="middle-th">同意確認</th>
-                  <td class="wider-td">
-                    <div class="privacy-cnt">
-
-                      <a href="#" style="text-decoration: underline;color: blue;">プライバシーポリシー</a>&emsp;<span
-                        style="color:#f84a2a;">を確認して同意のうえチェックを入れてください</span>
-                      <div class="privacy-check inner-500">
-                        <label>
-                          <input type="checkbox" name="agree" id="agree-check" required>
-                          個人情報の取扱について同意します
-                        </label>
-
-                  </td>
+                  <th class="middle-th">お問い合わせの内容</th>
+                  <td class="wider-td"><textarea cols="40" rows="10" name="contact-detail"></textarea></td>
                 </tr>
               </table>
+          </div>
+          <div class="contact-table-wrap">
+            <table class="table-contact-1">
+              <tr>
+                <th class="narrow-th"><span class=" required">必須</span>同意確認</th>
+                <td class="wider-td">
+                  <div class="privacy-cnt">
+
+                    <a href="#" style="text-decoration: underline;color: blue;">プライバシーポリシー</a>&emsp;<span
+                      style="color:#f84a2a;">を確認して同意のうえチェックを入れてください</span>
+                    <div class="privacy-check inner-500">
+                      <label>
+                        <input type="checkbox" name="agree" id="agree-check" required>
+                        個人情報の取扱について同意します
+                      </label>
+
+                </td>
+              </tr>
+            </table>
 
 
 
             </form>
             </table>
-            <div class="submit-row">
-              <button id="submit-btn" class="inactive" type="button">確認画面へ</button>
-            </div>
-          </div>x
+          </div>
+          <div class="submit-row">
+            <button id="submit-btn" class="inactive" type="button">確認画面へ</button>
+          </div>
+
         </div>
+
+
+
+
+
+      </section>
+    </main>
   </div>
 
-  </div>
 
-  </section>
-  </div>
-  </main>
   <!--   ここから共通 -->
 
   <div class="wave-up">
