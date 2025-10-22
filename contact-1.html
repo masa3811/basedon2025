@@ -89,17 +89,18 @@
                   <th class="middle-th">お問い合わせの分類</th>
                   <td class="wide-td">
                     <label>
+                      <input type="radio" name="inquiry_type" value="other">
+                      採用について
+                    </label>
+                    <label>
                       <input type="radio" name="inquiry_type" value="product" required>
-                      まずは相談したい
+                      相談したい
                     </label><br>
                     <label>
                       <input type="radio" name="inquiry_type" value="other">
                       その他
                     </label><br>
-                    <label>
-                      <input type="radio" name="inquiry_type" value="other">
-                      採用について
-                    </label>
+
                   </td>
                 </tr>
                 <tr>
@@ -182,22 +183,23 @@
                   <td class="wider-td"><input type="text" name="address-detail"></td>
                 </tr>
               </table>
-               <table class="table-contact-1 ma-0">
-              <tr>
-                <th class="narrow-th"><span class=" required">必須</span></th>
-                <th class="middle-th">同意確認</th>
-                <td class="wider-td">
-                  <div class="privacy-cnt">
-    
-                      <a href="#" style="text-decoration: underline;color: blue;">プライバシーポリシー</a>&emsp;<span style="color:#f84a2a;">を確認して同意のうえチェックを入れてください</span>
-                    <div class="privacy-check inner-500">
-                      <label>
-                        <input type="checkbox" name="agree" id="agree-check" required>
-                        個人情報の取扱について同意します
-                      </label>
+              <table class="table-contact-1 ma-0">
+                <tr>
+                  <th class="narrow-th"><span class=" required">必須</span></th>
+                  <th class="middle-th">同意確認</th>
+                  <td class="wider-td">
+                    <div class="privacy-cnt">
 
-                </td>
-              </tr>
+                      <a href="#" style="text-decoration: underline;color: blue;">プライバシーポリシー</a>&emsp;<span
+                        style="color:#f84a2a;">を確認して同意のうえチェックを入れてください</span>
+                      <div class="privacy-check inner-500">
+                        <label>
+                          <input type="checkbox" name="agree" id="agree-check" required>
+                          個人情報の取扱について同意します
+                        </label>
+
+                  </td>
+                </tr>
               </table>
 
 
