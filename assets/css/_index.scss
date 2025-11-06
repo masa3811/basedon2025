@@ -250,6 +250,30 @@ header {
 
 
 // company, tanker, business, recruit, contact も同様に統一
+.link-section {
+  margin-top: 50px;
+
+}
+
+.link-box {
+  display: flex;
+  gap : 20px;
+  margin-top: 50px;
+  @include c.ssp() {
+  flex-direction: column;
+  padding: 20px;
+
+  }
+  h4 {
+    margin-top: 10px;
+  }
+  .flex-1 {
+    margin-top: 20px;
+  }
+}
+.wave-line {
+  margin-top: 100px;
+}
 
 // ==========================
 // フッター

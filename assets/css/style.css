@@ -575,6 +575,32 @@ header .logo img {
     display: none;
   }
 }
+.link-section {
+  margin-top: 50px;
+}
+
+.link-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+@media (max-width: 400px) {
+  .link-box {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+.link-box h4 {
+  margin-top: 10px;
+}
+.link-box .flex-1 {
+  margin-top: 20px;
+}
+
+.wave-line {
+  margin-top: 100px;
+}
+
 footer {
   color: #fff;
   text-align: center;
