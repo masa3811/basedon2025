@@ -155,3 +155,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     elements.forEach(el => observer.observe(el));
 });
+
+
+/* contactのチェックボタン */
+document.addEventListener('DOMContentLoaded', function() {
+  const checkboxes = document.querySelectorAll('.agree-check'); 
+  const buttons = document.querySelectorAll('.submit-btn'); 
+  const cf7form = document.querySelector('.wpcf7 form');
+  const cf7submit = cf7form?.querySelector('input[type="submit"], button[type="submit"]');
+
+  // チェック状態でボタン制御
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function() {
+      const checked = [...checkboxes].some(cb => cb.checked); 
+
+      buttons.forEach(button => {
+        button.disabled = !checked;
+        button.classList.toggle('inactive', !checked);
+      });
+    });
+  });
+
+  // ボタン押下イベント
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      const checked = [...checkboxes].some(cb => cb.checked);
+
+      if (!checked) {
+        alert('プライバシーポリシーに同意してください。');
+        return;
+      }
+
+      if (cf7submit) {
+        cf7submit.click();
+      }
+    });
+  });
+});
+

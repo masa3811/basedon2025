@@ -716,6 +716,24 @@ header .logo img {
     transform: translateY(0);
   }
 }
+.waveStrong img {
+  display: block;
+  width: 100%;
+  animation: waveSmooth 3s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes waveSmooth {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(6deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
 footer {
   color: #fff;
   text-align: center;
@@ -2998,7 +3016,7 @@ iframe {
 }
 
 .table-contact-1 .middle-th {
-  width: 20%;
+  width: 30%;
 }
 @media (max-width: 400px) {
   .table-contact-1 .middle-th {
@@ -3174,6 +3192,7 @@ iframe {
 }
 .privacy-check {
   margin-top: 50px;
+  margin-left: 0;
 }
 @media (max-width: 600px) {
   .privacy-check .privacy-check {
@@ -3209,46 +3228,38 @@ iframe {
     padding: 20px 0;
   }
 }
-#submit-btn {
+.submit-btn {
   width: 420px;
   position: relative;
   color: #fff;
   font-size: 20px;
   border: 1px solid #ddd;
   padding: 30px;
-  cursor: not-allowed;
-  pointer-events: none;
   margin-bottom: 30px;
   background-color: #f84a2a;
-}
-
-#submit-btn input {
-  border-style: none;
-  background-color: #f84a2a;
-  font-size: 20px;
-  color: #ddd;
-}
-
-@media (max-width: 600px) {
-  #submit-btn {
-    width: 100%;
-  }
-}
-/* アクティブ状態 */
-#submit-btn.active {
-  color: #1a1a1a;
-  border: 1px solid #000;
+  transition: 0.3s;
+  opacity: 1;
   cursor: pointer;
   pointer-events: auto;
 }
 
-#submit-btn.active input {
-  color: #1a1a1a;
+/* 無効状態 */
+.submit-btn.inactive {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
-#submit-btn::after {
+/* 有効状態 */
+.submit-btn.active {
+  color: #1a1a1a;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+/* 矢印装飾 */
+.submit-btn::after {
   content: "";
-  border: 0;
   border-top: solid 2px #fff;
   border-right: solid 2px #fff;
   display: inline-block;
@@ -3259,19 +3270,22 @@ iframe {
   right: 20px;
   transform: translateY(-50%) rotate(45deg);
   transition: all 0.5s;
-  margin-left: 8px;
 }
 
-/* アクティブなときの矢印を濃く */
-#submit-btn.active::after {
-  border-top: solid 2px #000;
-  border-right: solid 2px #000;
+.submit-btn.active::after {
+  border-top-color: #000;
+  border-right-color: #000;
 }
 
-#submit-btn.active:hover::after {
+.submit-btn.active:hover::after {
   right: 15px;
 }
 
+@media (max-width: 600px) {
+  .submit-btn {
+    width: 100%;
+  }
+}
 .wpcf7 form .wpcf7-response-output {
   margin: 2em 0.5em 1em;
   padding: 0.2em 1em;

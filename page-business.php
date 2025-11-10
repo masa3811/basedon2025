@@ -27,7 +27,8 @@
                      <p>一度に大量の貨物を長距離輸送する内航船は<br>
                          地球環境にやさしい運輸機関として<br>
                          今注目されています。</p>
-                     <div class="img-box" data-aos="fade-up" data-aos-duration="1200">
+
+                     <div class="img-box waveStrong" data-aos="fade-up" data-aos-duration="1200">
                          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/wave.png" alt="波のイメージ">
                      </div>
 
@@ -46,8 +47,8 @@
              </div>
          </section>
 
- </main>
-  </div>
+     </main>
+ </div>
 
 
  <?php

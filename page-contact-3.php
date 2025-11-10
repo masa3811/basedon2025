@@ -30,7 +30,7 @@
 
                 </span>
               </p>
-          </div>x
+          </div>
         </div>
   
  
