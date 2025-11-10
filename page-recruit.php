@@ -305,7 +305,7 @@
             <div class="inner-600">
               <p>フォームからいつでも応募できます</p>
               <div class="btn-box">
-                <a href="#" class="btn-arrow btn-arrow--accent--alt"><span class="arrow"></span>
+                <a href="<?php echo home_url('/contact-1/'); ?>" class="btn-arrow btn-arrow--accent--alt"><span class="arrow"></span>
                   採用応募フォームへ
                 </a>
               </div>

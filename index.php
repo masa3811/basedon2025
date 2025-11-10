@@ -22,38 +22,51 @@
          </div>
 
          <ul class="news-list">
-           <li>
-             <span class="date">2025/06/24</span>
-             <a href="#">
-               求人（船員）のご案内
-               <span class="arrow"></span>
-             </a>
-           </li>
-           <li>
-             <span class="date">2020/05/11</span>
-             <a href="#">
-               弊社事務所を移転いたしました
-               <span class="arrow"></span>
-             </a>
-           </li>
-           <li>
-             <span class="date">2020/06/11</span>
-             <a href="#">
-               弊社事務所を移転いたしました
-               <span class="arrow"></span>
-             </a>
-           </li>
+           <?php
+            // 最新3件を取得
+            $args = array(
+              'post_type' => 'post', // 通常投稿
+              'posts_per_page' => 3, // 表示件数
+            );
+            $the_query = new WP_Query($args);
+
+            if ($the_query->have_posts()) :
+              while ($the_query->have_posts()) : $the_query->the_post();
+            ?>
+               <li>
+                 <span class="date"><?php the_time('Y/m/d'); ?></span>
+                 <a href="<?php the_permalink(); ?>">
+                   <?php the_title(); ?>
+                   <span class="arrow"></span>
+                 </a>
+               </li>
+           <?php
+              endwhile;
+              wp_reset_postdata();
+            else :
+              echo '<li>現在お知らせはありません。</li>';
+            endif;
+            ?>
          </ul>
 
        </div>
-       <!-- 一覧ボタン -->
+
        <div class="btn-box">
-         <a href="<?php echo esc_url(home_url('/news/')); ?>" class="btn-arrow btn-arrow--primary" data-aos="fade-up" data-aos-duration="1200"><span class="arrow"></span>
-           お知らせを一覧で見る
-         </a>
+         <?php
+          $category = get_category_by_slug('news'); // ← スラッグで取得（おすすめ）
+          if ($category) :
+            $cat_link = get_category_link($category->term_id);
+          ?>
+           <a href="<?php echo esc_url($cat_link); ?>" class="btn-arrow btn-arrow--primary" data-aos="fade-up" data-aos-duration="1200">
+             <span class="arrow"></span>お知らせを一覧で見る
+           </a>
+         <?php endif; ?>
+
+
        </div>
      </div>
    </section>
+
 
    <section class="company">
      <div class="inner-1000">
@@ -84,7 +97,7 @@
 
    <section class="business">
      <div class="inner-1000">
-        <div class="section-ttl" data-aos="fade-up" data-aos-duration="1200">
+       <div class="section-ttl" data-aos="fade-up" data-aos-duration="1200">
          <h3>Business description</h3>
        </div>
      </div>
@@ -111,7 +124,7 @@
    </section>
    <section class="tanker">
      <div class="inner-1000">
-        <div class="section-ttl" data-aos="fade-up" data-aos-duration="1200">
+       <div class="section-ttl" data-aos="fade-up" data-aos-duration="1200">
          <h3>Tanker ship specification</h3>
        </div>
      </div>
@@ -138,7 +151,7 @@
    <section class="recruit">
      <div class="inner-1000">
        <div class="img-box">
-          <div class="section-ttl" data-aos="fade-up" data-aos-duration="1200">
+         <div class="section-ttl" data-aos="fade-up" data-aos-duration="1200">
            <h3>Recruit crew member</h3>
          </div>
          <p class="img-ttl">船員募集</p>

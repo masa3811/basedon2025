@@ -82,7 +82,7 @@ $des = ""; ?>
                     </li>
                 </ul>
                 <div class="header-contact">
-                    <a href="<?php echo home_url('/contact/'); ?>"
+                    <a href="<?php echo home_url('/contact-1/'); ?>"
                         class="btn-arrow btn-arrow--primary btn-arrow--small <?php if (is_page('contact')) echo 'is-active'; ?>">
                         <span class="arrow"></span>お問い合わせ
                     </a>
