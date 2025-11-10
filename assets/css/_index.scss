@@ -128,7 +128,8 @@ header {
 
 
 .header-contact {
-  margin-left: 20px; 
+  margin-left: 20px;
+
   &::after {
     content: "";
     position: absolute;
@@ -257,23 +258,75 @@ header {
 
 .link-box {
   display: flex;
-  gap : 20px;
+  gap: 20px;
   margin-top: 50px;
+
   @include c.ssp() {
-  flex-direction: column;
-  padding: 20px;
+    flex-direction: column;
+    padding: 20px;
 
   }
+
   h4 {
+    text-align: left;
     margin-top: 10px;
   }
+
+
   .flex-1 {
-    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
   }
+
+  .flex-1.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .flex-1 a img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .flex-1 a:hover img {
+    transform: scale(1.05) translateY(-5px);
+  }
+
 }
+
+.link-content .box-ttl {
+  text-align: left;
+  margin-top: 10px;
+}
+
+
+
 .wave-line {
   margin-top: 100px;
+  overflow: hidden;
+  display: inline-block;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
+.wave-line img {
+  display: block;
+  animation: wave 3s ease-in-out infinite; 
+/*   animation: wave 3s ease-in-out 1;  */
+}
+
+/* 波のようにゆらゆら */
+@keyframes wave {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-5px); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+
 
 // ==========================
 // フッター
@@ -283,10 +336,14 @@ footer {
   text-align: center;
   margin-top: 80px;
 
-  .footer-logo img {
-    width: 90%;
-    max-width: 560px;
-    margin: 0 auto 20px;
+  .footer-logo {
+    margin-top: 50px;
+
+    img {
+      width: 90%;
+      max-width: 560px;
+      margin: 0 auto 20px;
+    }
   }
 
   .footer-in {
@@ -376,6 +433,7 @@ footer {
     img {
       width: 100%;
       display: block;
+
     }
 
     h2 {
@@ -393,16 +451,6 @@ footer {
       display: inline-block;
       box-sizing: border-box;
 
-      text-shadow:
-        6px 6px 0 c.$primary-color,
-        -6px 6px 0 c.$primary-color,
-        6px -6px 0 c.$primary-color,
-        -6px -6px 0 c.$primary-color,
-        0 6px 0 c.$primary-color,
-        0 -6px 0 c.$primary-color,
-        6px 0 0 c.$primary-color,
-        -6px 0 0 c.$primary-color;
-
       animation: textOutlineAnime 2s forwards;
 
       /* 下からスムーズに上に動くための設定 */
@@ -416,6 +464,13 @@ footer {
         transform: translateY(0);
         /* 最終位置 */
         opacity: 1;
+      }
+
+      img {
+        @include c.ssp() {
+          width: 70%;
+          margin-left: auto;
+        }
       }
     }
   }
@@ -503,7 +558,6 @@ section.tanker {
     padding: 0 1em;
   }
 
-
   .news-list {
     width: 65%;
 
@@ -533,7 +587,7 @@ section.tanker {
 
         @include c.ssp() {
           width: 100%;
-          margin-bottom: 5px; // 日付とリンクの間に隙間
+          margin-bottom: 5px;
           font-size: 15px;
         }
       }
@@ -554,22 +608,39 @@ section.tanker {
         }
 
         .arrow {
-          margin-left: 10px;
-          flex-shrink: 0;
-          transition: transform 0.3s;
+          position: relative;
+          display: inline-block;
+          padding-left: 12px;
+
+          &::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 0 6px 8px; // ▶ の形
+            border-color: transparent transparent transparent currentColor;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+            transition: transform 0.3s ease;
+          }
 
           @include c.ssp() {
             margin-left: 0;
-            margin-top: 5px; // 縦並びのときは下に
+            margin-top: 5px;
           }
-        }
-
-        &:hover .arrow {
-          transform: translateX(5px);
         }
 
         &:hover {
           color: #007BFF;
+
+          .arrow::before {
+            transform: translateX(4px);
+
+
+          }
         }
       }
     }

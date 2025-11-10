@@ -109,3 +109,49 @@ function animateSectionTitle() {
 // ページ読み込み時
 window.addEventListener('load', animateSectionTitle);
 
+/* --------------------------------
+ */
+document.addEventListener('DOMContentLoaded', () => {
+    // .link-box 内の .flex-1 全て
+    const boxes = document.querySelectorAll('.link-box .flex-1');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // 左から順番に表示
+                boxes.forEach((box, index) => {
+                    setTimeout(() => {
+                        box.classList.add('show');
+                    }, index * 400);
+                });
+                // 一度だけアニメーションさせる
+                observer.disconnect();
+            }
+        });
+    }, { threshold: 0.5 }); // 少し見えたら発火
+
+    boxes.forEach(box => observer.observe(box));
+});
+
+
+
+/* --------------------------------
+ */
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.left-in, .right-in, .up-in');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                elements.forEach((el, index) => {
+                    setTimeout(() => el.classList.add('show'), index * 150);
+                });
+                observer.disconnect(); // 一度だけアニメーション
+            }
+        });
+    }, { threshold: 0.3 });
+
+    elements.forEach(el => observer.observe(el));
+});

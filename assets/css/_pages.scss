@@ -243,17 +243,20 @@
                     }
                 }
 
-                &:hover .arrow {
-                    transform: translateX(5px);
-                }
-
                 &:hover {
                     color: #007BFF;
+
+                    .arrow::before {
+                        transform: translateX(4px);
+
+
+                    }
                 }
             }
         }
     }
 }
+
 
 .pages-company,
 .pages-business,
