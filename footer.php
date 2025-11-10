@@ -87,8 +87,8 @@
         <div class="footer-info">
             <a href="#">サイトマップ</a>
             <a href="#">免責事項</a>
-            <a href="#">プライバシーポリシー</a>
-            <a href="#">アクセスマップ</a>
+            <a href="<?php echo esc_url(home_url('/privacy-policy/')); ?>">プライバシーポリシー</a>
+            <a href="<?php echo esc_url(home_url('/access/')); ?>">アクセスマップ</a>
         </div>
 
     </div>
