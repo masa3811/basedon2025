@@ -242,7 +242,7 @@
                 <tr>
                   <th>給与</th>
                   <td>・当社給与規定による。<br>
-                    　※経験のある方は優遇するよう配慮します
+                    　※経験者は優遇します
                   </td>
                 </tr>
                 <tr>
@@ -305,7 +305,7 @@
             <div class="inner-600">
               <p>フォームからいつでも応募できます</p>
               <div class="btn-box">
-                <a href="<?php echo home_url('/contact-1/'); ?>" class="btn-arrow btn-arrow--accent--alt"><span class="arrow"></span>
+                <a target="_blank" href="<?php echo home_url('/contact-1/'); ?>" class="btn-arrow btn-arrow--accent--alt"><span class="arrow"></span>
                   採用応募フォームへ
                 </a>
               </div>

@@ -65,7 +65,7 @@ $des = ""; ?>
             <nav id="menubar">
                 <ul>
                     <li>
-                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">お知らせ</a>
+                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">TOP</a>
                     </li>
 
                     <li>
@@ -100,7 +100,7 @@ $des = ""; ?>
             <nav class="sp-menu">
                 <ul>
                     <li>
-                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">お知らせ</a>
+                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">TOP</a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/company/'); ?>" class="<?php if (is_page('company')) echo 'is-active'; ?>">会社案内</a>

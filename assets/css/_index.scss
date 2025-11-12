@@ -270,6 +270,11 @@ header {
   h4 {
     text-align: left;
     margin-top: 10px;
+
+    @include c.sp() {
+      font-size: 14px;
+    }
+
   }
 
 
@@ -299,7 +304,9 @@ header {
 .link-content .box-ttl {
   text-align: left;
   margin-top: 10px;
+  padding: 0 1em;
 }
+
 
 
 
@@ -313,17 +320,31 @@ header {
 
 .wave-line img {
   display: block;
-  animation: wave 3s ease-in-out infinite; 
-/*   animation: wave 3s ease-in-out 1;  */
+  animation: wave 3s ease-in-out infinite;
+  /*   animation: wave 3s ease-in-out 1;  */
 }
 
 /* 波のようにゆらゆら */
 @keyframes wave {
-  0%   { transform: translateY(0); }
-  25%  { transform: translateY(-5px); }
-  50%  { transform: translateY(0); }
-  75%  { transform: translateY(5px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 
@@ -336,9 +357,17 @@ header {
 }
 
 @keyframes waveSmooth {
-  0%   { transform: rotate(0deg) translateY(0); }
-  50%  { transform: rotate(6deg) translateY(-12px); }
-  100% { transform: rotate(0deg) translateY(0); }
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(6deg) translateY(-12px);
+  }
+
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
 }
 
 
