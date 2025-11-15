@@ -77,7 +77,7 @@
     <div class="footer-in">
         <div class="footer-nav">
             <a href="<?php echo esc_url(home_url()); ?>">HOME</a>
-            <a href="<?php echo esc_url($cat_link); ?>">お知らせ</a>
+            <a href="<?php echo esc_url(home_url('/category/news/')); ?>">お知らせ</a>
             <a href="<?php echo esc_url(home_url('/company/')); ?>">会社概要</a>
             <a href="<?php echo esc_url(home_url('/business/')); ?>">事業内容</a>
             <a href="<?php echo esc_url(home_url('/tanker/')); ?>">船舶情報</a>

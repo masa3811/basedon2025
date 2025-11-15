@@ -57,7 +57,7 @@
           if ($category) :
             $cat_link = get_category_link($category->term_id);
           ?>
-           <a href="<?php echo esc_url($cat_link); ?>" class="btn-arrow btn-arrow--primary" data-aos="fade-up" data-aos-duration="1200">
+           <a href="<?php echo esc_url(home_url('/category/news/')); ?>" class="btn-arrow btn-arrow--primary" data-aos="fade-up" data-aos-duration="1200">
              <span class="arrow"></span>お知らせを一覧で見る
            </a>
          <?php endif; ?>
