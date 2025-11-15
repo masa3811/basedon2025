@@ -309,7 +309,7 @@ button {
 }
 body #to-top {
   position: fixed;
-  bottom: 50px;
+  bottom: 100px;
   right: 20px;
   width: 50px;
   height: 50px;
@@ -655,6 +655,7 @@ header .logo img {
   .link-box {
     flex-direction: column;
     padding: 20px;
+    margin-top: 15px;
   }
 }
 .link-box h4 {
@@ -664,6 +665,7 @@ header .logo img {
 @media (max-width: 768.98px) {
   .link-box h4 {
     font-size: 14px;
+    margin-bottom: 15px;
   }
 }
 .link-box .flex-1 {
@@ -691,11 +693,16 @@ header .logo img {
 }
 
 .wave-line {
-  margin-top: 100px;
+  margin-top: 30px;
   overflow: hidden;
   display: inline-block;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+@media (max-width: 768.98px) {
+  .wave-line {
+    margin-top: 0;
+  }
 }
 
 .wave-line img {
@@ -746,7 +753,7 @@ footer {
   margin-top: 80px;
 }
 footer .footer-logo {
-  margin-top: 50px;
+  margin-top: 25px;
 }
 footer .footer-logo img {
   width: 90%;
@@ -772,7 +779,7 @@ footer .footer-in .footer-info {
 @media (max-width: 400px) {
   footer .footer-in .footer-nav,
   footer .footer-in .footer-info {
-    gap: 30px;
+    gap: 15px;
     margin-top: 20px;
   }
 }
@@ -826,15 +833,25 @@ footer .copy-right {
 .mv {
   position: relative;
   width: 100%;
-  margin-top: 83px;
 }
 .mv .mv-wrap {
   position: relative;
   width: 100%;
 }
+@media (max-width: 400px) {
+  .mv .mv-wrap {
+    margin-top: 5.2rem;
+  }
+}
 .mv .mv-wrap img {
   width: 100%;
   display: block;
+  margin-top: 5.2rem;
+}
+@media (max-width: 400px) {
+  .mv .mv-wrap img {
+    margin-top: 3.2rem;
+  }
 }
 .mv .mv-wrap h2 {
   position: absolute;
@@ -1138,6 +1155,12 @@ section.contact {
   .company .flex-1 .text-box p,
   .tanker .flex-1 .text-box p {
     line-height: 1.7;
+  }
+}
+@media (max-width: 400px) {
+  .company .flex-1 .text-box p,
+  .tanker .flex-1 .text-box p {
+    letter-spacing: 0.02em;
   }
 }
 .company .flex-1 .text-box .btn-box,
@@ -1578,6 +1601,11 @@ main section {
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
+@media (max-width: 600px) {
+  .single .inner-800 {
+    padding: 20px;
+  }
+}
 .single .single-title {
   font-size: 2rem;
   font-weight: 700;
@@ -1585,6 +1613,11 @@ main section {
   margin-bottom: 12px;
   border-bottom: 2px solid #0078d7;
   padding-bottom: 10px;
+}
+@media (max-width: 600px) {
+  .single .single-title {
+    font-size: 16px;
+  }
 }
 .single .single-date {
   font-size: 0.9rem;
@@ -1824,13 +1857,26 @@ main section {
   }
 }
 
+.grecaptcha-badge iframe {
+  margin-top: 0;
+}
+
+.pages-contents p {
+  letter-spacing: -0.05em;
+}
+
 .kv-wrap {
   position: relative;
 }
 .kv-wrap img {
   width: 100%;
   display: block;
-  margin-top: 5rem;
+  margin-top: 5.3rem;
+}
+@media (max-width: 400px) {
+  .kv-wrap img {
+    margin-top: 6rem;
+  }
 }
 .kv-wrap .page-ttl {
   position: absolute;
@@ -1932,6 +1978,18 @@ main section {
   }
 }
 
+@media (max-width: 400px) {
+  #tanker .kv-wrap .page-ttl {
+    top: 60%;
+  }
+  #tanker .kv-wrap .page-ttl h3 {
+    font-size: 22px;
+  }
+}
+#tanker .kv-wrap p {
+  margin: 0;
+}
+
 @media (max-width: 800px) {
   #recruit .kv-wrap .page-ttl h3 {
     font-size: 38px;
@@ -1961,7 +2019,7 @@ main section {
 }
 @media (max-width: 400px) {
   #recruit .kv-wrap .page-ttl p.lead {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 #recruit .kv-wrap .page-ttl p.sub {
@@ -1986,6 +2044,43 @@ main section {
     margin-top: 0;
     line-height: 1.3;
   }
+}
+
+.recruit-btn .btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+  color: #333;
+}
+.recruit-btn .btn-arrow .arrow {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+}
+.recruit-btn .btn-arrow .arrow::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 9px 0 9px 12px;
+  border-color: transparent transparent transparent currentColor;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+.recruit-btn .btn-arrow:hover .arrow::before {
+  transform: translateX(4px);
+}
+.recruit-btn .btn-arrow:active {
+  transform: translateY(1px);
 }
 
 .pages-news {
@@ -2073,6 +2168,13 @@ main section {
   .pages-business .img-wrap img,
   .pages-tanker .img-wrap img {
     padding: 0;
+  }
+}
+@media (max-width: 600px) {
+  .pages-company .img-wrap img,
+  .pages-business .img-wrap img,
+  .pages-tanker .img-wrap img {
+    margin-top: 50px;
   }
 }
 .pages-company .flex-1,
@@ -2236,6 +2338,8 @@ main section {
   .pages-tanker .description .box-ttl {
     font-size: 22px;
     text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
   }
 }
 .pages-company .desc,
@@ -2348,9 +2452,19 @@ iframe {
   }
 }
 
+.slide-up {
+  transform: translate3d(0, 100px, 0);
+  /* ← 2D → 3D変換 */
+  opacity: 0;
+  will-change: transform, opacity;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
 @keyframes slideUp {
   to {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+    /* 同様に3D */
     opacity: 1;
   }
 }
@@ -2615,7 +2729,7 @@ iframe {
 .system .section-ttl p,
 .environment .section-ttl p {
   margin: 0;
-  line-height: 1;
+  line-height: 1.3;
 }
 .system .details,
 .environment .details {
@@ -2697,6 +2811,7 @@ iframe {
   .system .point,
   .environment .point {
     padding: 15px;
+    min-height: 150px;
   }
 }
 .system .point .flex-1,
@@ -2902,7 +3017,7 @@ iframe {
 }
 @media (max-width: 400px) {
   .job table td {
-    padding: 20px 10px;
+    padding: 20px 5px;
     border-width: 0;
   }
 }
@@ -2916,7 +3031,7 @@ iframe {
     font-size: 15px;
     display: block;
     width: 100%;
-    padding: 30px 10px 10px;
+    padding: 30px 5px 5px;
   }
 }
 
@@ -2930,6 +3045,36 @@ iframe {
   text-indent: -2em;
 }
 
+.indent-3 {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+.indent-4 {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+@media (max-width: 400px) {
+  .indent-1 {
+    padding-left: 0em;
+    text-indent: 0em;
+  }
+  .indent-2 {
+    padding-left: 0em;
+    text-indent: 0em;
+  }
+  .indent-4 {
+    padding-left: 0em;
+    text-indent: 0em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .indent-text {
+    text-indent: 1em;
+    display: block;
+  }
+}
 .blue-box {
   width: 100%;
   background: #1f426a;
@@ -3137,8 +3282,7 @@ iframe {
   }
 }
 
-.table-contact-1 input[type=text],
-.table-contact-1 textarea {
+.table-contact-1 input[type=text] {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -3147,7 +3291,7 @@ iframe {
 
 .table-contact-1 input[type=email],
 .table-contact-1 input[type=tel] {
-  width: 75%;
+  width: 90%;
   padding: 0.5rem;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -3157,6 +3301,10 @@ iframe {
   .table-contact-1 input[type=tel] {
     width: 100%;
   }
+}
+
+.table-contact-1 textarea {
+  width: 75%;
 }
 
 .table-contact-2 input[type=text],
@@ -3181,6 +3329,28 @@ iframe {
   font-size: 16px;
   box-sizing: border-box;
   resize: vertical;
+}
+
+/* 入力欄とテキストエリアの横幅を統一 */
+.wider-td input[type=text],
+.wider-td input[type=email],
+.wider-td input[type=tel] {
+  width: 100%;
+  max-width: 400px;
+  /* 必要に応じて調整（inputと同じ） */
+  box-sizing: border-box;
+}
+
+/* テキストエリアの高さを調整 */
+.wider-td textarea {
+  width: 400px;
+  height: 120px;
+  padding: 8px;
+}
+@media (max-width: 400px) {
+  .wider-td textarea {
+    max-width: 300px;
+  }
 }
 
 .table-flex-1 {
@@ -3352,6 +3522,127 @@ iframe {
   text-align: center;
 }
 
+.wpcf7-list-item {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.wpcf7-form-control.wpcf7-radio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  /* 項目の間隔 */
+}
+
+.wpcf7-form-control.wpcf7-radio .wpcf7-list-item {
+  display: flex;
+  align-items: center;
+}
+
+/* 生年月日などの共通input幅 */
+.date-input {
+  width: 10em;
+  margin-bottom: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* フレックス構成を整える */
+.table-flex-1 {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 2カラム（氏名・フリガナ）用 */
+.table-flex-2 {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* ラジオボタン縦並び */
+.wpcf7-form-control.wpcf7-radio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.wpcf7-form-control.wpcf7-radio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  line-height: 0;
+}
+
+/* ▼ 確認画面：テキスト入力・メール・電話だけ編集不可 */
+#contact-2 .wpcf7-form-control.wpcf7-text,
+#contact-2 .wpcf7-form-control.wpcf7-email,
+#contact-2 .wpcf7-form-control.wpcf7-tel,
+#contact-2 .wpcf7-form-control.wpcf7-textarea {
+  pointer-events: none;
+  background-color: #fafafa;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+/* ▼ ラジオ・チェックボックスは見た目だけ固定 */
+#contact-2 input[type=radio],
+#contact-2 input[type=checkbox] {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* ▼ 戻るボタン・送信ボタンは有効化 */
+#contact-2 .wpcf7-previous,
+#contact-2 input[type=submit],
+#contact-2 .submit-btn {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+}
+
+/* ▼ Multi-step が必要とする hidden フィールド */
+#contact-2 input[name=_wpcf7_step] {
+  pointer-events: auto !important;
+}
+
+#contact-2 .date-input {
+  pointer-events: none;
+  background-color: #fafafa;
+  color: #555;
+  border: 1px solid #ddd;
+}
+
+#contact-2 input[type=radio],
+#contact-2 input[type=radio]:hover,
+#contact-2 input[type=checkbox],
+#contact-2 input[type=checkbox]:hover {
+  pointer-events: none !important;
+  opacity: 0.8;
+  cursor: default !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: inherit !important;
+}
+
+/* ▼ ラジオ・チェックボタンとその label を完全静止 */
+#contact-2 input[type=radio],
+#contact-2 input[type=checkbox],
+#contact-2 label {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
+/* ▼ label:hover も無効化 */
+#contact-2 label:hover {
+  background-color: inherit !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
 #contact-2 .submit-row {
   width: 100%;
   display: flex;
@@ -3459,4 +3750,50 @@ iframe {
     padding: 0 1em;
     font-size: 15px;
   }
+}
+
+/* サイトマップ全体 */
+.wsp-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.wsp-container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  border-left: 4px solid #3bb1d3;
+}
+.wsp-container ul.wsp-pages-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.wsp-container ul.wsp-pages-list li {
+  margin-bottom: 12px;
+  padding: 10px 15px;
+  background: #f7fbfc;
+  /* 薄い水色の背景 */
+  border: 1px solid #e2edf1;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+.wsp-container ul.wsp-pages-list li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+}
+.wsp-container ul.wsp-pages-list li:hover {
+  background: #e5f4f8;
+  transform: translateX(5px);
+}
+.wsp-container ul.wsp-pages-list li.current_page_item {
+  background: #dff2ff;
+  border-color: #8ac7e9;
+}
+.wsp-container ul.wsp-pages-list li.current_page_item a {
+  font-weight: bold;
+  color: #1678aa;
 }/*# sourceMappingURL=style.css.map */

@@ -77,10 +77,11 @@
     <div class="footer-in">
         <div class="footer-nav">
             <a href="<?php echo esc_url(home_url()); ?>">HOME</a>
-            <a href="<?php echo esc_url(home_url('/news/')); ?>">お知らせ</a>
+            <a href="<?php echo esc_url($cat_link); ?>">お知らせ</a>
             <a href="<?php echo esc_url(home_url('/company/')); ?>">会社概要</a>
             <a href="<?php echo esc_url(home_url('/business/')); ?>">事業内容</a>
             <a href="<?php echo esc_url(home_url('/tanker/')); ?>">船舶情報</a>
+            <a href="<?php echo esc_url(home_url('/recruit/')); ?>">船員募集</a>
             <a href="<?php echo esc_url(home_url('/contact-1/')); ?>">お問い合わせ</a>
         </div>
 
@@ -92,9 +93,9 @@
         </div>
 
     </div>
-    <small>&copy;2025 SETOUCHI CHUO KISEN CO .,LTD. All Rights Reserved.</small>
+    <small>&copy;2025 SETOUCHI CHUO KISEN CO .,LTD. <br class="sp-only">All Rights Reserved.</small>
 
-    <div class="copy-right">瀬戸内中央汽船株式会社 山口県下関市大和町1丁目16番1号 下関漁港ビル211号</div>
+    <div class="copy-right">瀬戸内中央汽船株式会社 <br class="sp-only">山口県下関市大和町1丁目16番1号 <br class="sp-only">下関漁港ビル211号</div>
 
     <!-- トップに戻るボタン -->
     <button id="to-top"></button>

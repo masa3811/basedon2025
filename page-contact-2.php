@@ -9,7 +9,8 @@
         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/contact_title-pc.jpg" alt="お問い合わせ-1トップ画像">
         <div class="page-ttl">
           <h3>Contact</h3>
-          <p>お問い合わせ</p>
+          <p>お問い合わせ確認画面</p>
+          <p style="color: #dc3232;font-size: 15px">※まだ送信は完了していません</p>
         </div>
       </div>
     </section>

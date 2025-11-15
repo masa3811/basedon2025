@@ -17,7 +17,7 @@
         </div>
 
     </section>
-    <div class="recruit-catch">
+    <div class="recruit-catch slide-up">
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/recruit-catch.png" alt="船員募集キャッチ画像">
     </div>
 
@@ -181,9 +181,9 @@
               </div>
               <div class="talk-right">
                 <div class="balloon">
-                  <p class="indent-1">・司厨長が乗船していますので、新卒者や若い方にとって職務に集中できる環境だと思います。</p>
-                  <p class="indent-1">・ここ数年、続けて新卒者に入社してもらっていて、若手が多く船内も活気が有りとても良い雰囲気です。</p>
-                  <p class="indent-1">・船内Wi-Fi環境が充実していますが、スターリンクも導入予定で更にネット環境が充実します。</p>
+                  <p class="indent-3">・司厨長が乗船していますので、新卒者や若い方にとって職務に集中できる環境だと思います。</p>
+                  <p class="indent-3">・ここ数年、続けて新卒者に入社してもらっていて、若手が多く船内も活気が有りとても良い雰囲気です。</p>
+                  <p class="indent-3">・船内Wi-Fi環境が充実していますが、スターリンクも導入予定で更にネット環境が充実します。</p>
                 </div>
                 <div class="writer">船長（JMETS・波方海上技術短大卒）入社15年</div>
               </div>
@@ -194,8 +194,8 @@
               </div>
               <div class="talk-right">
                 <div class="balloon">
-                  <p class="indent-1">・働き方改革が内航タンカー船にも浸透してきて、近年は航海数が減少し、仮バースも月に数回あり、仕事と休息のオンオフの切り替えができ充実していますね。</p>
-                  <p class="indent-1">・今年から休暇中の手当ても増え、乗下船中の給料の差がほとんどなくなり妻も喜んでいます。</p>
+                  <p class="indent-3">・働き方改革が内航タンカー船にも浸透してきて、近年は航海数が減少し、仮バースも月に数回あり、仕事と休息のオンオフの切り替えができ充実していますね。</p>
+                  <p class="indent-3">・今年から休暇中の手当ても増え、乗下船中の給料の差がほとんどなくなり妻も喜んでいます。</p>
                 </div>
                 <div class="writer">一等航海士（普通高校卒）入社10年</div>
               </div>
@@ -206,9 +206,9 @@
               </div>
               <div class="talk-right">
                 <div class="balloon">
-                  <p class="indent-1">・居住区の全ての部屋にシャワーとウォシュレット付のトイレが付いていて、トイレ待ちの心配もないですし、夏場は自由にシャワーを浴びる事が出来、ストレスフリーな環境です。
+                  <p class="indent-3">・居住区の全ての部屋にシャワーとウォシュレット付のトイレが付いていて、トイレ待ちの心配もないですし、夏場は自由にシャワーを浴びる事が出来、ストレスフリーな環境です。
                   </p>
-                  <p class="indent-1">・入社以来、2ヶ月乗船後1ヶ月休暇のサイクルなので、休暇中の旅行の計画も充実しています。成人式のタイミングでも会社から配慮して頂き下船させてもらいましたよ。</p>
+                  <p class="indent-3">・入社以来、2ヶ月乗船後1ヶ月休暇のサイクルなので、休暇中の旅行の計画も充実しています。成人式のタイミングでも会社から配慮して頂き下船させてもらいましたよ。</p>
                 </div>
                 <div class="writer">甲板手（JMETS・唐津海上技術学校卒）入社3年</div>
               </div>
@@ -231,7 +231,7 @@
               <tbody>
                 <tr>
                   <th>募集職種</th>
-                  <td>・甲板部職員、甲板部部員（司厨長）、機関部職員、機関部部員
+                  <td>・甲板部職員、甲板部部員（司厨長）、<br class="sp-only"><span class="indent-text">機関部職員、機関部部員</span>
                   </td>
                 </tr>
                 <tr>
@@ -253,7 +253,7 @@
                 </tr>
                 <tr>
                   <th>福利厚生</th>
-                  <td>・船員保険、厚生年金保険、労働保険、雇用保険、退職金制度有り（中退共加入）、<br>　船内Wi-Fi、作業着年2回支給</td>
+                  <td>・船員保険、厚生年金保険、労働保険、<br class="sp-only"><span class="indent-text">雇用保険、退職金制度有り（中退共加入）、</span><br>　船内Wi-Fi、作業着年2回支給</td>
                 </tr>
                 <tr>
                   <th>乗船サイクル</th>
@@ -271,15 +271,15 @@
 
                 <tr>
                   <th>応募方法</th>
-                  <td>・お問合せをいただき、履歴書を確認後、<br class="sp-only">面接を検討させて頂きます。<br>・面接時の自宅からの往復交通費は弊社が全額負担します。
+                  <td>・お問合せをいただき、履歴書を確認後、<br class="sp-only"><span class="indent-text">面接を検討させて頂きます。</span><br>・面接時の自宅からの往復交通費は<br class="sp-only"><span class="indent-text">弊社が全額負担します。</span>
                   </td>
                 </tr>
 
                 <tr>
                   <th>その他</th>
                   <td>・過去の新卒採用実績<br>
-                    <span class="indent-1">清水海上技術短期大学校、波方海上技術短期大学校、宮古海上技術短期大学校、唐津海上技術学校</span><br>
-                   <span class="indent-1">神奈川海洋科学高等学校専攻科、大津緑洋高等学校水産校舎、尾道海技学院（旧 日本海洋技術専門学校）</span>
+                    <span class="indent-4">清水海上技術短期大学校、<br class="sp-only">波方海上技術短期大学校、<br class="sp-only">宮古海上技術短期大学校、<br class="sp-only">唐津海上技術学校</span><br>
+                   <span class="indent-4">神奈川海洋科学高等学校専攻科、<br class="sp-only">大津緑洋高等学校水産校舎、<br class="sp-only">尾道海技学院（旧 日本海洋技術専門学校）</span>
 
 
                   </td>

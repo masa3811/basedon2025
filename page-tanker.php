@@ -25,7 +25,7 @@
        </div>
        <div class="inner-800">
          <div class="flex-1">
-           <p></p>
+           <p>内航大型タンカー船<br class="sp-only">（6,000kl積み）を<br class="pc-only">メインとした<br class="sp-only">ラインナップとなっております。</p>
            <div class="img-box waveStrong" data-aos="fade-up" data-aos-duration="1200">
              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/pages/wave.png" alt="波のイメージ">
            </div>

@@ -1,5 +1,6 @@
 <?php
-$des = ""; ?>
+$des="山口県下関市に本社を置き、石油製品、ケミカル製品のタンカー船により高度な品質管理と安全で効率の高い海上輸送を実現しています。"
+; ?>
 <!DOCTYPE html>
 <html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
 
@@ -9,7 +10,7 @@ $des = ""; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="email=no,telephone=no,address=no">
     <meta name="description" content="<?php echo $des; ?>">
-    <meta name="keywords" content="">
+    <meta name="keywords" content="船員募集,海上輸送,山口県,下関市,航海士,タンカー,石油タンカー">
     <meta property="og:type" content="website">
     <meta property="og:title"
         content="<?php wp_title('-', true, 'right'); ?><?php bloginfo('name'); ?> | <?php echo $des; ?>">
@@ -18,7 +19,7 @@ $des = ""; ?>
         content="<?php wp_title('-', true, 'right'); ?><?php bloginfo('name'); ?> | <?php echo $des; ?>">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:image"
-        content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.jpg">
+        content="<?php echo get_template_directory_uri(); ?>/assets/img/fb.png">
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -65,11 +66,11 @@ $des = ""; ?>
             <nav id="menubar">
                 <ul>
                     <li>
-                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">TOP</a>
+                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">HOME</a>
                     </li>
 
                     <li>
-                        <a href="<?php echo home_url('/company/'); ?>" class="<?php if (is_page('company')) echo 'is-active'; ?>">会社案内</a>
+                        <a href="<?php echo home_url('/company/'); ?>" class="<?php if (is_page('company')) echo 'is-active'; ?>">会社概要</a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/business/'); ?>" class="<?php if (is_page('business')) echo 'is-active'; ?>">事業内容</a>
@@ -100,10 +101,10 @@ $des = ""; ?>
             <nav class="sp-menu">
                 <ul>
                     <li>
-                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">TOP</a>
+                        <a href="<?php echo home_url(); ?>" class="<?php if (is_front_page()) echo 'is-active'; ?>">HOME</a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/company/'); ?>" class="<?php if (is_page('company')) echo 'is-active'; ?>">会社案内</a>
+                        <a href="<?php echo home_url('/company/'); ?>" class="<?php if (is_page('company')) echo 'is-active'; ?>">会社概要</a>
                     </li>
                     <li>
                         <a href="<?php echo home_url('/business/'); ?>" class="<?php if (is_page('business')) echo 'is-active'; ?>">事業内容</a>

@@ -85,7 +85,7 @@
              <p>私たちは、国内の港と港を結んで産業基礎資材である石油製品を運んでいます。<br>
                常に安全と環境保全を考え人にやさしく地球にやさしく大切なエネルギーを大切に運び続けます。</p>
              <div class="btn-box">
-               <a href="company.html" class="btn-arrow btn-arrow--secondary" data-aos="fade-up" data-aos-duration="1200"><span class="arrow"></span>
+               <a href="<?php echo esc_url(home_url('/company/')); ?>" class="btn-arrow btn-arrow--secondary" data-aos="fade-up" data-aos-duration="1200"><span class="arrow"></span>
                  会社概要を見る
                </a>
              </div>
@@ -110,7 +110,7 @@
              <p>当社のメイン業務は、石油製品、ケミカル製品のタンカー船による海上輸送です。<br>
                当社では、常に時代にマッチした船種・船型の運航により、高度な品質管理と安全で効率の高い輸送を実現しています。</p>
              <div class="btn-box">
-               <a href="business.html" class="btn-arrow btn-arrow--primary" data-aos="fade-up" data-aos-duration="1200"><span class="arrow"></span>
+               <a href="<?php echo esc_url(home_url('/business/')); ?>" class="btn-arrow btn-arrow--primary" data-aos="fade-up" data-aos-duration="1200"><span class="arrow"></span>
                  事業内容を見る
                </a>
              </div>
@@ -138,7 +138,7 @@
              <h4 class="box-ttl">船舶情報</h4>
              <p></p>
              <div class="btn-box" data-aos="fade-up" data-aos-duration="1200">
-               <a href="tanker.html" class="btn-arrow btn-arrow--secondary"><span class="arrow"></span>
+               <a href="<?php echo esc_url(home_url('/tanker/')); ?>" class="btn-arrow btn-arrow--secondary"><span class="arrow"></span>
                  船舶情報を見る
                </a>
              </div>
@@ -159,7 +159,7 @@
          <p class="line">将来を見据えた強い組織をつくる上で<br class="sp-only">必要不可欠な人材を募集します。</p>
        </div>
        <div class="btn-box">
-         <a href="recruit.html" class="btn-arrow btn-arrow--accent" data-aos="fade-up" data-aos-duration="1200"><span class="arrow"></span>
+         <a href="<?php echo esc_url(home_url('/recruit/')); ?>" class="btn-arrow btn-arrow--accent" data-aos="fade-up" data-aos-duration="1200"><span class="arrow"></span>
            船員募集を見る
          </a>
        </div>

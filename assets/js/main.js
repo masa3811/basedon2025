@@ -158,38 +158,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* contactのチェックボタン */
-document.addEventListener('DOMContentLoaded', function() {
-  const checkboxes = document.querySelectorAll('.agree-check'); 
-  const buttons = document.querySelectorAll('.submit-btn'); 
-  const cf7form = document.querySelector('.wpcf7 form');
-  const cf7submit = cf7form?.querySelector('input[type="submit"], button[type="submit"]');
 
-  // チェック状態でボタン制御
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', function() {
-      const checked = [...checkboxes].some(cb => cb.checked); 
-
-      buttons.forEach(button => {
-        button.disabled = !checked;
-        button.classList.toggle('inactive', !checked);
-      });
-    });
-  });
-
-  // ボタン押下イベント
-  buttons.forEach(button => {
-    button.addEventListener('click', function() {
-      const checked = [...checkboxes].some(cb => cb.checked);
-
-      if (!checked) {
-        alert('プライバシーポリシーに同意してください。');
-        return;
-      }
-
-      if (cf7submit) {
-        cf7submit.click();
-      }
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  const agree = document.querySelector('.agree-check');
+  const submitBtn = document.querySelector('.submit-btn');
+  if (!agree || !submitBtn) return;
+  submitBtn.disabled = true;
+  agree.addEventListener('change', () => {
+    submitBtn.disabled = !agree.checked;
+    submitBtn.classList.toggle('inactive', !agree.checked);
   });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const backBtn = document.querySelector('.wpcf7-previous');
+  if (backBtn) {
+    backBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      history.back();
+    });
+  }
+});
+
+
+
+/*  戻るボタンで２通送らない */
+document.addEventListener('wpcf7mailsent', function () {
+  setTimeout(() => {
+    sessionStorage.clear();
+  }, 800);
+});
